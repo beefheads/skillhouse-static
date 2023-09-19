@@ -1,0 +1,107 @@
+/* stylelint-disable no-invalid-position-at-import-rule */
+@use "sass:math";
+
+@import "./variables/media";
+@import "./variables/variables";
+@import "./variables/colors";
+@import "./mixins";
+
+
+// Шрифты
+@include font('Muller', normal, 300, '../resources/fonts/muller/mullerlight');
+@include font('Muller', normal, 400, '../resources/fonts/muller/mullerregular');
+@include font('Muller', normal, 500, '../resources/fonts/muller/mullermedium');
+@include font('Muller', normal, 700, '../resources/fonts/muller/mullerbold');
+
+@include font('Georgia', normal, 400, '../resources/fonts/georgia/georgiaregular');
+:root {
+  --ff-regular: "Muller", sans-serif;
+}
+
+// Сброс CSS
+@import "./reset";
+@import "./normalize";
+
+fieldset {
+  padding: 0;
+  margin: 0;
+}
+
+
+html {
+  overscroll-behavior: none;
+  --fz-modifier: 0.520834;
+  font-size: #{'calc(var(--fz-modifier) * var(--base-size))'};//calc(0.342466 * var(--base-size)); //10px for 1920×1000
+
+  @media (max-width: $laptop) {
+    --fz-modifier: 1.020834;
+  }
+
+  @media (max-width: $mobile-xl) {
+    --fz-modifier: 1.663894;
+  }
+
+  @media (max-width: $mobile-l) {
+    --fz-modifier: 3.125;
+  }
+}
+
+body {
+  color: var(--fg-regular);
+  font-family: var(--ff-regular);
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 111%;
+
+  overscroll-behavior: none;
+
+  @media (max-width: $tablet) and (min-width: $mobile-xl + 1) {
+    font-size: 2rem;
+  }
+  @media (max-width: $mobile-l) {
+    font-size: 2rem;
+  }
+}
+body._lock {
+  overflow: hidden;
+  touch-action: none;
+}
+
+.wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100%;
+  //overflow: hidden;
+}
+.wrapper > .content {
+  position: relative;
+  z-index: 1;
+  flex: 1 0 auto;
+}
+
+.container {
+  max-width: #{'calc(var(--w-container) + 2 * var(--p-container))'};
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--p-container);
+  padding-right: var(--p-container);
+}
+
+.main {
+  @media (max-width: $laptop) {
+    margin-top: auto;
+  }
+}
+
+// Библиотеки
+@import "./libs/vanilla-datepicker";
+// @import "./libs/swiper";
+// @import "./libs/fancybox";
+
+@import "./components";
+@import "./sections";
+@import "./pages";
+@import "./modifiers";
