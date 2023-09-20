@@ -14,7 +14,7 @@
 	margin-right: 1rem;
 	margin-bottom: 1.5rem;
 
-	@media (max-width: $tablet) {
+	@media (max-width: $tablet-xlg) {
 		--fz: 1.4rem;
 	}
 }
@@ -33,7 +33,7 @@
 	cursor: pointer;
 	font-size: var(--fz);
 
-	@media (max-width: $tablet) {
+	@media (max-width: $tablet-xlg) {
 		line-height: initial;
 	}
 }

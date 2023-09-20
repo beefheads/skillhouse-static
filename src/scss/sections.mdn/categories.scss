@@ -7,7 +7,7 @@
 	grid-template-columns: repeat(2, 1fr);
 	gap: 3rem 2.1rem;
 
-	@media (max-width: $mobile-xl) {
+	@media (max-width: $mobile-xlg) {
 		grid-template-columns: 100%;
 		row-gap: 1.5rem;
 	}
@@ -21,15 +21,15 @@
 	overflow: hidden;
 	--content-width: 27rem;
 
-	@media (max-width: $tablet) {
+	@media (max-width: $tablet-xlg) {
 		--content-width: 20rem;
 	}
 	
-	@media (max-width: $mobile-xl) {
+	@media (max-width: $mobile-xlg) {
 		--content-width: 30rem;
 		min-height: 20.8rem;
 	}
-	@media (max-width: $mobile-l) {
+	@media (max-width: $mobile-lg) {
 		--content-width: 55.3%;
 	}
 }
@@ -40,15 +40,15 @@
 	padding: 4rem 0 4.4rem 6.9rem;
 	// padding: 4rem 6.9rem 4.4rem;
 
-	@media (max-width: $laptop) {
+	@media (max-width: $laptop-md) {
 		padding: 4rem 0 4.4rem 4rem;
 	}
 
-	@media (max-width: $tablet) {
+	@media (max-width: $tablet-xlg) {
 		padding: 2rem 0 2.4rem 3rem;
 	}
 
-	@media (max-width: $mobile-xl) {
+	@media (max-width: $mobile-xlg) {
 		padding: 2rem 0 2rem 2.5rem;
 		display: flex;
 		flex-direction: column;
@@ -65,7 +65,7 @@
 	height: 100%;
 	pointer-events: none;
 
-	@media (max-width: $mobile-xl) {
+	@media (max-width: $mobile-xlg) {
 		right: -4rem;
 	}
 }
@@ -91,7 +91,7 @@
 	margin-bottom: 1.5rem;
 	max-width: var(--content-width);
 
-	@media (max-width: $mobile-xl) {
+	@media (max-width: $mobile-xlg) {
 		font-size: 1.6rem;
 		margin-bottom: 0.4rem;
 	}
@@ -104,7 +104,7 @@
 	margin-bottom: 2rem;
 	max-width: var(--content-width);
 
-	@media (max-width: $mobile-xl) {
+	@media (max-width: $mobile-xlg) {
 		font-size: 1.4rem;
 	}
 }
@@ -113,11 +113,11 @@
 	font-size: 1.4rem;
 	position: static;
 
-	@media (min-width: $laptop + 1) {
+	@media (min-width: $laptop-md + 1) {
 		opacity: 0;
 	}
 
-	@media (max-width: $laptop) and (min-width: $mobile-xl) {
+	@media (max-width: $laptop-md) and (min-width: $mobile-xlg) {
     font-size: 1.9rem;
     padding-left: 2rem;
     padding-right: 2rem;
@@ -125,7 +125,7 @@
     padding-bottom: 1.7rem;
 	}
 
-	@media (max-width: $mobile-xl) {
+	@media (max-width: $mobile-xlg) {
 		font-size: 1.2rem;
 		margin-top: auto;
 	}

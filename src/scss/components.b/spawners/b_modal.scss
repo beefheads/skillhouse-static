@@ -108,7 +108,7 @@
   background-color: var(--closer-color);
   transition: all 0.3s ease;
 
-  @media (max-width: $tablet) {
+  @media (max-width: $tablet-xlg) {
     top: 46%;
     width: 70%;
   }

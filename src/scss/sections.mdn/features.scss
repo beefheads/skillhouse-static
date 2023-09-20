@@ -3,7 +3,7 @@
 	padding-top: 8rem;
 	padding-bottom: 10rem;
 
-	@media (max-width: $mobile-xl) {
+	@media (max-width: $mobile-xlg) {
 		padding-top: 3rem;
 		padding-bottom: 5rem;
 	}
@@ -15,11 +15,11 @@
 	align-items: end;
 	gap: 3rem;
 
-	@media (max-width: $tablet) {
+	@media (max-width: $tablet-xlg) {
 		align-items: stretch;
 	}
 
-	@media (max-width: $mobile-xl) {
+	@media (max-width: $mobile-xlg) {
 		grid-template-columns: 100%;
 		gap: 1.5rem;
 	}
@@ -31,14 +31,14 @@
 	border-radius: 20px;
 	padding: 4rem 3rem;
 
-	@media (max-width: $mobile-xl) {
+	@media (max-width: $mobile-xlg) {
 		padding: 2.1rem 2.3rem 3rem;
 	}
 }
 
 .features-card:first-child,
 .features-card:last-child {
-	@media (min-width: $laptop) {
+	@media (min-width: $laptop-md) {
 		background-color: transparent;
 		border: none;
 		background-repeat: no-repeat;
@@ -48,19 +48,19 @@
 }
 
 .features-card:first-child {
-	@media (min-width: $laptop) {
+	@media (min-width: $laptop-md) {
 		background-image: url("../img/features/card-left.svg");
 	}
 }
 
 .features-card:nth-child(2) {
-	@media (min-width: $laptop) {
+	@media (min-width: $laptop-md) {
 		padding-bottom: 6.5rem;
 	}
 }
 
 .features-card:last-child {
-	@media (min-width: $laptop) {
+	@media (min-width: $laptop-md) {
 		background-image: url("../img/features/card-right.svg");
 	}
 }
@@ -78,7 +78,7 @@
 	margin-left: auto;
 	margin-right: auto;
 
-	@media (max-width: $mobile-xl) {
+	@media (max-width: $mobile-xlg) {
 		--size: 10rem;
 		margin-bottom: 1.8rem;
 	}
@@ -104,7 +104,7 @@
 	font-size: 2rem;
 	line-height: 130.4%;
 
-	@media (max-width: $mobile-xl) {
+	@media (max-width: $mobile-xlg) {
 		font-size: 1.6rem;
 	}
 }

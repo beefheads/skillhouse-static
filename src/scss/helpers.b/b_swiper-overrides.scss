@@ -14,7 +14,7 @@
 	margin-top: 0;
 	transition: var(--tr-regular);
 
-	@media (max-width: $mobile-xl) {
+	@media (max-width: $mobile-xlg) {
 		--size: 4.4rem;
 	}
 }
@@ -51,7 +51,7 @@
 	height: 0.4rem;
 	opacity: 1;
 
-	@media (max-width: $mobile-xl) {
+	@media (max-width: $mobile-xlg) {
 		height: 0.5rem;
 	}
 }
@@ -65,7 +65,7 @@
 	opacity: 0.2;
 	position: relative;
 
-	@media (max-width: $mobile-xl) {
+	@media (max-width: $mobile-xlg) {
 		margin-left: clamp(0.3rem, 100%, 0.5rem);
 		margin-right: clamp(0.3rem, 100%, 0.5rem);
 	}

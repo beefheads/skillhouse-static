@@ -51,7 +51,7 @@
   color: $input-placeholder;
   pointer-events: none;
 
-  @media (max-width: $mobile-l) {
+  @media (max-width: $mobile-lg) {
     font-size: 16px;
   }
 }

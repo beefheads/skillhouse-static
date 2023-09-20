@@ -8,7 +8,7 @@
 	position: relative;
 	z-index: 2;
 
-	@media (min-width: $mobile-xl + 1) {
+	@media (min-width: $mobile-xlg + 1) {
 		margin-bottom: 7.1rem;
 	}
 }
@@ -22,7 +22,7 @@
 	z-index: 2;
 	counter-reset: ol;
 
-	@media (max-width: $mobile-xl) {
+	@media (max-width: $mobile-xlg) {
 		grid-template-columns: 100%;
 		gap: 2rem;
 		margin-bottom: 2.5rem;
@@ -34,7 +34,7 @@
 	position: relative;
 	counter-increment: ol;
 
-	@media (max-width: $mobile-xl) {
+	@media (max-width: $mobile-xlg) {
 		text-align: center;
 		display: flex;
 		flex-direction: column;
@@ -52,7 +52,7 @@
 	background-position: center;
 	background-size: contain;
 
-	@media (max-width: $mobile-xl) {
+	@media (max-width: $mobile-xlg) {
 		content: none;
 	}
 }	
@@ -68,12 +68,12 @@
 	position: relative;
 	z-index: 2;
 
-	@media (max-width: $mobile-xl) {
+	@media (max-width: $mobile-xlg) {
 		margin-bottom: 2.7rem;
 		--size: 11rem;
 	}
 
-	@media (max-width: $mobile-l) {
+	@media (max-width: $mobile-lg) {
 		margin-bottom: 2rem;
 	}
 }
@@ -101,7 +101,7 @@
 	border-radius: 100%;
 	background: var(--bg-primary);
 
-	@media (max-width: $mobile-xl) {
+	@media (max-width: $mobile-xlg) {
 		font-size: 2.4rem;
 		bottom: -1.6rem;
 		--size: 4rem;
@@ -129,7 +129,7 @@
 	line-height: 130.4%;
 	margin-bottom: 1.5rem;
 
-	@media (max-width: $mobile-xl) {
+	@media (max-width: $mobile-xlg) {
 		font-size: 1.6rem;
 		margin-bottom: 0.3rem;
 	}
@@ -140,13 +140,13 @@
 	font-size: 2rem;
 	line-height: 1.4;
 
-	@media (max-width: $mobile-xl) {
+	@media (max-width: $mobile-xlg) {
 		font-size: 1.4rem;
 	}
 }
 
 .cooperation-card__desc br {
-	@media (max-width: $mobile-xl) {
+	@media (max-width: $mobile-xlg) {
 		display: none;
 	}
 }
@@ -169,12 +169,12 @@
 	position: relative;
 	z-index: 2;
 
-	@media (max-width: $laptop) {
+	@media (max-width: $laptop-md) {
 		font-size: 1.7rem;
 		max-width: 47.9rem;
 	}
 
-	@media (max-width: $mobile-xl) {
+	@media (max-width: $mobile-xlg) {
 		flex-direction: column;
 		text-align: center;
 		padding-bottom: 2.7rem;
@@ -191,17 +191,17 @@
 	margin-top: 1.2rem;
 	margin-bottom: 1rem;
 
-	@media (max-width: $mobile-xl) {
+	@media (max-width: $mobile-xlg) {
 		margin-bottom: -1rem;
 	}
-	@media (max-width: $mobile-l) {
+	@media (max-width: $mobile-lg) {
 		font-size: 5.627rem;
 		margin-bottom: -0.3rem;
 	}
 }
 
 .cooperation__warning-text {
-	@media (min-width: $mobile-xl + 1) {
+	@media (min-width: $mobile-xlg + 1) {
 		margin-top: -1rem;
 	}
 }
@@ -213,13 +213,13 @@
   top: 1rem;
   left: 16rem;
 
-  @media (max-width: $tablet-l) {
+  @media (max-width: $tablet-lg) {
 	  width: 42.5rem;
   }
 }
 
 .cooperation-card:nth-child(2) {
-  @media (min-width: $mobile-xl + 1) {
+  @media (min-width: $mobile-xlg + 1) {
 	  margin-top: 12.5rem;
   }
 }
@@ -231,14 +231,14 @@
   top: 10rem;
   left: -46rem;
 
-  @media (max-width: $tablet-l) {
+  @media (max-width: $tablet-lg) {
     width: 67.3rem;
     transform: rotate(-11deg);
   }
 }
 
 .cooperation-card:nth-child(3) {
-  @media (min-width: $mobile-xl + 1) {
+  @media (min-width: $mobile-xlg + 1) {
 		margin-left: 10rem;
 		margin-top: -13rem;
 	}
@@ -251,13 +251,13 @@
   top: 11rem;
   left: 11rem;
 
-  @media (max-width: $laptop) {
+  @media (max-width: $laptop-md) {
 	  width: 46.5rem;
   }
 }
 
 .cooperation-card:nth-child(4) {
-  @media (min-width: $mobile-xl + 1) {
+  @media (min-width: $mobile-xlg + 1) {
 	  margin-top: 3rem;
 	  margin-left: 3rem;
 	}
@@ -282,13 +282,13 @@
 	top: 16rem;
 	left: 0;
 
-	@media (max-width: $laptop) {
+	@media (max-width: $laptop-md) {
 		top: 6rem;
 	}
-	@media (max-width: $mobile-xl) {
+	@media (max-width: $mobile-xlg) {
 		top: 96rem;
 	}
-	@media (max-width: $mobile-l) {
+	@media (max-width: $mobile-lg) {
 		top: 65rem;
     width: 7rem;
     height: 8rem;
@@ -303,15 +303,15 @@
 	top: 0;
 	right: 0;
 
-	@media (max-width: $tablet-l) {
+	@media (max-width: $tablet-lg) {
 		width: 26.6rem;
 	}
-	@media (max-width: $mobile-xl) {
+	@media (max-width: $mobile-xlg) {
 		top: 40rem;
     right: -18rem;
     transform: rotate(35deg);
 	}
-	@media (max-width: $mobile-l) {
+	@media (max-width: $mobile-lg) {
 		// top: 0;//5rem;
 		width: 24.6rem;
 		height: 24rem;
@@ -325,16 +325,16 @@
 	top: 57.5rem;
 	left: 0;
 
-	@media (max-width: $laptop) {
+	@media (max-width: $laptop-md) {
 		top: 67.5rem;
 	}
-	@media (max-width: $tablet-l) {
+	@media (max-width: $tablet-lg) {
 		width: 10.3rem;
 	}
-	@media (max-width: $mobile-xl) {
+	@media (max-width: $mobile-xlg) {
 		top: 25.5rem;
 	}
-	@media (max-width: $mobile-l) {
+	@media (max-width: $mobile-lg) {
 		width: 5rem;
 		top: 10.5rem
 	}
@@ -347,13 +347,13 @@
 	top: 63.7rem;
 	right: 0;
 
-	@media (max-width: $laptop) {
+	@media (max-width: $laptop-md) {
 		top: 80.7rem;
 	}
-	@media (max-width: $mobile-xl) {
+	@media (max-width: $mobile-xlg) {
 		top: 30.7rem;
 	}
-	@media (max-width: $mobile-l) {
+	@media (max-width: $mobile-lg) {
 		width: 6rem;
 		top: 15.2rem;
 	}
@@ -366,7 +366,7 @@
 	bottom: 0;
 	left: 0;
 
-	@media (max-width: $mobile-l) {
+	@media (max-width: $mobile-lg) {
 		width: 20.2rem;
     height: 26.1rem;
 	}
@@ -378,11 +378,11 @@
 	right: 0;
 	bottom: 0;
 
-	@media (max-width: $tablet-l) {
+	@media (max-width: $tablet-lg) {
 		width: 27.7rem;
     height: 48.4rem;
 	}
-	@media (max-width: $mobile-xl) {
+	@media (max-width: $mobile-xlg) {
 		display: none;
 	}
 }

@@ -10,7 +10,7 @@
 	background-color: #fff;
 	margin-bottom: 4rem;
 
-	@media (max-width: $tablet) {
+	@media (max-width: $tablet-xlg) {
 		border-radius: 1.5rem;
 		margin-bottom: 2.1rem;
 	}
@@ -49,7 +49,7 @@
 	--icon-stroke-color: var(--color);
 	transition: var(--tr-regular);
 
-	@media (max-width: $tablet) {
+	@media (max-width: $tablet-xlg) {
 		--size: 2.7rem;
 	}
 }
@@ -62,7 +62,7 @@
 	line-height: 1.4;
 	transition: var(--tr-regular);
 
-	@media (max-width: $tablet) {
+	@media (max-width: $tablet-xlg) {
 		font-size: 1.6rem;
 	}
 }
@@ -72,7 +72,7 @@
 }
 
 .search__scroller {
-	@media (max-width: $tablet) {
+	@media (max-width: $tablet-xlg) {
 		width: auto;
 		overflow-x: auto;
 		overflow-y: hidden;
@@ -87,7 +87,7 @@
 .search__filters {
 	padding: 0;
 
-	@media (max-width: $tablet) {
+	@media (max-width: $tablet-xlg) {
 		display: flex;
 		width: auto;
 		padding-bottom: 1.5rem;

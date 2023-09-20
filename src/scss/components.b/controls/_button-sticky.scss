@@ -9,23 +9,23 @@
   z-index: 15;
   margin-top: 10rem;
 
-  @media (max-width: $desktop-l) {
+  @media (max-width: $desktop-lg) {
   	bottom: 36rem;
   }
-  @media (max-width: $desktop-m) {
+  @media (max-width: $desktop-md) {
     bottom: 46rem;
   }
 
-  @media (max-width: $laptop-m) {
+  @media (max-width: $laptop-xlg) {
     // bottom: 20rem;
     bottom: 35rem;
   }
-  @media (max-width: $desktop-s) {
+  @media (max-width: $laptop-lg) {
     bottom: 40rem;
     // bottom: 46rem;
   }
 
-  @media (max-width: $laptop) {
+  @media (max-width: $laptop-md) {
     bottom: 0rem;
     margin-top: 5rem;
   }
@@ -40,11 +40,11 @@
 .button-sticky--active {
   bottom: 5rem;
 
-  @media (max-width: $laptop) {
+  @media (max-width: $laptop-md) {
     bottom: 2rem;
   }
 
-  @media (max-width: $mobile-l) {
+  @media (max-width: $mobile-lg) {
     bottom: 0;
   }
 }

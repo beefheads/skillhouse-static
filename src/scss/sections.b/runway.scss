@@ -7,25 +7,25 @@
 	// margin-bottom: 0rem;
 
 
-	@media (max-width: $laptop) {
+	@media (max-width: $laptop-md) {
 		margin-bottom: 3.3rem;
 		// margin-left: #{'calc(0px - var(--p-container))'};
 	  overflow: hidden;
 	  max-width: 100%;
 	}
-	@media (max-width: $mobile-xl) {
+	@media (max-width: $mobile-xlg) {
 		// margin-right: #{'calc(0px - var(--p-container))'};
 	}
 }
 
 .showcase__runway {
-	@media (max-width: $laptop) {
+	@media (max-width: $laptop-md) {
 		margin-bottom: 0;
 	}
 }
 
 .runway__shaft {
-  @media (max-width: $tablet) {
+  @media (max-width: $tablet-xlg) {
 	  -webkit-mask-image: var(--mask);
 	  mask: var(--mask);
 	}
@@ -36,7 +36,7 @@
 	justify-content: space-between;
 	align-items: center;
 
-	@media (max-width: $laptop) {
+	@media (max-width: $laptop-md) {
 	  overflow-x: auto;
 		justify-content: flex-start;
 		margin-bottom: -2rem;
@@ -45,12 +45,12 @@
 }
 
 .categories-showcase__gallery.runway {
-	@media (min-width: $tablet + 1) {
+	@media (min-width: $tablet-xlg + 1) {
 		overflow: visible;
 	}
 }
 .categories-showcase__gallery .runway__lift {
-	@media (min-width: $tablet + 1) {
+	@media (min-width: $tablet-xlg + 1) {
 		display: grid;
 		grid-template-columns: repeat(auto-fill, minmax(37rem, 1fr));
 		gap: 3rem;
@@ -60,7 +60,7 @@
 }
 
 .showcase .runway__lift {
-	@media (max-width: $laptop) {
+	@media (max-width: $laptop-md) {
 		padding-left: var(--p-container);
 		padding-right: var(--p-container);
 	}
@@ -69,7 +69,7 @@
 .product__related .runway__lift {
 	justify-content: flex-end;
 
-	@media (max-width: $mobile-xl) {
+	@media (max-width: $mobile-xlg) {
 		justify-content: flex-start;
 	}
 }
@@ -79,7 +79,7 @@
 }
 
 .runway__lift::after {
-	@media (max-width: $tablet) {
+	@media (max-width: $tablet-xlg) {
 		content: "";
 		display: block;
 		min-width: #{'calc(var(--p-container) / 2)'};
@@ -89,14 +89,14 @@
 }
 
 .categories-showcase__gallery .runway__lift::after {
-	@media (min-width: $tablet + 1) {
+	@media (min-width: $tablet-xlg + 1) {
 		display: none;
 	}
 }
 
 .runway__lift > * {
   margin-bottom: 2rem;
-  @media (max-width: $tablet) {
+  @media (max-width: $tablet-xlg) {
 		margin-right: 1.6rem;
 	}
 }
@@ -107,12 +107,12 @@
 	white-space: nowrap;
 	font-size: 1.6rem;
 
-	@media (max-width: $laptop) {
+	@media (max-width: $laptop-md) {
 		flex-basis: initial;
 		margin-right: 1rem;
 	}
 
-	@media (max-width: $tablet) {
+	@media (max-width: $tablet-xlg) {
 		margin-bottom: 2rem;
 		font-size: 1.4rem;
 	}

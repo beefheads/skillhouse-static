@@ -10,7 +10,7 @@
 	display: flex;
 	flex-direction: column;
 
-	@media (max-width: $mobile-xl) {
+	@media (max-width: $mobile-xlg) {
 		max-width: 30rem;
 		padding-left: 1.5rem;
 		padding-right: 1.5rem;
@@ -36,7 +36,7 @@
 	text-align: center;
 	color: #565656;
 
-	@media (max-width: $mobile-xl) {
+	@media (max-width: $mobile-xlg) {
 		font-size: 2.5rem;
 		margin-bottom: 1rem;
 		text-align: left;
@@ -50,7 +50,7 @@
 	text-align: center;
 	color: #9a9a9a;
 
-	@media (max-width: $mobile-xl) {
+	@media (max-width: $mobile-xlg) {
 		font-size: 1.4rem;
 		margin-bottom: 1.5rem;
 		text-align: left;
@@ -58,7 +58,7 @@
 }
 
 .modal__desc br {
-	@media (max-width: $mobile-xl) {
+	@media (max-width: $mobile-xlg) {
 		display: none;
 	}
 }
@@ -69,7 +69,7 @@
 	width: 100%;
 	border-radius: 0.6rem;
 
-	@media (max-width: $mobile-xl) {
+	@media (max-width: $mobile-xlg) {
 		--fz-button: 1.6rem;
 	}
 }
@@ -84,7 +84,7 @@
 	max-width: var(--w-container);
 	width: 100%;
 
-	@media (min-width: $mobile-xl + 1) {
+	@media (min-width: $mobile-xlg + 1) {
 		padding-top: 6rem;
 		padding-bottom: 6rem;
 		padding-left: 7rem;
@@ -93,7 +93,7 @@
 }
 
 .modal--wide .modal__title {
-	@media (min-width: $laptop + 1) {
+	@media (min-width: $laptop-md + 1) {
 		text-align: left;
 		font-size: 4.5rem;
 		margin-bottom: 1.9rem;
@@ -101,7 +101,7 @@
 }
 
 .modal--wide .modal__desc {
-	@media (min-width: $laptop + 1) {
+	@media (min-width: $laptop-md + 1) {
 		text-align: left;
 		font-size: 1.6rem;
 		margin-bottom: 5rem;
@@ -109,7 +109,7 @@
 }
 
 .modal--wide .form__fields {
-	@media (min-width: $laptop + 1) {
+	@media (min-width: $laptop-md + 1) {
 		display: grid;
 		grid-template-columns: 3fr 1fr;
 		gap: 2.3rem;
@@ -117,7 +117,7 @@
 }
 
 .modal--wide .form__row {
-	@media (min-width: $laptop + 1) {
+	@media (min-width: $laptop-md + 1) {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;

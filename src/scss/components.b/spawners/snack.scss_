@@ -16,7 +16,7 @@
   background: #F6F6F6;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
-  @media (max-width: $tablet) {
+  @media (max-width: $tablet-xlg) {
     left: 0;
     right: 0;
     padding:  0.5rem 2.7857142857142856rem 0.5rem 2.2142857142857144rem;
@@ -31,7 +31,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  @media (max-width: $tablet) {
+  @media (max-width: $tablet-xlg) {
     max-width: 100%;
     width: 100%;
     display: flex;
@@ -43,7 +43,7 @@
   margin-right: 5.3125rem;
   max-width: 31.25rem;
   font-size: 0.875rem;
-  @media (max-width: $tablet) {
+  @media (max-width: $tablet-xlg) {
     font-size: 0.86rem;
     max-width: 100%;
     margin-right: 0;
@@ -58,7 +58,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  @media (max-width: $tablet) {
+  @media (max-width: $tablet-xlg) {
     max-width: 100%;
     // padding-top: 0.9rem;
   }
@@ -73,7 +73,7 @@
   border-radius: 0.3125rem;
   font-size: 16px;
   color: var(--c-accent);
-  @media (max-width: $tablet) {
+  @media (max-width: $tablet-xlg) {
     width: 100%;
     max-width: 100%;
   }

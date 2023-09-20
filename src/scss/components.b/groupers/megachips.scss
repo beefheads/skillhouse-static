@@ -1,12 +1,12 @@
 .megachips {
 	display: flex;
 	align-items: center;
-	@media (max-width: $tablet) {
+	@media (max-width: $tablet-xlg) {
 		position: relative;
 		flex-direction: column;
 	}
 }
-@media (max-width: $tablet) {
+@media (max-width: $tablet-xlg) {
 	.megachips::before,
 	.megachips::after {
 		content: "";
@@ -32,7 +32,7 @@
 	display: flex;
 	flex-wrap: wrap;
 	white-space: nowrap;
-	@media (max-width: $tablet) {
+	@media (max-width: $tablet-xlg) {
 		position: absolute;
 		left: 0;
 		top: 4.5rem;
@@ -48,7 +48,7 @@
 	}
 }
 .megachips._active .megachips__list {
-	@media (max-width: $tablet) {
+	@media (max-width: $tablet-xlg) {
 		pointer-events: initial;
 		opacity: 1;
 		transform: translateY(0);
@@ -64,7 +64,7 @@
 	font-style: italic;
 	font-weight: 600;
 	border-radius: 20px 20px 0 0;
-	@media (max-width: $tablet) {
+	@media (max-width: $tablet-xlg) {
 		display: block;
 		margin-right: 0;
 		padding-top: 0.42857142857142855rem;
@@ -81,7 +81,7 @@
 	padding-right: 3.75rem;
 	font-style: normal;
 	position: relative;
-	@media (max-width: $tablet) {
+	@media (max-width: $tablet-xlg) {
 		text-align: left;
 		padding-top: 0.42857142857142855rem;
 		padding-right: 2.0714285714285716rem;
@@ -98,7 +98,7 @@
 	width: 70px;
   height: 32px;
 	border-radius: 50%;
-	@media (max-width: $tablet) {
+	@media (max-width: $tablet-xlg) {
 		display: none;
 	}
 }
@@ -128,11 +128,11 @@
 	font-style: normal;
 	position: relative;
 
-	@media (min-width: ($tablet)) {
+	@media (min-width: ($tablet-xlg)) {
 		display: none;
 	}
 }
-@media (max-width: $tablet) {
+@media (max-width: $tablet-xlg) {
 	.megachips__current::after {
 		position: absolute;
 		top: 1.25rem;//20px;

@@ -7,7 +7,7 @@
   --closer-width: 3rem;
   --closer-height: 3rem;
 
-  @media (max-width: $tablet) {
+  @media (max-width: $tablet-xlg) {
 	  --closer-width: 1.6rem;
 	  --closer-height: 1.6rem;
 	  --toggler-line-height: 0.2rem;
@@ -123,7 +123,7 @@
   transform: none;
   background: transparent;
 
-  @media (max-width: $mobile-l) {
+  @media (max-width: $mobile-lg) {
     border-width: 1.5rem 0.9rem 0px 0.9rem;
   }
 }
@@ -137,10 +137,10 @@
 .bayan--toggler-triangle .bayan--opened .bayan__toggler::before {
   top: 0.7rem;
 
-  @media (max-width: $mobile-xl) {
+  @media (max-width: $mobile-xlg) {
     top: -1.3rem;
   }
-  @media (max-width: $mobile-l) {
+  @media (max-width: $mobile-lg) {
     left: 1.4rem;
     top: 2.2rem;
   }

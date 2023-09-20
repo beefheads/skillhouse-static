@@ -3,7 +3,7 @@
 	--cart-grid: 11rem 16rem 14.2rem 13.5rem 11.5rem 11.5rem;
 	--cart-gap: 1.6rem;
 
-	@media (max-width: $tablet) {
+	@media (max-width: $tablet-xlg) {
 		--cart-grid: 11rem 19rem 15.2rem 14.5rem 12.5rem 12.5rem;
 		--cart-gap: 1rem 1.5rem;
 	}
@@ -14,12 +14,12 @@
 	grid-template-columns: auto 36rem;
 	gap: 3rem;
 
-	@media (max-width: $desktop-m) and (min-width: $laptop + 1) {
+	@media (max-width: $desktop-md) and (min-width: $laptop-md + 1) {
     max-width: 100%;
     --p-container: 8rem;
 	}
 
-	@media (max-width: $laptop) {
+	@media (max-width: $laptop-md) {
 		grid-template-columns: 100%;
 	}
 }
@@ -54,7 +54,7 @@
 	line-height: 120%;
 	margin-bottom: 0.3em;
 
-	@media (max-width: $mobile-xl) {
+	@media (max-width: $mobile-xlg) {
 		font-size: 1.8rem;
 	}
 }
@@ -75,7 +75,7 @@
 	font-size: 1.4rem;
 	color: var(--fg-third);
 
-	@media (max-width: $mobile-xl) {
+	@media (max-width: $mobile-xlg) {
 		font-size: 1.3rem;
 	}
 }

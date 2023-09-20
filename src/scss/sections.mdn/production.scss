@@ -5,7 +5,7 @@
 }
 
 .production__container {
-	@media (max-width: $mobile-xl) {
+	@media (max-width: $mobile-xlg) {
 		z-index: 2;
 		position: relative;
 	}
@@ -14,7 +14,7 @@
 .production__title {
 	margin-bottom: 6.7rem;
 
-	@media (max-width: $mobile-xl) {
+	@media (max-width: $mobile-xlg) {
 		margin-bottom: 2.7rem;
 	}
 }
@@ -25,7 +25,7 @@
 	gap: 8.5rem 2rem;
 	margin-bottom: 17rem;
 
-	@media (max-width: $laptop) {
+	@media (max-width: $laptop-md) {
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
@@ -34,7 +34,7 @@
 		margin-bottom: 10rem;
 	}
 
-	@media (max-width: $mobile-xl) {
+	@media (max-width: $mobile-xlg) {
 		margin-bottom: 5rem;
 		align-items: center;
 	}
@@ -44,13 +44,13 @@
 	position: relative;
 	max-width: 35rem;
 
-	@media (max-width: $mobile-xl) {
+	@media (max-width: $mobile-xlg) {
 		margin-bottom: 3rem;
 	}
 }
 
 .production-card:last-of-type {
-	@media (max-width: $mobile-xl) {
+	@media (max-width: $mobile-xlg) {
 		margin-bottom: 0;
 	}
 }
@@ -66,7 +66,7 @@
 	width: 45rem;
 	height: 20rem;
 
-	@media (max-width: $mobile-xl) {
+	@media (max-width: $mobile-xlg) {
 		display: none;
 	}
 }
@@ -84,7 +84,7 @@
 	position: relative;
 	z-index: 2;
 
-	@media (max-width: $mobile-xl) {
+	@media (max-width: $mobile-xlg) {
 		--size: 11rem;
 		margin-left: auto;
 		margin-right: auto;
@@ -109,7 +109,7 @@
 	position: relative;
 	z-index: 2;
 
-	@media (max-width: $mobile-xl) {
+	@media (max-width: $mobile-xlg) {
 		text-align: center;
 		font-size: 1.4rem;
 		margin-bottom: 0.4em;
@@ -123,7 +123,7 @@
 .production-card:nth-of-type(1) {
 	order: -8;
 
-  @media (max-width: $laptop) {
+  @media (max-width: $laptop-md) {
 		order: initial;
   }
 }
@@ -133,7 +133,7 @@
   left: 4.4rem;
   top: 3.5rem;
 
-  @media (max-width: $laptop) {
+  @media (max-width: $laptop-md) {
   	width: 65rem;
     height: 30rem;
   }
@@ -143,13 +143,13 @@
 	top: 6.6rem;
 	order: -7;
 
-	@media (max-width: $laptop) {
+	@media (max-width: $laptop-md) {
 		margin-top: -24.6rem;
 		top: 0;
 		order: initial;
 	}
 
-	@media (max-width: $mobile-xl) {
+	@media (max-width: $mobile-xlg) {
 		margin-top: 0;
 	}
 }
@@ -159,7 +159,7 @@
   left: 6rem;
   top: -2.7rem;
 
-  @media (max-width: $laptop) {
+  @media (max-width: $laptop-md) {
   	left: -54rem;
     top: 7.3rem;
     transform: rotate(-6.4deg);
@@ -173,10 +173,10 @@
 	order: -6;
 	max-width: 100%;
 
-  @media (max-width: $laptop) {
+  @media (max-width: $laptop-md) {
 		order: initial;
   }
-	@media (max-width: $mobile-xl) {
+	@media (max-width: $mobile-xlg) {
 		top: 0;
 		max-width: 35rem;
 	}
@@ -189,7 +189,7 @@
   top: 9.5rem;
   left: -1rem;
 
-  @media (max-width: $laptop) {
+  @media (max-width: $laptop-md) {
     width: 80rem;
     height: 22rem;
     top: 9.5rem;
@@ -207,12 +207,12 @@
 	top: 5.5rem;
 	max-width: 100%;
 
-	@media (max-width: $laptop) {
+	@media (max-width: $laptop-md) {
 		order: initial;
 		grid-column-end: initial;
 	}
 	
-	@media (max-width: $mobile-xl) {
+	@media (max-width: $mobile-xlg) {
 		top: 0;
 		max-width: 35rem;
 	}
@@ -224,7 +224,7 @@
   right: 46rem;
   width: 52rem;
 
-  @media (max-width: $laptop) {
+  @media (max-width: $laptop-md) {
     top: 17rem;
     right: 26rem;
     width: 62rem;
@@ -238,11 +238,11 @@
   top: 3.8rem;
   max-width: 29rem;
 
-  @media (max-width: $laptop) {
+  @media (max-width: $laptop-md) {
 		order: initial;
   }
 
-  @media (max-width: $mobile-xl) {
+  @media (max-width: $mobile-xlg) {
   	left: 0;
   	top: 0;
   }
@@ -254,7 +254,7 @@
   left: -31rem;
   top: 10rem;
 
-  @media (max-width: $laptop) {
+  @media (max-width: $laptop-md) {
     width: 66rem;
     left: -6rem;
     top: 17rem;
@@ -267,7 +267,7 @@
 	top: 8.4rem;
 	max-width: 36rem;
 
-	@media (max-width: $mobile-xl) {
+	@media (max-width: $mobile-xlg) {
 		top: 0;
 	}
 }
@@ -277,7 +277,7 @@
   width: 67rem;
   height: 10rem;
 
-  @media (max-width: $laptop) {
+  @media (max-width: $laptop-md) {
   	top: 5rem;
     height: 30rem;
     left: -50rem;
@@ -289,7 +289,7 @@
   top: -2.2rem;
   left: 2.3rem;
 
-  @media (max-width: $mobile-xl) {
+  @media (max-width: $mobile-xlg) {
   	top: 0;
   	left: 0;
   }
@@ -301,7 +301,7 @@
   top: 2rem;
   left: 14rem;
 
-  @media (max-width: $laptop) {
+  @media (max-width: $laptop-md) {
     width: 57rem;
     height: 31rem;
     top: 4.4rem;
@@ -315,12 +315,12 @@
   top: 4rem;
   max-width: 30rem;
 
-  @media (max-width: $laptop) {
+  @media (max-width: $laptop-md) {
   	left: -5rem;
   	margin-top: -15rem;
   }
 
-  @media (max-width: $mobile-xl) {
+  @media (max-width: $mobile-xlg) {
   	top: 0;
   	left: 0;
   	margin-top: 0;
@@ -328,7 +328,7 @@
 }
 
 .production-card:nth-of-type(even) {
-	@media (max-width: $laptop) and (min-width: $mobile-xl + 1) {
+	@media (max-width: $laptop-md) and (min-width: $mobile-xlg + 1) {
 		margin-left: auto;
 	}
 }
@@ -349,7 +349,7 @@
 	background-size: contain;
 	pointer-events: none;
 
-	@media (max-width: $mobile-xl) {
+	@media (max-width: $mobile-xlg) {
 		z-index: 1;
 	}
 }
@@ -360,7 +360,7 @@
 	left: 0;
 	top: 0;
 
-	@media (max-width: $mobile-xl) {
+	@media (max-width: $mobile-xlg) {
     width: 8.6rem;
     height: 25.7rem;
 	}
@@ -373,7 +373,7 @@
 	top: 28.4rem;
 	right: 0;
 
-	@media (max-width: $mobile-xl) {
+	@media (max-width: $mobile-xlg) {
     width: 8.3rem;
     height: 11.4rem;
     top: 38.4rem;
@@ -387,7 +387,7 @@
 	right: 0;
 	top: 71.6rem;
 
-	@media (max-width: $mobile-xl) {
+	@media (max-width: $mobile-xlg) {
     width: 7.4rem;
     height: 7.8rem;
     top: 66.6rem;
@@ -401,7 +401,7 @@
 	bottom: 0;
 	left: 0;
 
-	@media (max-width: $mobile-xl) {
+	@media (max-width: $mobile-xlg) {
 		width: 19.5rem;
     height: 29.3rem;
 	}
@@ -414,7 +414,7 @@
 	bottom: 0;
 	right: 0;
 
-	@media (max-width: $mobile-xl) {
+	@media (max-width: $mobile-xlg) {
 		width: 19.5rem;
     height: 31.3rem;
 	}

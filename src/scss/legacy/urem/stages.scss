@@ -8,10 +8,10 @@
 	z-index: 2;
 }
 .stages__title {
-	@media (max-width: $tablet) {
+	@media (max-width: $tablet-xlg) {
 		margin-bottom: 2.143rem;
 	}
-	@media (max-width: $mobile-l) {
+	@media (max-width: $mobile-lg) {
 		margin-bottom: 4.143rem;
 	}
 }
@@ -21,10 +21,10 @@
 	column-gap: rem(20);
 	row-gap: rem(32);
 	counter-reset: stages-cards;
-	@media (max-width: $desktop-m) {
+	@media (max-width: $desktop-md) {
 		row-gap: 1.25rem;
 	}
-	@media (max-width: $tablet) {
+	@media (max-width: $tablet-xlg) {
 		grid-template-columns: 1fr 1fr;
 	}
 	@media (max-width: $w-mobile) {
@@ -39,10 +39,10 @@
 	border-radius: 1.25rem;//rem(20);
 	padding: rem(74) rem(23) rem(16) rem(23);
 	letter-spacing: -0.5px;
-	@media (max-width: $desktop-s) {
+	@media (max-width: $laptop-lg) {
 		padding-bottom: 1.4rem;
 	}
-	@media (max-width: $tablet) {
+	@media (max-width: $tablet-xlg) {
 		padding: 2.825rem 1.238rem 1.8rem 1.238rem;
 		border-radius: 1.428rem;
 	}
@@ -58,7 +58,7 @@
 	align-items: center;
 	width: rem(58);
 	height: rem(58);
-	@media (max-width: $tablet) {
+	@media (max-width: $tablet-xlg) {
 		top: -1.59rem;
 		left: 0.1rem;
 		width: 3rem;
@@ -76,7 +76,7 @@
 	border-bottom: rem(10) solid #F6F6F6;
 	border-left: rem(8) solid #F6F6F6;
 	border-color: #ffffff;
-	@media (max-width: $tablet) {
+	@media (max-width: $tablet-xlg) {
 		border-width: 0.428rem;
 		border-top-width: 0.357rem;
 	}
@@ -92,7 +92,7 @@
 	font-family: var(--ff-em);
 	font-size: rem(22);
 	color: var(--c-text-on);
-	@media (max-width: $tablet) {
+	@media (max-width: $tablet-xlg) {
 		font-size: 1.142rem;
 	}
 }
@@ -111,13 +111,13 @@
 
 
 .stages__gallery--work > .stages-card:nth-child(3) {
-	@media (min-width: ($tablet + 1)) {
+	@media (min-width: ($tablet-xlg + 1)) {
 		grid-row-start: 1;
 		grid-row-end: 3;
 		grid-column-start: 3;
 		grid-column-end: 4;
 	}
-	@media (max-width: $tablet) {
+	@media (max-width: $tablet-xlg) {
 		padding-bottom: 0.642rem;
 		margin-bottom: -0.714rem;
 	}
@@ -127,16 +127,16 @@
 	font-size: 1rem;
 	margin-bottom: rem(20);
 	font-weight: 600;
-	@media (max-width: $desktop-s) {
+	@media (max-width: $laptop-lg) {
 		margin-bottom: 0.55rem;
 	}
-	@media (max-width: $tablet) {
+	@media (max-width: $tablet-xlg) {
 		margin-bottom: 0.714rem;
 	}
 }
 .stages-card__desc {
 	font-size: 1rem;
-	@media (max-width: $tablet) {
+	@media (max-width: $tablet-xlg) {
 		letter-spacing: initial;
 		line-height: initial;
 	}
@@ -155,7 +155,7 @@
 	min-height: rem(205);
 	margin-top: rem(37);
 	overflow: hidden;
-	@media (max-width: $tablet) {
+	@media (max-width: $tablet-xlg) {
 		padding-top: 0.928rem;
 		padding-left: 0.714rem;
 		padding-bottom: 1.357rem;
@@ -171,7 +171,7 @@
 	font-size: 0.875rem; //14
 	font-style: normal;
 	font-weight: 400;
-	@media (max-width: $tablet) {
+	@media (max-width: $tablet-xlg) {
 		max-width: 10.857rem;
 		font-size: 1rem;
 		letter-spacing: initial;
@@ -181,14 +181,14 @@
 	@media (max-width: $w-mobile) {
 		max-width: 64%;
 	}
-	@media (max-width: $mobile-l) {
+	@media (max-width: $mobile-lg) {
 		max-width: 10.857rem;
 	}
 }
 .stages-card__quote-cite {
 	font-family: var(--ff-em);
 	font-size: 1.25rem;
-	@media (max-width: $tablet) {
+	@media (max-width: $tablet-xlg) {
 		font-size: 1rem;
 		letter-spacing: initial;
 	}
@@ -199,13 +199,13 @@
 	bottom: 0;
 	height: 100%;
 	width: rem(208);
-	@media (max-width: $desktop-l) {
+	@media (max-width: $desktop-lg) {
 		width: 11rem;
 	}
-	@media (max-width: $desktop-m) {
+	@media (max-width: $desktop-md) {
 		width: 10rem;
 	}
-	@media (max-width: $tablet) {
+	@media (max-width: $tablet-xlg) {
 		right: -29px;
 		height: 94%;
 		width: 12rem;
@@ -222,7 +222,7 @@
 	border-bottom: 1px solid var(--color);
 	font-family: var(--ff-em);
 	font-size: 1.25rem;
-	@media (max-width: $tablet) {
+	@media (max-width: $tablet-xlg) {
 		font-size: 1.143rem;
 	}
 }

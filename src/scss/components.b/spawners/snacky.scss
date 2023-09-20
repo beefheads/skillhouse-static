@@ -23,7 +23,7 @@
   opacity: 0;
   transform: translateY(2rem);
 
-  @media (max-width: $tablet-l) {
+  @media (max-width: $tablet-lg) {
     max-width: 25rem;
   }
 }

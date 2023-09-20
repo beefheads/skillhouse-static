@@ -121,7 +121,7 @@
   border-width: 0 0.8rem 1rem 0.8rem;
   border-color: transparent transparent var(--bg-card) transparent;
 
-  @media (max-width: $mobile-l) {
+  @media (max-width: $mobile-lg) {
     right: 8.4rem;
   }
 }
@@ -155,7 +155,7 @@
   --c-burger-line: #777782;
   --line-width: 71.25%;
 
-  @media (max-width: $tablet) {
+  @media (max-width: $tablet-xlg) {
     margin-left: 1.8rem;
   }
 }

@@ -1,9 +1,9 @@
 .turnkey {
 	padding-bottom: 6.5rem;
-	@media (max-width: $desktop-m) {
+	@media (max-width: $desktop-md) {
 		padding-bottom: 4.5rem;
 	}
-	@media (max-width: $desktop-s) {
+	@media (max-width: $laptop-lg) {
 		padding-top: 6rem;
 	}
 	@media (max-width: $w-mobile) {
@@ -28,7 +28,7 @@
 	color: var(--color);
 	max-width: 32.142007%;
 	width: 100%;
-	@media (max-width: $tablet) {
+	@media (max-width: $tablet-xlg) {
 		max-width: 100%;
 		padding-top: 1.315rem;
 		padding-bottom: 1.928rem;
@@ -53,7 +53,7 @@
 	font-weight: 600;
 	font-style: italic;
 	margin-bottom: 9.6875rem;//rem(155);
-	@media (max-width: $tablet) {
+	@media (max-width: $tablet-xlg) {
 		margin-left: 0;
 		font-size: 0.857rem;//rem(12);
 		padding-right: 0.9285714285714286rem;
@@ -76,7 +76,7 @@
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: center;
-	@media (max-width: $tablet) {
+	@media (max-width: $tablet-xlg) {
 		left: -1.2rem;
 	}
 }
@@ -176,18 +176,18 @@
 .turnkey__gallery > .turnkey-card:nth-child(1) .turnkey-card__shield,
 .turnkey__gallery > .turnkey-card:nth-child(2) .turnkey-card__shield {
 	margin-bottom: rem(255);
-	@media (max-width: $tablet) {
+	@media (max-width: $tablet-xlg) {
 		margin-bottom: 14.642857142857142rem;//205
 	}
 }
 .turnkey__gallery > .turnkey-card:nth-child(1) {
-	@media (min-width: ($tablet + 1)) {
+	@media (min-width: ($tablet-xlg + 1)) {
 		max-width: 59.628252788104085%;
 
 	}
 }
 .turnkey__gallery > .turnkey-card:nth-child(2) {
-	@media (min-width: ($tablet + 1)) {
+	@media (min-width: ($tablet-xlg + 1)) {
 		max-width: 38.876952%;
 	}
 }

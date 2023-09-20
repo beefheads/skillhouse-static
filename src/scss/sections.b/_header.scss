@@ -33,7 +33,7 @@ body:not(._lock) .header--hidden {
     background-color: inherit;
   }
 
-  @media (max-width: $mobile-l) {
+  @media (max-width: $mobile-lg) {
     padding-right: 0.5rem;
   }
 }
@@ -41,7 +41,7 @@ body:not(._lock) .header--hidden {
 .header__logo {
   margin-right: 8rem;
 
-  @media (max-width: $laptop) {
+  @media (max-width: $laptop-md) {
     margin-right: 3rem;
   }
 
@@ -59,7 +59,7 @@ body:not(._lock) .header--hidden {
   justify-content: flex-start;
   transition: all 0.5s var(--tr-jolly-enter);
 
-  @media (max-width: $mobile-xl) {
+  @media (max-width: $mobile-xlg) {
     margin-left: #{'calc(0px - var(--p-container))'};
     margin-right: #{'calc(0px - var(--p-container))'};
     overflow: hidden;
@@ -97,7 +97,7 @@ body:not(._lock) .header--hidden {
 .header__nav {
   // margin-right: auto;
 
-  // @media (max-width: $tablet) {
+  // @media (max-width: $tablet-xlg) {
   //   margin-bottom: auto;
   // }
 
@@ -107,7 +107,7 @@ body:not(._lock) .header--hidden {
   // }
   width: 100%;
 
-  @media (max-width: $mobile-xl) {
+  @media (max-width: $mobile-xlg) {
     padding-left: var(--p-container);
     padding-right: var(--p-container);
     width: 100%;
@@ -131,7 +131,7 @@ body:not(._lock) .header--hidden {
     font-size: 1.8rem;
   }
   */
-  @media (max-width: $mobile-xl) {
+  @media (max-width: $mobile-xlg) {
     white-space: nowrap;
     display: flex;
     align-items: center;
@@ -157,7 +157,7 @@ body:not(.page-home) .header__nav-item {
 }
 
 .header__nav-item:last-child {
-  @media (max-width: $mobile-xl) {
+  @media (max-width: $mobile-xlg) {
     position: absolute;
     top: 1rem;
     right: #{'calc(2 * var(--p-container))'};
@@ -167,15 +167,15 @@ body:not(.page-home) .header__nav-item {
 .header__nav-item:not(:last-child) {
   margin-right: 11rem;
 
-  @media (max-width: $desktop-s) {
+  @media (max-width: $laptop-lg) {
     margin-right: 3rem;
   }
 
-  @media (max-width: $laptop) {
+  @media (max-width: $laptop-md) {
     margin-right: 3.4rem;
   }
 
-  @media (max-width: $mobile-xl) {
+  @media (max-width: $mobile-xlg) {
     margin-bottom: 2rem;
     margin-right: 2rem;
   }
@@ -192,7 +192,7 @@ body:not(.page-home) .header__nav-item {
   margin-left: auto;
   margin-right: 4rem;
 
-  @media (max-width: $mobile-xl) {
+  @media (max-width: $mobile-xlg) {
     margin-left: initial;
     padding-right: 2rem;
   }
@@ -206,7 +206,7 @@ body:not(.page-home) .header__nav-item {
   color: inherit;
   transition: all 0.3s ease;
 
-  @media (max-width: $laptop) {
+  @media (max-width: $laptop-md) {
     padding-top: 2rem;
     padding-bottom: 2rem;
   }

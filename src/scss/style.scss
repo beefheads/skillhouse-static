@@ -33,15 +33,15 @@ html {
   --fz-modifier: 0.520834;
   font-size: #{'calc(var(--fz-modifier) * var(--base-size))'};//calc(0.342466 * var(--base-size)); //10px for 1920×1000
 
-  @media (max-width: $laptop) {
+  @media (max-width: $laptop-md) {
     --fz-modifier: 1.020834;
   }
 
-  @media (max-width: $mobile-xl) {
+  @media (max-width: $mobile-xlg) {
     --fz-modifier: 1.663894;
   }
 
-  @media (max-width: $mobile-l) {
+  @media (max-width: $mobile-lg) {
     --fz-modifier: 3.125;
   }
 }
@@ -55,10 +55,10 @@ body {
 
   overscroll-behavior: none;
 
-  @media (max-width: $tablet) and (min-width: $mobile-xl + 1) {
+  @media (max-width: $tablet-xlg) and (min-width: $mobile-xlg + 1) {
     font-size: 2rem;
   }
-  @media (max-width: $mobile-l) {
+  @media (max-width: $mobile-lg) {
     font-size: 2rem;
   }
 }
@@ -91,7 +91,7 @@ body._lock {
 }
 
 .main {
-  @media (max-width: $laptop) {
+  @media (max-width: $laptop-md) {
     margin-top: auto;
   }
 }

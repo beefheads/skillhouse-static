@@ -14,7 +14,7 @@
   --c-button-disabled: #4B4B4B;
 
 
-  @media (max-width: $mobile-xl) {
+  @media (max-width: $mobile-xlg) {
     --fz-button: 1.7rem;
   }
 }
@@ -68,7 +68,7 @@
 
   transition: var(--tr-regular);
 
-  @media (max-width: $mobile-xl) {
+  @media (max-width: $mobile-xlg) {
     // padding: 1.6rem 3.5rem 2.1rem 3.5rem;
     padding: 1.6rem 3.5rem 1.9rem 3.5rem;
   }
@@ -100,7 +100,7 @@
   transition: var(--tr-regular);
   text-align: center;
 
-  @media (max-width: $mobile-xl) {
+  @media (max-width: $mobile-xlg) {
     padding: 0.9rem 1.5rem;
   }
 }

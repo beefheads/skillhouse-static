@@ -13,7 +13,7 @@
 	padding-bottom: 7rem;
 	border-bottom: 0.1rem solid var(--c-border);
 
-	@media (max-width: $mobile-xl) {
+	@media (max-width: $mobile-xlg) {
 		border-bottom: none;
 		padding-top: 1.5rem;
 		padding-bottom: 0;
@@ -29,7 +29,7 @@
 }
 
 .categories-showcase__button {
-	@media (max-width: $mobile-xl) {
+	@media (max-width: $mobile-xlg) {
 		font-size: 1.2rem;
 		padding-left: 1.2rem;
 		padding-right: 1.2rem;
@@ -37,7 +37,7 @@
 }
 
 .categories-showcase__button::after {
-	@media (min-width: $mobile-xl + 1) {
+	@media (min-width: $mobile-xlg + 1) {
 		transform: scaleX(1.2);
 	}
 }

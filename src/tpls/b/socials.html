@@ -1,0 +1,10 @@
+<div class="socials @@className">
+  @@for (var i = 0; i < context.socials.length; i++) {
+    <a href="`+context.socials[i].href+`" target="_blank" rel="noopener noreferrer" class="socials__link">
+      <svg class="socials__icon">
+        <use href="./img/icons/@@instagram.svg#@@instagram"></use>
+      </svg>
+      `+context.socials[i].name+`
+    </a>
+  }
+</div>

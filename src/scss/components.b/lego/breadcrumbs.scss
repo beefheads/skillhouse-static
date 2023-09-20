@@ -12,14 +12,14 @@
   position: relative;
   margin-left: var(--p-container);
 
-	@media (max-width: $tablet) {
+	@media (max-width: $tablet-xlg) {
 		font-size: 1.4rem;
 	  // -webkit-mask-image: var(--mask);
 	  // mask: var(--mask);
 	  margin-left: 0;
 	}
 
-	@media (max-width: $mobile-xl) {
+	@media (max-width: $mobile-xlg) {
 		font-size: 1.2rem;
 	  margin-left: 0;
 	}
@@ -28,7 +28,7 @@
 .breadcrumbs ~ .main {
 	margin-top: -2.8rem;
 
-	@media (max-width: $mobile-xl) {
+	@media (max-width: $mobile-xlg) {
 		margin-top: 0;
 	}
 }
@@ -36,10 +36,10 @@
 .header ~ .breadcrumbs {
 	padding-top: 5rem;
 	
-	@media (max-width: $mobile-xl) {
+	@media (max-width: $mobile-xlg) {
 		padding-top: 3rem;
 	}
-	@media (max-width: $mobile-l) {
+	@media (max-width: $mobile-lg) {
 		margin-bottom: 0;
 	}
 }
@@ -62,7 +62,7 @@
 	margin-left: 0;
 	margin-right: 0;
 
-	@media (max-width: $tablet) {
+	@media (max-width: $tablet-xlg) {
 	  -webkit-mask-image: var(--mask);
 	  mask: var(--mask);
 	}
@@ -102,7 +102,7 @@
 	background-position: center;
 	background-size: contain;
 	transform: scaleX(-1);
-	@media (max-width: $mobile-xl) {
+	@media (max-width: $mobile-xlg) {
 		margin-left: 0.1rem;
 		margin-right: 0.2rem;
 	}

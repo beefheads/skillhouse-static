@@ -5,7 +5,7 @@
 }
 
 .only-mobile {
-  @media (min-width: $mobile-xl + 1) {
+  @media (min-width: $mobile-xlg + 1) {
     display: none;
   }
 }

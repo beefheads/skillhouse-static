@@ -7,7 +7,7 @@
 	font-family: var(--ff-title);
 	border-top: 0.1rem solid var(--c-border);
 
-	@media (max-width: $mobile-l) {
+	@media (max-width: $mobile-lg) {
 		padding-top: 2.5rem;
 		padding-bottom: 2.5rem;
 	}
@@ -23,12 +23,12 @@
 	grid-template-columns: 27rem auto 25rem;
 	column-gap: 3rem;
 
-	@media (max-width: $tablet) {
+	@media (max-width: $tablet-xlg) {
 		grid-template-columns: 23rem auto 24rem;
     grid-auto-rows: auto;
     grid-template-rows: 10rem;
 	}
-	@media (max-width: $mobile-xl) {
+	@media (max-width: $mobile-xlg) {
 		grid-template-areas: "logo contacts"
 												 "nav nav"
 												 "links links"
@@ -45,7 +45,7 @@
 	margin-bottom: 2.2rem;
 	grid-area: logo;
 
-	@media (max-width: $mobile-l) {
+	@media (max-width: $mobile-lg) {
 		max-width: 8.2rem;
 	}
 }
@@ -57,11 +57,11 @@
 	color: var(--fg-primary);
 	max-width: 27rem;
 
-	@media (max-width: $mobile-xl) {
+	@media (max-width: $mobile-xlg) {
 		max-width: 100%;
 		text-align: center;
 	}
-	@media (max-width: $mobile-l) {
+	@media (max-width: $mobile-lg) {
 		font-size: 1.4rem;
 	}
 }
@@ -78,7 +78,7 @@
 	align-items: flex-start;
 	padding-top: 1rem;
 
-	@media (max-width: $mobile-l) {
+	@media (max-width: $mobile-lg) {
 		padding-top: 0;
 	}
 }
@@ -86,11 +86,11 @@
 .footer__nav-menu {
 	margin-right: 7.8rem;
 
-	@media (max-width: $tablet) {
+	@media (max-width: $tablet-xlg) {
 		margin-right: 1.8rem;
 	}
 
-	@media (max-width: $mobile-xl) {
+	@media (max-width: $mobile-xlg) {
 		margin-right: 2.5rem;
 	}
 }
@@ -105,10 +105,10 @@
 	line-height: initial;
 	margin-bottom: 1rem;
 
-	@media (max-width: $tablet) {
+	@media (max-width: $tablet-xlg) {
 		font-size: 2.2rem;
 	}
-	@media (max-width: $mobile-l) {
+	@media (max-width: $mobile-lg) {
 		font-size: 1.6rem;
 	}
 }
@@ -119,10 +119,10 @@
 	line-height: 129.02%;
 
 
-	@media (max-width: $tablet) {
+	@media (max-width: $tablet-xlg) {
 		font-size: 2rem;
 	}
-	@media (max-width: $mobile-l) {
+	@media (max-width: $mobile-lg) {
 		font-size: 1.3rem;
 	}
 }
@@ -130,7 +130,7 @@
 .footer__nav-menu-item {
 	margin-bottom: 0.5em;
 
-	@media (max-width: $mobile-l) {
+	@media (max-width: $mobile-lg) {
 		margin-bottom: 0.4em;
 	}
 }
@@ -154,7 +154,7 @@
 	grid-area: contacts;
 	padding-top: 2rem;
 
-	@media (max-width: $mobile-xl) {
+	@media (max-width: $mobile-xlg) {
 		padding-top: 0;
 	}
 }
@@ -167,11 +167,11 @@
 	margin-top: 2.3rem;
 	font-size: 1.6rem;
 
-	@media (max-width: $mobile-xl) {
+	@media (max-width: $mobile-xlg) {
 		text-align: center;
 		justify-items: center;
 	}
-	@media (max-width: $mobile-l) {
+	@media (max-width: $mobile-lg) {
 		margin-top: -0.5rem;
 		font-size: 1.4rem;
 	}
@@ -180,7 +180,7 @@
 .footer__link {
 	margin-bottom: 1em;
 
-	@media (max-width: $mobile-l) {
+	@media (max-width: $mobile-lg) {
 		margin-bottom: 0.6em;
 	}
 }
@@ -198,15 +198,15 @@
 	font-size: 1.6rem;
 	text-align: center;
 
-	@media (max-width: $tablet) {
+	@media (max-width: $tablet-xlg) {
 		font-size: 2.2rem;
 		margin-top: 4.5rem;
 	}
 
-	@media (max-width: $mobile-xl) {
+	@media (max-width: $mobile-xlg) {
 		margin-top: 0.3rem;
 	}
-	@media (max-width: $mobile-l) {
+	@media (max-width: $mobile-lg) {
 		font-size: 1.4rem;
 	}
 }

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru-RU">
   <head>
-      @@include('tpls/b/meta-head.html',{
+      @include('tpls/b/meta-head.html',{
         "title": "Skillhouse",
         "desc": "",
         "themeColor": "#1A1A1A",
@@ -12,16 +12,16 @@
   <body class="page-home">
 
     <div class="wrapper">
-      @@include('tpls/miri/header.html',{})
+      @include('tpls/sections.sklh/header.html',{})
 
       <main class="main">
         
       </main>
 
-      @@include('tpls/footer.html',{})
+      @include('tpls/footer.html',{})
     </div>
 
-    @@include('tpls/modals.html', {})
+    @include('tpls/modals.html', {})
 
     <script src="./js/index.min.js"></script>
   </body>

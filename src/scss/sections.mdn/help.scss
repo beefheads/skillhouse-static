@@ -1,6 +1,6 @@
 .help {
 	padding-top: 3rem;
-	@media (max-width: $mobile-xl) {
+	@media (max-width: $mobile-xlg) {
 		padding-top: 0;
 	}
 }
@@ -14,7 +14,7 @@
 	padding-right: 10rem;
 	padding-bottom: 6rem;
 
-	@media (max-width: $mobile-xl) {
+	@media (max-width: $mobile-xlg) {
 		padding: 1.5rem;
 	}
 }
@@ -40,7 +40,7 @@
 	font-weight: 400;
 	line-height: 130%;
 
-	@media (max-width: $tablet) {
+	@media (max-width: $tablet-xlg) {
 		margin-bottom: 1.5rem;
 	}
 }
@@ -60,7 +60,7 @@
 	background-color: #F9F9F9;
 	border-radius: 9999px;
 
-	@media (max-width: $mobile-xl) {
+	@media (max-width: $mobile-xlg) {
 		--size: 2.5rem;
 		margin-right: 0.8rem;
 	}
@@ -108,7 +108,7 @@ a.help__contact-value:hover {
 	background-color: #f8f8f8;
 	margin-top: 4rem;
 
-	@media (max-width: $mobile-l) {
+	@media (max-width: $mobile-lg) {
 		height: 20rem;
 		margin-bottom: 2rem;
 		margin-top: 2rem;

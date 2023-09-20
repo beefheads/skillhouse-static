@@ -1,7 +1,7 @@
 .contacts {
 	padding-top: 7rem;
 	padding-bottom: 16rem;
-	@media (max-width: $tablet) {
+	@media (max-width: $tablet-xlg) {
 		padding-top: 3.5rem;
 		padding-bottom: 4rem;
 	}
@@ -14,7 +14,7 @@
 	flex-direction: column;
 	background-color: #f6f6f6;
 	border-radius: 20px;
-	@media (max-width: $tablet) {
+	@media (max-width: $tablet-xlg) {
 		background-color: transparent;
 	}
 }
@@ -25,7 +25,7 @@
 	max-width: 96%;
 	width: 100%;
 	height: 43.75rem;
-	@media (max-width: $tablet) {
+	@media (max-width: $tablet-xlg) {
 		height: 21.142857142857142rem;
 		margin-bottom: -7rem;
 		max-width: 85%;
@@ -50,7 +50,7 @@
 	padding-bottom: 2rem;
 	width: 100%;
 	margin-right: 0;
-	@media (max-width: $tablet) {
+	@media (max-width: $tablet-xlg) {
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
@@ -67,7 +67,7 @@
 	margin-right: auto;
 	column-gap: 65px;
 	margin-bottom: 0;
-	@media (max-width: $tablet) {
+	@media (max-width: $tablet-xlg) {
 		display: block;
 		max-width: 100%;
 		width: 100%;
@@ -82,7 +82,7 @@
 	}
 }
 .contacts .footer-contact__info br {
-	@media (min-width: ($tablet)) {
+	@media (min-width: ($tablet-xlg)) {
 		display: none;
 	}
 }
@@ -97,14 +97,14 @@
 	margin-left: auto;
 	margin-right: auto;
 	bottom: -125px;
-	@media (max-width: $tablet) {
+	@media (max-width: $tablet-xlg) {
 		position: static;
 	}
 }
 .contacts .footer-contact__socials  {
 	margin-right: 7rem;
 	margin-bottom: 0;
-	@media (max-width: $tablet) {
+	@media (max-width: $tablet-xlg) {
 		margin-right: 0;
 		margin-bottom: 1.4285714285714286rem;
 	}
@@ -112,7 +112,7 @@
 .contacts .footer-contact__platforms  {
 	flex-direction: column-reverse;
 	margin-bottom: 0;
-	@media (max-width: $tablet) {
+	@media (max-width: $tablet-xlg) {
 		justify-content: center;
 		align-items: center;
 		margin-bottom: 1.125rem;
@@ -126,13 +126,13 @@
 .contacts .footer-contact__info-title,
 .contacts .footer-contact__info-desc {
 	font-size: 1.125rem;
-	@media (max-width: $tablet) {
+	@media (max-width: $tablet-xlg) {
 		font-size: 1rem;
 	}
 }
 .contacts .footer__author  {
 	margin-right: auto;
-	@media (max-width: $tablet) {
+	@media (max-width: $tablet-xlg) {
 		position: static;
 		margin-left: auto;
 		margin-right: auto;
@@ -147,7 +147,7 @@
 	font-family: var(--ff-em);
 	top: 1.6em;
 	font-size: 1.125rem;
-	@media (max-width: $tablet) {
+	@media (max-width: $tablet-xlg) {
 		position: static;
 	}
 }

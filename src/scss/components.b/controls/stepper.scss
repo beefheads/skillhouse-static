@@ -13,7 +13,7 @@
   max-width: 11rem;
   overflow: visible;
 
-  @media (max-width: $mobile-xl) {
+  @media (max-width: $mobile-xlg) {
   	--fz: 1.2rem;
 		--minw-stepper-button: 2.8rem;
 		--brad: 0.63rem;
@@ -78,7 +78,7 @@
 	white-space: nowrap;
 	color: rgba(68, 68, 68, 0.4);
 
-	@media (max-width: $mobile-xl) {
+	@media (max-width: $mobile-xlg) {
 		font-size: 1.2rem;
 		top: -1.4rem;
 	}
