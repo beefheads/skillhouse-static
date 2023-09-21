@@ -1,7 +1,7 @@
 .socials {
   display: flex;
   align-items: center;
-  --icon-size: 6rem;
+/*  --icon-size: 6rem;
   --icon-gap: 2.3rem;
   --link-padding: 1.4rem;
   --icon-brad: 9999px;
@@ -11,6 +11,7 @@
     --icon-gap: 1.5rem;
     --link-padding: 0.9rem;
   }
+*/
 }
 
 .socials__link {
@@ -32,7 +33,7 @@
 }
 .socials__link:hover {
   @media (any-hover:hover) {
-    transform: scale(1.1);
+    // transform: scale(1.1);
   }
 }
 
