@@ -40,7 +40,7 @@
 
 
 
-      <link rel="stylesheet" href="./css/style.css?_v=20230921155006">
+      <link rel="stylesheet" href="./css/style.css?_v=20230921171715">
   </head>
   
   <body class="page-home">
@@ -98,14 +98,16 @@
 		<div class="header__menu">
 			<ul class="header__menu-links">
 				<li class="header__menu-links-item">
-					<a href="#" class="header__menu-link">Отзывы клиентов</a>
+					<a href="#" class="header__menu-link link">
+						<span class="link__text">Отзывы клиентов</span>
+					</a>
 				</li>
 			</ul>
 		</div>
 		<div class="header__contacts">
 			<a href="tel:" class="header__contacts-item">+7(499) 111-39-99</a>
-			<button class="button-third header__button-callback">
-				Заказать звонок
+			<button class="link header__button-callback">
+				<span class="link__text">Заказать звонок</span>
 			</button>
 		</div>
 	</div>
@@ -220,7 +222,7 @@
               </h2>
               <div class="hero__buttons">
                 <a class="button-primary" href="#">Узнать стоимость ремонта</a>
-                <button class="button-primary" type="button">Заказать дизайн-проект</button>
+                <button class="button-secondary" type="button">Заказать дизайн-проект</button>
               </div>
             </div>
           </div>
@@ -730,17 +732,17 @@
                 </div>
               </div>
               <div class="swiper-buttons quiz-buttons">
-                <div class="swiper-button-prev quiz-button-prev">
-                  <svg class="button__icon">
-                    <use xlink:href="./img/sklh_common/arrow-left.svg#arrow-left" />
+                <div class="swiper-button-prev quiz-button-prev link">
+                  <svg class="link__icon">
+                    <use href="./img/sklh_common/arrow-left.svg#arrow-left" />
                   </svg>
-                  <span class="button__text">Назад</span>
+                  <span class="link__text">Назад</span>
                 </div>
-                <div class="swiper-button-next quiz-button-next">
-                  <svg class="button__icon">
-                    <use xlink:href="./img/sklh_common/arrow-right.svg#arrow-right" />
-                  </svg>
+                <div class="swiper-button-next quiz-button-next button-secondary">
                   <span class="button__text">Следующий шаг</span>
+                  <svg class="button__icon">
+                    <use href="./img/sklh_common/arrow-right.svg#arrow-right" />
+                  </svg>
                 </div>
               </div>
             </div>
@@ -1655,6 +1657,6 @@
 </div>
 
 
-    <script src="./js/index.min.js?_v=20230921155006"></script>
+    <script src="./js/index.min.js?_v=20230921171715"></script>
   </body>
 </html>

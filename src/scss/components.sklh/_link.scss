@@ -1,0 +1,30 @@
+ @import "../components.b/controls/link";
+
+.link {
+  --ff: var(--ff-regular);
+  --fz: 1.8rem;
+  --fw: 500;
+  --lh: initial;
+
+  --padding-block: 1.25em;
+  --padding-inline: 1.5em;
+  --padding: 0;
+  --text-padding: 0.4em 0 0.44rem 0;
+
+  --fg: var(--c-primary);
+  --bg: transparent;
+
+  --border-width: 0.1rem;
+  --border-color: transparent;
+  --border-radius: 0;
+}
+
+.link:hover {
+	@media (any-hover:hover) {
+	  --border-color: ;
+	}
+}
+
+.link:active {
+  --fw: 700;
+}
