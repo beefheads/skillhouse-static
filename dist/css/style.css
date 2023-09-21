@@ -993,6 +993,131 @@ body._lock {
   background: linear-gradient(45deg, #025BC7 0.73%, #0089FD 91.97%);
 }
 
+.input {
+  /*
+  --bg: #fff;
+  --fg: #000;
+  --fg-placeholder: #d0d0d0;
+
+  --fz: 1.8rem;
+  --padding-inline: 1.2em;
+  --padding-block: 0.7em;
+  --padding: var(--padding-block) var(--padding-inline);
+  --letter-spacing: initial;
+
+  --border-color: #dfdfdf;
+  --border-width: 0.2rem;
+  --border-radius: 0.5rem;
+  --border-focus: var(--c-primary);
+
+  --icon-size: 1rem;
+
+  --error-color: #FF3B30;
+  --error-fz: 1rem;
+
+  */
+  display: block;
+  font-size: 1.8rem;
+  cursor: text;
+  font-family: var(--ff-regular);
+  transition: all 0.3s ease;
+}
+
+.input.has-error {
+  --border-color: var(--error-color, #FF3b30);
+  --fg: var(--error-color, #FF3b30);
+  --fg-placeholder: var(--error-color, #FF3b30);
+}
+
+.input__area {
+  position: relative;
+  display: block;
+  width: 100%;
+  background: var(--bg, #fff);
+  font-size: inherit;
+  font-family: inherit;
+  transition: inherit;
+}
+
+.input__icon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  display: block;
+  width: var(--icon-size);
+  max-width: var(--icon-size);
+  min-width: var(--icon-size);
+  height: var(--icon-size);
+  min-height: var(--icon-size);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.input--has-icon .input__icon {
+  opacity: 1;
+}
+
+.input__field {
+  display: block;
+  width: 100%;
+  padding: var(--padding);
+  border: var(--border-width, 0.2rem) solid var(--border-color, #dfdfdf);
+  border-radius: var(--border-radius, 0.5em);
+  background: transparent;
+  color: var(--fg, #333);
+  font-size: inherit;
+  font-family: inherit;
+  transition: inherit;
+  letter-spacing: var(--letter-spacing, initial);
+}
+
+.input__field::placeholder {
+  color: var(--fg-placdeholder);
+}
+
+.input__field:focus {
+  --border-color: var(--border-focus);
+}
+
+.input--has-icon .input__field {
+  padding-left: 3.2rem;
+}
+
+.input__error {
+  display: block;
+  padding-left: var(--padding-inline);
+  font-family: sans-serif;
+  font-size: var(--error-fz, 1rem);
+  color: var(--error-color);
+  line-height: 1;
+  transition: inherit;
+  padding-top: 0.5em;
+  margin-top: -1.5em;
+  opacity: 1;
+}
+
+.has-error .input__error {
+  margin-top: 0;
+  opacity: 0;
+}
+
+.input {
+  --bg: var(--bg-app);
+  --fg: var(--fg-regular);
+  --fz: 2rem;
+  --padding-block: 1.25em;
+  --padding-inline: 1.5em;
+  --padding: var(--padding-block) var(--padding-inline);
+  --letter-spacing: -0.08rem;
+  --border-color: var(--fg-regular);
+  --border-width: 0.1rem;
+  --border-radius: 9999px;
+  --border-focus: var(--c-primary);
+  --error-color: #FF3B30;
+  --error-fz: 1rem;
+}
+
 /*
     <button class="burger header__burger">
       <span class="burger__line"></span>
