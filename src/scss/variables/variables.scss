@@ -1,31 +1,19 @@
 
 :root {
   --base-size: 1vw;//#{"calc(1vw + 1vh)"};
-  @media (min-width: $mobile-lg + 1) and (max-width: $tablet-xlg) {
-    //--base-size: #{"calc(1vw + 1vh)"};
-  }
+
   --tr: 0.3s;
   --tr-regular: all var(--tr) ease;
 
-  --p-container: 7rem;
-  // @media (max-width: $laptop-lg) and (min-width: $tablet-xlg + 1) {
-  //   --p-container: 4.5rem;
-  // }
+  --p-container: 2rem;
 
-  @media (max-width: $laptop-md) {
-    --p-container: 4rem;
-  }
-
-  @media (max-width: $mobile-xlg) {
-    --p-container: 1.6rem;
-  }
 
   // Widths
-  --w-container: 154rem;
-  // --w-container: 100%;
-  // @media (max-width: $tablet-xlg) {
-  //   --w-container: 100%;
-  // }
+  --w-container: 123rem;
+  @media (max-width: $tablet-xlg) {
+    --w-container: 100%;
+  }
+
 
   --z-above-header: 103;
   --z-burger: 102;

@@ -1,0 +1,16 @@
+@import "../components.b/lego/burger.scss";
+
+.header {
+
+}
+
+.header .burger {
+	--c-burger-line: var(--c-primary);
+}
+
+.header__container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+

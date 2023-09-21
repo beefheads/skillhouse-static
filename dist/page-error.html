@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Страница ошибки</title>
-    <link rel="stylesheet" href="./css/style.css?_v=20230921094541">
+    <link rel="stylesheet" href="./css/style.css?_v=20230921155006">
 
     <!-- Отключить автодетект телефонов -->
     <meta name="format-detection" content="telephone=no">
@@ -58,8 +58,61 @@
 
     </div>
 
-    <!-- @include('./miri/modal-form.html', {id: "online"}) -->
+    <div class="b_modal modal" id="online" data-closer-type="inner">
+	<header class="modal__head">
+		<div class="logo modal__logo">
+			<picture class="logo__pic">
+				<img src="./img/sklh_common/logo.svg" alt="Skillhouse" class="logo__img">
+			</picture>
+		</div>
+	</header>
+	<div class="modal__body">
+		<h3 class="modal__title">Оставьте свои контакты. </h3>
+		<p class="modal_desc">
+			Мы перезвоним и&nbsp;<span class="text-bold">договоримся о встрече </span>
+			в&nbsp;удобное для вас время.
+		</p>
+		<div class="modal__form form js_form">
+			<div class="form__fieldset">
+				<label class="input">
+  <span class="input__area">
+    <input
+      class="input__field"
+      name="user_name"
+      
+        placeholder="Ваше имя"
+      
+      autocomplete="name"
+      type="text"
+    >
+  </span>
+  <span class="input__error">Текст ошибки</span>
+</label>
 
-    <script src="./js/bundle.min.js?_v=20230921094541"></script>
+				<label class="input">
+  <span class="input__area">
+    <input
+      class="input__field"
+      name="user_tel"
+      type="tel"
+      maxlength="25"
+      minlength="10"
+      autocomplete="tel"
+      
+      placeholder="Номер телефона"
+      
+      required
+    >
+  </span>
+  <span class="input__error">Текст ошибки</span>
+</label>
+
+			</div>
+			<button class="button-primary form__submit" type="button">Записаться в Шоурум</button>
+		</div>
+	</div>
+</div>
+
+    <script src="./js/bundle.min.js?_v=20230921155006"></script>
   </body>
 </html>

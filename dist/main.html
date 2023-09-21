@@ -40,7 +40,7 @@
 
 
 
-      <link rel="stylesheet" href="./css/style.css?_v=20230921094541">
+      <link rel="stylesheet" href="./css/style.css?_v=20230921155006">
   </head>
   
   <body class="page-home">
@@ -300,7 +300,7 @@
                 <a href="#" class="portfolio-gallery-card__link">Смотреть объект</a>
                 <div class="portfolio-gallery-card__logo">
                   <picture class="portfolio-gallery-card__logo-pic">
-                    <img src="./img/sklh_portfolio/logo-logo-boleir.png" alt="" class="portfolio-gallery-card__logo-img">
+                    <img src="./img/sklh_portfolio/logo-boleir.png" alt="" class="portfolio-gallery-card__logo-img">
                   </picture>
                 </div>
               </article>
@@ -1599,9 +1599,62 @@
 
     </div>
 
-    <!-- @include('./miri/modal-form.html', {id: "online"}) -->
+    <div class="b_modal modal" id="online" data-closer-type="inner">
+	<header class="modal__head">
+		<div class="logo modal__logo">
+			<picture class="logo__pic">
+				<img src="./img/sklh_common/logo.svg" alt="Skillhouse" class="logo__img">
+			</picture>
+		</div>
+	</header>
+	<div class="modal__body">
+		<h3 class="modal__title">Оставьте свои контакты. </h3>
+		<p class="modal_desc">
+			Мы перезвоним и&nbsp;<span class="text-bold">договоримся о встрече </span>
+			в&nbsp;удобное для вас время.
+		</p>
+		<div class="modal__form form js_form">
+			<div class="form__fieldset">
+				<label class="input">
+  <span class="input__area">
+    <input
+      class="input__field"
+      name="user_name"
+      
+        placeholder="Ваше имя"
+      
+      autocomplete="name"
+      type="text"
+    >
+  </span>
+  <span class="input__error">Текст ошибки</span>
+</label>
+
+				<label class="input">
+  <span class="input__area">
+    <input
+      class="input__field"
+      name="user_tel"
+      type="tel"
+      maxlength="25"
+      minlength="10"
+      autocomplete="tel"
+      
+      placeholder="Номер телефона"
+      
+      required
+    >
+  </span>
+  <span class="input__error">Текст ошибки</span>
+</label>
+
+			</div>
+			<button class="button-primary form__submit" type="button">Записаться в Шоурум</button>
+		</div>
+	</div>
+</div>
 
 
-    <script src="./js/index.min.js?_v=20230921094541"></script>
+    <script src="./js/index.min.js?_v=20230921155006"></script>
   </body>
 </html>

@@ -3,6 +3,9 @@
 - [репо](https://github.com/beefheads/skillhouse-static)
 - [макет]()
 
+## Куда посмотреть что умеет сборка?
+- _quickfix.js — js полезности
+
 ## Если не работает команда `gulp` после `npm i`
 Проверь, что установлен webp-converter@2.2.3
 `npm install webp-converter@2.2.3 --save-dev`

@@ -1,3 +1,4 @@
+import "./_use-bg.js"
 import "./apple-helpers.js"
 import "./smooth-anchors.js"
 

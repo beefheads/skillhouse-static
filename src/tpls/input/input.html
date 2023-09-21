@@ -1,10 +1,13 @@
-<label class="input input-name @@className">
-  <input
-    class="input__field"
-    name="user_name"
-    type="text"
-    placeholder="@@placeholder"
-    autocomplete="name"
-    required
-  >
-</label>
+<label class="input">
+  <span class="input__area">
+    <input
+      class="input__field"
+      name="@@name"
+      placeholder="@@placeholder"
+      autocomplete="name"
+      type="text"
+      @@attributes
+    >
+  </span>
+  <span class="input__error">Текст ошибки</span>
+<label>
