@@ -29,6 +29,9 @@ fieldset {
 
 
 html {
+  --fz-regular: 2rem;
+  --fz-title: 5.5rem;
+
   overscroll-behavior: none;
   --fz-modifier: 0.520834;
   font-size: #{'calc(var(--fz-modifier) * var(--base-size))'};//calc(0.342466 * var(--base-size)); //10px for 1920×1000
@@ -42,16 +45,20 @@ html {
   }
 
   @media (max-width: $mobile-lg) {
+    --fz-regular: 1rem;
     --fz-modifier: 3.125;
   }
+  background-color: var(--bg-app);
 }
 
 body {
   color: var(--fg-regular);
   font-family: var(--ff-regular);
-  font-weight: 700;
+  font-size: var(--fz-regular);
+  font-weight: 400;
   font-size: 2.4rem;
   line-height: 111%;
+  background: inherit;
 
   overscroll-behavior: none;
 

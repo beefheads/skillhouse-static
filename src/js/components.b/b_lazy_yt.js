@@ -6,10 +6,10 @@
 
 window.addEventListener("DOMContentLoaded", (event) => {
   const lazyYT = {
-    videoParents: document.querySelectorAll(".big-card__media"),
+    videoParents: document.querySelectorAll(".b_lazy-yt"),
     videoPicClassName: "picture",
-    videoImgClassName: ".js_lazy__preview",
-    videoIframeClassName: ".js_lazy__content",
+    videoImgClassName: ".js_lazy-yt__preview",
+    videoIframeClassName: ".js_lazy-yt__content",
   };
   setupLazyYT(lazyYT);
 });

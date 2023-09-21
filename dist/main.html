@@ -1,28 +1,1607 @@
 <!DOCTYPE html>
 <html lang="ru-RU">
   <head>
-      @include('tpls/b/meta-head.html',{
-        "title": "Skillhouse",
-        "desc": "",
-        "themeColor": "#1A1A1A",
-      })
-      <link rel="stylesheet" href="./css/style.css?_v=20230920144803">
+      <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+	<title>Skillhouse</title>
+	<meta property="og:title" content="Skillhouse">
+
+
+<meta name="format-detection" content="telephone=no">
+
+<link rel="icon" type="image/png" href="./img/common/favicon.png">
+
+
+    <meta property="og:description" content="">
+
+              
+
+  <meta property="og:image" content="./img/common/og.png">
+
+
+<meta property="twitter:card" content="summary_large_image">
+
+
+
+    
+
+
+	<meta property="og:type" content="website">
+
+
+
+
+
+  <meta name="msapplication-TileColor" content="#1A1A1A">
+  <meta name="theme-color" content="#1A1A1A">
+
+
+
+      <link rel="stylesheet" href="./css/style.css?_v=20230921094541">
   </head>
   
   <body class="page-home">
 
     <div class="wrapper">
-      @include('tpls/sections.sklh/header.html',{})
+      <header class="header">
+	<div class="container header__container">
+		<div class="burger">
+			<span class="burger__line"></span>
+			<span class="burger__line"></span>
+			<span class="burger__line"></span>
+		</div>
+		<div class="socials header__socials">
+  
+    <a class="socials__link socials__link--youtube" aria-label="YT"
+      href="https://youtube.com" target="_blank" rel="noopener noreferrer"
+      >
+      <svg class="socials__icon">
+        <use href="./img/sklh_common/icon-youtube.svg#icon-youtube"></use>
+      </svg>
+    </a>
+  
+    <a class="socials__link socials__link--instagram" aria-label="IG"
+      href="https://instagram.com" target="_blank" rel="noopener noreferrer"
+      >
+      <svg class="socials__icon">
+        <use href="./img/sklh_common/icon-instagram.svg#icon-instagram"></use>
+      </svg>
+    </a>
+  
+    <a class="socials__link socials__link--telegram" aria-label="TG"
+      href="https://t.me" target="_blank" rel="noopener noreferrer"
+      >
+      <svg class="socials__icon">
+        <use href="./img/sklh_common/icon-telegram.svg#icon-telegram"></use>
+      </svg>
+    </a>
+  
+    <a class="socials__link socials__link--whatsapp" aria-label="WA"
+      href="https://wa.me" target="_blank" rel="noopener noreferrer"
+      >
+      <svg class="socials__icon">
+        <use href="./img/sklh_common/icon-whatsapp.svg#icon-whatsapp"></use>
+      </svg>
+    </a>
+  
+</div>
+
+		<a href="/" class="logo header__logo">
+			<picture class="logo__pic">
+				<img src="./img/sklh_common/logo.svg" alt="Skillhouse" class="logo__img">
+			</picture>
+		</a>
+
+		<div class="header__menu">
+			<ul class="header__menu-links">
+				<li class="header__menu-links-item">
+					<a href="#" class="header__menu-link">Отзывы клиентов</a>
+				</li>
+			</ul>
+		</div>
+		<div class="header__contacts">
+			<a href="tel:" class="header__contacts-item">+7(499) 111-39-99</a>
+			<button class="button-third header__button-callback">
+				Заказать звонок
+			</button>
+		</div>
+	</div>
+	<div class="header__sidemenu menu">
+		<div class="menu__head">
+			<a href="/" class="logo menu__logo">
+				<picture class="logo__pic">
+					<img src="./img/sklh_common/logo.svg" alt="Skillhouse" class="logo__img">
+				</picture>
+			</a>
+		</div>
+		<div class="menu__body">
+			<ul class="menu__nav">
+				<li class="menu__nav-item">
+					<a href="#" class="menu__nav-link">Портфолио</a>
+				</li>
+				<li class="menu__nav-item">
+					<a href="#" class="menu__nav-link">Заказать дизайн-проект</a>
+				</li>
+				<li class="menu__nav-item">
+					<a href="#" class="menu__nav-link">Рассчитать ремонт</a>
+				</li>
+				<li class="menu__nav-item">
+					<a href="#" class="menu__nav-link">О нас</a>
+				</li>
+				<li class="menu__nav-item">
+					<a href="#" class="menu__nav-link"> Контакты</a>
+				</li>
+			</ul>
+		</div>
+		<div class="menu__footer">
+			<ul class="menu__linklist">
+				<li class="menu__linklist-item">
+					<a href="tel:" class="menu__linklist-link">
+						+7(996) 316-39-99
+					</a>
+				</li>
+				<li class="menu__linklist-item">
+					<a href="tel:" class="menu__linklist-link">
+						+7(499) 111-39-99
+					</a>
+				</li>
+			</ul>
+			<div class="menu__contacts">
+				<a class="menu__contacts-item" href="mailto">
+					<span class="text--bold">Email</span>
+					info@skill-house.ru
+				</a>
+				<a class="menu__contacts-item" href="" target="_blank">
+					<span class="text--bold">Адрес: </span>
+					г. Москва, ул. Большая Якиманка 31, офис 105
+				</a>
+				<p class="menu__contacts-item">
+					<span class="text--bold">ИНН:</span> 9721188852
+					<span class="text--bold">ОГРН: </span> 1227700804891
+				</p>
+			</div>
+			<div class="menu__footbuttons">
+				<button class="button-secondary" type="button">Заказать звонок</button>
+			</div>
+			<div class="socials menu__socials">
+  
+    <a class="socials__link socials__link--youtube" aria-label="YT"
+      href="https://youtube.com" target="_blank" rel="noopener noreferrer"
+      >
+      <svg class="socials__icon">
+        <use href="./img/sklh_common/icon-youtube.svg#icon-youtube"></use>
+      </svg>
+    </a>
+  
+    <a class="socials__link socials__link--instagram" aria-label="IG"
+      href="https://instagram.com" target="_blank" rel="noopener noreferrer"
+      >
+      <svg class="socials__icon">
+        <use href="./img/sklh_common/icon-instagram.svg#icon-instagram"></use>
+      </svg>
+    </a>
+  
+    <a class="socials__link socials__link--telegram" aria-label="TG"
+      href="https://t.me" target="_blank" rel="noopener noreferrer"
+      >
+      <svg class="socials__icon">
+        <use href="./img/sklh_common/icon-telegram.svg#icon-telegram"></use>
+      </svg>
+    </a>
+  
+    <a class="socials__link socials__link--whatsapp" aria-label="WA"
+      href="https://wa.me" target="_blank" rel="noopener noreferrer"
+      >
+      <svg class="socials__icon">
+        <use href="./img/sklh_common/icon-whatsapp.svg#icon-whatsapp"></use>
+      </svg>
+    </a>
+  
+</div>
+
+			<div class="menu__footnotes">
+				<p>© 2023 СкилХаус</p>
+			</div>
+		</div>
+	</div>
+</header>
 
       <main class="main">
-        
+
+        <section class="section hero">
+          <div class="container hero__container">
+            <div class="hero__offer">
+              <h2 class="section-title hero__title">
+                <span class="text-colored">Дизайн интерьера</span>
+                и ремонт квартир под ключ в Москве
+              </h2>
+              <div class="hero__buttons">
+                <a class="button-primary" href="#">Узнать стоимость ремонта</a>
+                <button class="button-primary" type="button">Заказать дизайн-проект</button>
+              </div>
+            </div>
+          </div>
+          <div class="hero__bg js_use-bg">
+            <div class="only-desktop" data-use-bg="./img/sklh_hero/hero-bg.jpg"></div>
+            <div class="only-mobile" data-use-bg="./img/sklh_hero/hero-bg-mobile.jpg"></div>
+          </div>
+        </section>
+
+
+        <section class="section features">
+          <div class="container features__container">
+            <div class="features__gallery">
+              <article class="features-card">
+                <h3 class="features-card__title"></h3>
+                <p class="features-card__desc"></p>
+              </article>
+              <article class="features-card">
+                <h3 class="features-card__title"></h3>
+                <p class="features-card__desc"></p>
+              </article>
+              <article class="features-card">
+                <h3 class="features-card__title"></h3>
+                <p class="features-card__desc"></p>
+              </article>
+              <article class="features-card">
+                <h3 class="features-card__title"></h3>
+                <p class="features-card__desc"></p>
+              </article>
+              <article class="features-card">
+                <h3 class="features-card__title"></h3>
+                <p class="features-card__desc"></p>
+              </article>
+              <button class="button-secondary features__button-callback" type="button">Заказать звонок</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="section portfolio-gallery">
+          <div class="container portfolio-gallery__container">
+            <h2 class="section-title portfolio-gallery__title">
+              <span class="text-colored">Портфолио</span>
+            </h2>
+            <div class="porfolio-gallery__showcase">
+              <article class="portfolio-gallery-card">
+                <div class="portfolio-gallery-card__media">
+                  <picture class="portfolio-gallery-card__media-pic">
+                    <img src="./img/sklh_portfolio/portfolio-01.jpg" alt="" class="portfolio-gallery-card__media-img">
+                  </picture>
+                </div>
+                <a href="#" class="portfolio-gallery-card__link">Смотреть объект</a>
+                <div class="portfolio-gallery-card__logo">
+                  <picture class="portfolio-gallery-card__logo-pic">
+                    <img src="./img/sklh_portfolio/logo-armond.png" alt="" class="portfolio-gallery-card__logo-img">
+                  </picture>
+                </div>
+              </article>
+              <article class="portfolio-gallery-card">
+                <div class="portfolio-gallery-card__media">
+                  <picture class="portfolio-gallery-card__media-pic">
+                    <img src="./img/sklh_portfolio/portfolio-02.jpg" alt="" class="portfolio-gallery-card__media-img">
+                  </picture>
+                </div>
+                <a href="#" class="portfolio-gallery-card__link">Смотреть объект</a>
+                <div class="portfolio-gallery-card__logo">
+                  <picture class="portfolio-gallery-card__logo-pic">
+                    <img src="./img/sklh_portfolio/logo-bastil.png" alt="" class="portfolio-gallery-card__logo-img">
+                  </picture>
+                </div>
+              </article>
+              <article class="portfolio-gallery-card">
+                <div class="portfolio-gallery-card__media">
+                  <picture class="portfolio-gallery-card__media-pic">
+                    <img src="./img/sklh_portfolio/portfolio-03.jpg" alt="" class="portfolio-gallery-card__media-img">
+                  </picture>
+                </div>
+                <a href="#" class="portfolio-gallery-card__link">Смотреть объект</a>
+                <div class="portfolio-gallery-card__logo">
+                  <picture class="portfolio-gallery-card__logo-pic">
+                    <img src="./img/sklh_portfolio/logo-logo-boleir.png" alt="" class="portfolio-gallery-card__logo-img">
+                  </picture>
+                </div>
+              </article>
+              <article class="portfolio-gallery-card">
+                <div class="portfolio-gallery-card__media">
+                  <picture class="portfolio-gallery-card__media-pic">
+                    <img src="./img/sklh_portfolio/portfolio-04.jpg" alt="" class="portfolio-gallery-card__media-img">
+                  </picture>
+                </div>
+                <a href="#" class="portfolio-gallery-card__link">Смотреть объект</a>
+                <div class="portfolio-gallery-card__logo">
+                  <picture class="portfolio-gallery-card__logo-pic">
+                    <img src="./img/sklh_portfolio/logo-darkside.png" alt="" class="portfolio-gallery-card__logo-img">
+                  </picture>
+                </div>
+              </article>
+              <article class="portfolio-gallery-card">
+                <div class="portfolio-gallery-card__media">
+                  <picture class="portfolio-gallery-card__media-pic">
+                    <img src="./img/sklh_portfolio/portfolio-05.jpg" alt="" class="portfolio-gallery-card__media-img">
+                  </picture>
+                </div>
+                <a href="#" class="portfolio-gallery-card__link">Смотреть объект</a>
+                <div class="portfolio-gallery-card__logo">
+                  <picture class="portfolio-gallery-card__logo-pic">
+                    <img src="./img/sklh_portfolio/logo-armond.png" alt="" class="portfolio-gallery-card__logo-img">
+                  </picture>
+                </div>
+              </article>
+              <article class="portfolio-gallery-card">
+                <div class="portfolio-gallery-card__media">
+                  <picture class="portfolio-gallery-card__media-pic">
+                    <img src="./img/sklh_portfolio/portfolio-06.jpg" alt="" class="portfolio-gallery-card__media-img">
+                  </picture>
+                </div>
+                <a href="#" class="portfolio-gallery-card__link">Смотреть объект</a>
+                <div class="portfolio-gallery-card__logo">
+                  <picture class="portfolio-gallery-card__logo-pic">
+                    <img src="./img/sklh_portfolio/logo-bastil.png" alt="" class="portfolio-gallery-card__logo-img">
+                  </picture>
+                </div>
+              </article>
+              <article class="portfolio-gallery-card">
+                <div class="portfolio-gallery-card__media">
+                  <picture class="portfolio-gallery-card__media-pic">
+                    <img src="./img/sklh_portfolio/portfolio-07.jpg" alt="" class="portfolio-gallery-card__media-img">
+                  </picture>
+                </div>
+                <a href="#" class="portfolio-gallery-card__link">Смотреть объект</a>
+                <div class="portfolio-gallery-card__logo">
+                  <picture class="portfolio-gallery-card__logo-pic">
+                    <img src="./img/sklh_portfolio/logo-boleir.png" alt="" class="portfolio-gallery-card__logo-img">
+                  </picture>
+                </div>
+              </article>
+              <article class="portfolio-gallery-card">
+                <div class="portfolio-gallery-card__media">
+                  <picture class="portfolio-gallery-card__media-pic">
+                    <img src="./img/sklh_portfolio/portfolio-08.jpg" alt="" class="portfolio-gallery-card__media-img">
+                  </picture>
+                </div>
+                <a href="#" class="portfolio-gallery-card__link">Смотреть объект</a>
+                <div class="portfolio-gallery-card__logo">
+                  <picture class="portfolio-gallery-card__logo-pic">
+                    <img src="./img/sklh_portfolio/logo-darkside.png" alt="" class="portfolio-gallery-card__logo-img">
+                  </picture>
+                </div>
+              </article>
+              <article class="portfolio-gallery-card">
+                <div class="portfolio-gallery-card__media">
+                  <picture class="portfolio-gallery-card__media-pic">
+                    <img src="./img/sklh_portfolio/portfolio-09.jpg" alt="" class="portfolio-gallery-card__media-img">
+                  </picture>
+                </div>
+                <a href="#" class="portfolio-gallery-card__link">Смотреть объект</a>
+                <div class="portfolio-gallery-card__logo">
+                  <picture class="portfolio-gallery-card__logo-pic">
+                    <img src="./img/sklh_portfolio/logo-armond.png" alt="" class="portfolio-gallery-card__logo-img">
+                  </picture>
+                </div>
+              </article>
+            </div>
+            <div class="portfolio-gallery__buttons">
+              <button class="button-primary" type="button">Узнать стоимость ремонта</button>
+              <button class="button-secondary" type="button">Записаться на просмотр</button>
+            </div>
+          </div>
+        </section>
+
+
+        <section class="section price">
+          <div class="container price__container">
+            <h2 class="section-title price__title">
+              <span class="text-colored">Стоимость </span>
+              дизайн-проекта
+            </h2>
+            <div class="price-table">
+              <div class="swiper price-table-swiper">
+                <div class="swiper-wrapper">
+                  <article class="swiper-slide price-table-slide">
+                    <div class="price-table-slide__body">
+                      <h3 class="price-table-slide__title">Стандарт</h3>
+                      <p class="price-table-slide__cost">
+                        <span class="price-table-slide__cost-value">1 500 </span>
+                        <span class="text-currency">₽</span><span class="text-sub text-sub--square">м</span>
+                      </p>
+                      <p class="price-table-slide__desc">
+                        Минимальные затраты <br>
+                        при высоком качестве
+                      </p>
+                    </div>
+                    <div class="price-table-slide__foot">
+                      <button class="button-thirdly price-table-slide__button-more" type="button">Подробнее</button>
+                    </div>
+                  </article>
+                  <article class="swiper-slide price-table-slide">
+                    <div class="price-table-slide__body">
+                      <h3 class="price-table-slide__title">Комфорт</h3>
+                      <p class="price-table-slide__cost">
+                        <span class="price-table-slide__cost-value">3 000 </span>
+                        <span class="text-currency">₽</span><span class="text-sub text-sub--square">м</span>
+                      </p>
+                      <p class="price-table-slide__desc">
+                        Оптимальное соотношение <br>
+                        стоимости и результата
+                      </p>
+                    </div>
+                    <div class="price-table-slide__foot">
+                      <button class="button-thirdly price-table-slide__button-more" type="button">Подробнее</button>
+                    </div>
+                  </article>
+                  <article class="swiper-slide price-table-slide">
+                    <div class="price-table-slide__body">
+                      <h3 class="price-table-slide__title">Премиум</h3>
+                      <p class="price-table-slide__cost">
+                        <span class="price-table-slide__cost-value">5 000 </span>
+                        <span class="text-currency">₽</span><span class="text-sub text-sub--square">м</span>
+                      </p>
+                      <p class="price-table-slide__desc">
+                        Идеальное исполнение <br>
+                        для самых взыскательных
+                      </p>
+                    </div>
+                    <div class="price-table-slide__foot">
+                      <button class="button-thirdly price-table-slide__button-more" type="button">Подробнее</button>
+                    </div>
+                  </article>
+                </div>
+              
+                <div class="swiper-pagination price-table-pagination"></div>
+              
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section narrative">
+          <div class="container narrative__container">
+            <div class="narrative__content">
+              <h2 class="section-title narrative__title">
+                Планируете ремонт? <br>
+                Пройдите <span class="text-colored">короткий тест за 1 минуту</span>
+              </h2>
+              <div class="narrative__desc">
+                <p>И получите <span class="text-bold">уникальное предложение бесплатно:</span> </p>
+                <ul>
+                  <li>точный расчет сметы</li>
+                  <li>обмерный план</li>
+                  <li>планировочное решение</li>
+                </ul>
+              </div>
+              <div class="narrative__buttons">
+                <a href="#" class="button-primary narrative__button">Узнать стоимость ремонта</a>
+              </div>
+            </div>
+            <div class="narrative__media">
+              <picture class="narrative__media-pic">
+                <img src="./img/sklh_cta/quiz-cta.png" alt="Как расчитать ремонт" class="narrative__media-img">
+              </picture>
+            </div>
+          </div>
+        </section>
+
+
+        <section class="section section-quiz">
+          <div class="container section-quiz__container">
+            <h2 class="section-title section-quiz__title"></h2>
+            <div class="quiz">
+              <div class="swiper-pagination quiz-pagination"></div>
+              <div class="swiper quiz-swiper">
+                <div class="swiper-wrapper">
+                  
+                  <article class="swiper-slide quiz-slide">
+                    <div class="quiz-slide__answer">
+                      <h3 class="quiz-slide__title">
+                        Где Вы планируете делать ремонт?
+                      </h3>
+                      <div class="quiz-slide__answerlist">
+                        <label class="radio quiz-slide__answer">
+  <input type="radio" name="quiz_step_1" class="radio__input" value="Новостройка" required checked >
+  <span class="radio__checkbox"></span>
+  <p class="radio__label">Новостройка</p>
+</label>
+
+                        <label class="radio quiz-slide__answer">
+  <input type="radio" name="quiz_step_1" class="radio__input" value="Вторичка" required >
+  <span class="radio__checkbox"></span>
+  <p class="radio__label">Вторичка</p>
+</label>
+
+                        <label class="radio quiz-slide__answer">
+  <input type="radio" name="quiz_step_1" class="radio__input" value="Коттедж / Таунхаус" required >
+  <span class="radio__checkbox"></span>
+  <p class="radio__label">Коттедж / Таунхаус</p>
+</label>
+
+                        <label class="radio quiz-slide__answer">
+  <input type="radio" name="quiz_step_1" class="radio__input" value="Коммерческий объект" required >
+  <span class="radio__checkbox"></span>
+  <p class="radio__label">Коммерческий объект</p>
+</label>
+
+                      </div>
+                    </div>
+                    <div class="quiz-slide__media">
+                      <picture class="quiz-slide__media-pic">
+                        <img src="./img/sklh_quiz/quiz-step-1.jpg" alt="Где Вы планируете делать ремонт?" class="quiz-slide__media-img">
+                      </picture>
+                    </div>
+                  </article>
+                  
+                  <article class="swiper-slide quiz-slide">
+                    <div class="quiz-slide__answer">
+                      <h3 class="quiz-slide__title">
+                        Где Вы планируете делать ремонт?
+                      </h3>
+                      <div class="quiz-slide__answerlist">
+                        <label class="radio quiz-slide__answer">
+  <input type="radio" name="quiz_step_1" class="radio__input" value="Новостройка" required checked >
+  <span class="radio__checkbox"></span>
+  <p class="radio__label">Новостройка</p>
+</label>
+
+                        <label class="radio quiz-slide__answer">
+  <input type="radio" name="quiz_step_1" class="radio__input" value="Вторичка" required >
+  <span class="radio__checkbox"></span>
+  <p class="radio__label">Вторичка</p>
+</label>
+
+                        <label class="radio quiz-slide__answer">
+  <input type="radio" name="quiz_step_1" class="radio__input" value="Коттедж / Таунхаус" required >
+  <span class="radio__checkbox"></span>
+  <p class="radio__label">Коттедж / Таунхаус</p>
+</label>
+
+                        <label class="radio quiz-slide__answer">
+  <input type="radio" name="quiz_step_1" class="radio__input" value="Коммерческий объект" required >
+  <span class="radio__checkbox"></span>
+  <p class="radio__label">Коммерческий объект</p>
+</label>
+
+                      </div>
+                    </div>
+                    <div class="quiz-slide__media">
+                      <picture class="quiz-slide__media-pic">
+                        <img src="./img/sklh_quiz/quiz-step-1.jpg" alt="Где Вы планируете делать ремонт?" class="quiz-slide__media-img">
+                      </picture>
+                    </div>
+                  </article>
+                  
+                  <article class="swiper-slide quiz-slide">
+                    <div class="quiz-slide__answer">
+                      <h3 class="quiz-slide__title">
+                        Где Вы планируете делать ремонт?
+                      </h3>
+                      <div class="quiz-slide__answerlist">
+                        <label class="radio quiz-slide__answer">
+  <input type="radio" name="quiz_step_1" class="radio__input" value="Новостройка" required checked >
+  <span class="radio__checkbox"></span>
+  <p class="radio__label">Новостройка</p>
+</label>
+
+                        <label class="radio quiz-slide__answer">
+  <input type="radio" name="quiz_step_1" class="radio__input" value="Вторичка" required >
+  <span class="radio__checkbox"></span>
+  <p class="radio__label">Вторичка</p>
+</label>
+
+                        <label class="radio quiz-slide__answer">
+  <input type="radio" name="quiz_step_1" class="radio__input" value="Коттедж / Таунхаус" required >
+  <span class="radio__checkbox"></span>
+  <p class="radio__label">Коттедж / Таунхаус</p>
+</label>
+
+                        <label class="radio quiz-slide__answer">
+  <input type="radio" name="quiz_step_1" class="radio__input" value="Коммерческий объект" required >
+  <span class="radio__checkbox"></span>
+  <p class="radio__label">Коммерческий объект</p>
+</label>
+
+                      </div>
+                    </div>
+                    <div class="quiz-slide__media">
+                      <picture class="quiz-slide__media-pic">
+                        <img src="./img/sklh_quiz/quiz-step-1.jpg" alt="Где Вы планируете делать ремонт?" class="quiz-slide__media-img">
+                      </picture>
+                    </div>
+                  </article>
+                  
+                  <article class="swiper-slide quiz-slide">
+                    <div class="quiz-slide__answer">
+                      <h3 class="quiz-slide__title">
+                        Где Вы планируете делать ремонт?
+                      </h3>
+                      <div class="quiz-slide__answerlist">
+                        <label class="radio quiz-slide__answer">
+  <input type="radio" name="quiz_step_1" class="radio__input" value="Новостройка" required checked >
+  <span class="radio__checkbox"></span>
+  <p class="radio__label">Новостройка</p>
+</label>
+
+                        <label class="radio quiz-slide__answer">
+  <input type="radio" name="quiz_step_1" class="radio__input" value="Вторичка" required >
+  <span class="radio__checkbox"></span>
+  <p class="radio__label">Вторичка</p>
+</label>
+
+                        <label class="radio quiz-slide__answer">
+  <input type="radio" name="quiz_step_1" class="radio__input" value="Коттедж / Таунхаус" required >
+  <span class="radio__checkbox"></span>
+  <p class="radio__label">Коттедж / Таунхаус</p>
+</label>
+
+                        <label class="radio quiz-slide__answer">
+  <input type="radio" name="quiz_step_1" class="radio__input" value="Коммерческий объект" required >
+  <span class="radio__checkbox"></span>
+  <p class="radio__label">Коммерческий объект</p>
+</label>
+
+                      </div>
+                    </div>
+                    <div class="quiz-slide__media">
+                      <picture class="quiz-slide__media-pic">
+                        <img src="./img/sklh_quiz/quiz-step-1.jpg" alt="Где Вы планируете делать ремонт?" class="quiz-slide__media-img">
+                      </picture>
+                    </div>
+                  </article>
+                  
+                  <article class="swiper-slide quiz-slide">
+                    <div class="quiz-slide__answer">
+                      <h3 class="quiz-slide__title">
+                        Где Вы планируете делать ремонт?
+                      </h3>
+                      <div class="quiz-slide__answerlist">
+                        <label class="radio quiz-slide__answer">
+  <input type="radio" name="quiz_step_1" class="radio__input" value="Новостройка" required checked >
+  <span class="radio__checkbox"></span>
+  <p class="radio__label">Новостройка</p>
+</label>
+
+                        <label class="radio quiz-slide__answer">
+  <input type="radio" name="quiz_step_1" class="radio__input" value="Вторичка" required >
+  <span class="radio__checkbox"></span>
+  <p class="radio__label">Вторичка</p>
+</label>
+
+                        <label class="radio quiz-slide__answer">
+  <input type="radio" name="quiz_step_1" class="radio__input" value="Коттедж / Таунхаус" required >
+  <span class="radio__checkbox"></span>
+  <p class="radio__label">Коттедж / Таунхаус</p>
+</label>
+
+                        <label class="radio quiz-slide__answer">
+  <input type="radio" name="quiz_step_1" class="radio__input" value="Коммерческий объект" required >
+  <span class="radio__checkbox"></span>
+  <p class="radio__label">Коммерческий объект</p>
+</label>
+
+                      </div>
+                    </div>
+                    <div class="quiz-slide__media">
+                      <picture class="quiz-slide__media-pic">
+                        <img src="./img/sklh_quiz/quiz-step-1.jpg" alt="Где Вы планируете делать ремонт?" class="quiz-slide__media-img">
+                      </picture>
+                    </div>
+                  </article>
+                  
+                  <article class="swiper-slide quiz-slide">
+                    <div class="quiz-slide__answer">
+                      <h3 class="quiz-slide__title">
+                        Где Вы планируете делать ремонт?
+                      </h3>
+                      <div class="quiz-slide__answerlist">
+                        <label class="radio quiz-slide__answer">
+  <input type="radio" name="quiz_step_1" class="radio__input" value="Новостройка" required checked >
+  <span class="radio__checkbox"></span>
+  <p class="radio__label">Новостройка</p>
+</label>
+
+                        <label class="radio quiz-slide__answer">
+  <input type="radio" name="quiz_step_1" class="radio__input" value="Вторичка" required >
+  <span class="radio__checkbox"></span>
+  <p class="radio__label">Вторичка</p>
+</label>
+
+                        <label class="radio quiz-slide__answer">
+  <input type="radio" name="quiz_step_1" class="radio__input" value="Коттедж / Таунхаус" required >
+  <span class="radio__checkbox"></span>
+  <p class="radio__label">Коттедж / Таунхаус</p>
+</label>
+
+                        <label class="radio quiz-slide__answer">
+  <input type="radio" name="quiz_step_1" class="radio__input" value="Коммерческий объект" required >
+  <span class="radio__checkbox"></span>
+  <p class="radio__label">Коммерческий объект</p>
+</label>
+
+                      </div>
+                    </div>
+                    <div class="quiz-slide__media">
+                      <picture class="quiz-slide__media-pic">
+                        <img src="./img/sklh_quiz/quiz-step-1.jpg" alt="Где Вы планируете делать ремонт?" class="quiz-slide__media-img">
+                      </picture>
+                    </div>
+                  </article>
+                  
+                </div>
+              </div>
+              <div class="swiper-buttons quiz-buttons">
+                <div class="swiper-button-prev quiz-button-prev">
+                  <svg class="button__icon">
+                    <use xlink:href="./img/sklh_common/arrow-left.svg#arrow-left" />
+                  </svg>
+                  <span class="button__text">Назад</span>
+                </div>
+                <div class="swiper-button-next quiz-button-next">
+                  <svg class="button__icon">
+                    <use xlink:href="./img/sklh_common/arrow-right.svg#arrow-right" />
+                  </svg>
+                  <span class="button__text">Следующий шаг</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section narrative">
+          <div class="container narrative__container">
+            <div class="narrative__content">
+              <h2 class="section-title narrative__title">
+                <span class="text-colored">Договор. </span><br>
+                Фиксированные цена, сроки, и поэтапная оплата
+              </h2>
+              <div class="narrative__desc">
+                <p>
+                  <span class="text-bold">Никаких доплат и затягивания сроков. </span>
+                  До начала ремонта Вы точно знаете сколько он стоит и когда закончится. Цена, сроки, 
+                  3 этапа оплаты — <span class="text-bold">всё фиксируется в договоре.</span>
+                </p>
+              </div>
+              <div class="narrative__buttons">
+                <a href="#" class="button-primary narrative__button">Скачать договор</a>
+              </div>
+            </div>
+            <div class="narrative__media">
+              <picture class="narrative__media-pic">
+                <img src="./img/sklh_contract/contract.png" alt="Ремонт по договору" class="narrative__media-img">
+              </picture>
+            </div>
+          </div>
+        </section>
+
+
+        <section class="section problems">
+          <div class="container problems__container">
+            <h2 class="section-title problems__title">
+              Самые распространенные 
+              <span class="text-color">проблемы </span>
+              клиентов
+            </h2>
+            <p class="section-desc problems__desc">
+              с которыми они сталкиваются 
+              <span class="text-bold">в других компаниях</span>
+            </p>
+            <div class="problems-carousel">
+              <div class="swiper problems-swiper">
+                <div class="swiper-wrapper">
+                  
+                  <article class="swiper-slide problems-carousel-slide">
+                    <div class="problems-carousel-slide__media">
+                      <picture class="problems-carousel-slide__media-pic">
+                        <img src="./img/sklh_problems/prombel-1.png" alt="" class="problems-carousel-slide__media-img">
+                      </picture>
+                    </div>
+                    <div class="problems-carousel-slide__content">
+                      <h3 class="problems-carousel-slide__title">
+                        Нет общего бюджета <br>
+                        всего ремонта
+                      </h3>
+                      <div class="problems-carousel-slide__desc">
+                        <h4 class="problems-carousel-slide__subtitle">Наше решение:</h4>
+                        <p>
+                          Мы даем полную картину, через <span class="text-bold">предваритрельную смету </span>и точно корректируем её после разработки дизайн-проекта, что <span class="text-bold">экономит бюджет в 1,5-2 раза.</span>
+                        </p>
+                      </div>
+                    </div>
+                  </article>
+                  
+                  <article class="swiper-slide problems-carousel-slide">
+                    <div class="problems-carousel-slide__media">
+                      <picture class="problems-carousel-slide__media-pic">
+                        <img src="./img/sklh_problems/prombel-1.png" alt="" class="problems-carousel-slide__media-img">
+                      </picture>
+                    </div>
+                    <div class="problems-carousel-slide__content">
+                      <h3 class="problems-carousel-slide__title">
+                        Нет общего бюджета <br>
+                        всего ремонта
+                      </h3>
+                      <div class="problems-carousel-slide__desc">
+                        <h4 class="problems-carousel-slide__subtitle">Наше решение:</h4>
+                        <p>
+                          Мы даем полную картину, через <span class="text-bold">предваритрельную смету </span>и точно корректируем её после разработки дизайн-проекта, что <span class="text-bold">экономит бюджет в 1,5-2 раза.</span>
+                        </p>
+                      </div>
+                    </div>
+                  </article>
+                  
+                  <article class="swiper-slide problems-carousel-slide">
+                    <div class="problems-carousel-slide__media">
+                      <picture class="problems-carousel-slide__media-pic">
+                        <img src="./img/sklh_problems/prombel-1.png" alt="" class="problems-carousel-slide__media-img">
+                      </picture>
+                    </div>
+                    <div class="problems-carousel-slide__content">
+                      <h3 class="problems-carousel-slide__title">
+                        Нет общего бюджета <br>
+                        всего ремонта
+                      </h3>
+                      <div class="problems-carousel-slide__desc">
+                        <h4 class="problems-carousel-slide__subtitle">Наше решение:</h4>
+                        <p>
+                          Мы даем полную картину, через <span class="text-bold">предваритрельную смету </span>и точно корректируем её после разработки дизайн-проекта, что <span class="text-bold">экономит бюджет в 1,5-2 раза.</span>
+                        </p>
+                      </div>
+                    </div>
+                  </article>
+                  
+                  <article class="swiper-slide problems-carousel-slide">
+                    <div class="problems-carousel-slide__media">
+                      <picture class="problems-carousel-slide__media-pic">
+                        <img src="./img/sklh_problems/prombel-1.png" alt="" class="problems-carousel-slide__media-img">
+                      </picture>
+                    </div>
+                    <div class="problems-carousel-slide__content">
+                      <h3 class="problems-carousel-slide__title">
+                        Нет общего бюджета <br>
+                        всего ремонта
+                      </h3>
+                      <div class="problems-carousel-slide__desc">
+                        <h4 class="problems-carousel-slide__subtitle">Наше решение:</h4>
+                        <p>
+                          Мы даем полную картину, через <span class="text-bold">предваритрельную смету </span>и точно корректируем её после разработки дизайн-проекта, что <span class="text-bold">экономит бюджет в 1,5-2 раза.</span>
+                        </p>
+                      </div>
+                    </div>
+                  </article>
+                  
+                  <article class="swiper-slide problems-carousel-slide">
+                    <div class="problems-carousel-slide__media">
+                      <picture class="problems-carousel-slide__media-pic">
+                        <img src="./img/sklh_problems/prombel-1.png" alt="" class="problems-carousel-slide__media-img">
+                      </picture>
+                    </div>
+                    <div class="problems-carousel-slide__content">
+                      <h3 class="problems-carousel-slide__title">
+                        Нет общего бюджета <br>
+                        всего ремонта
+                      </h3>
+                      <div class="problems-carousel-slide__desc">
+                        <h4 class="problems-carousel-slide__subtitle">Наше решение:</h4>
+                        <p>
+                          Мы даем полную картину, через <span class="text-bold">предваритрельную смету </span>и точно корректируем её после разработки дизайн-проекта, что <span class="text-bold">экономит бюджет в 1,5-2 раза.</span>
+                        </p>
+                      </div>
+                    </div>
+                  </article>
+                  
+                  <article class="swiper-slide problems-carousel-slide">
+                    <div class="problems-carousel-slide__media">
+                      <picture class="problems-carousel-slide__media-pic">
+                        <img src="./img/sklh_problems/prombel-1.png" alt="" class="problems-carousel-slide__media-img">
+                      </picture>
+                    </div>
+                    <div class="problems-carousel-slide__content">
+                      <h3 class="problems-carousel-slide__title">
+                        Нет общего бюджета <br>
+                        всего ремонта
+                      </h3>
+                      <div class="problems-carousel-slide__desc">
+                        <h4 class="problems-carousel-slide__subtitle">Наше решение:</h4>
+                        <p>
+                          Мы даем полную картину, через <span class="text-bold">предваритрельную смету </span>и точно корректируем её после разработки дизайн-проекта, что <span class="text-bold">экономит бюджет в 1,5-2 раза.</span>
+                        </p>
+                      </div>
+                    </div>
+                  </article>
+                  
+                </div>
+              </div>
+              <div class="carousel-nav problems-carousel__nav">
+                <div class="swiper-pagination problems-carousel-pagination"></div>
+                <div class="swiper-buttons problems-buttons">
+                  <div class="swiper-button-prev problems-carousel-button-prev"></div>
+                  <div class="swiper-button-next problems-carousel-button-next"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section narrative">
+          <div class="container narrative__container">
+            <div class="narrative__content">
+              <h2 class="section-title narrative__title">
+                Посетите наш <br>
+                <span class="text-colored">Шоурум</span>
+              </h2>
+              <div class="narrative__desc">
+                <p>
+                  <span class="text-bold">Комплектация объекта под ключ. </span> Мы реализуем любые идеи вашего проекта: подберем нужные материалы и предметы интерьера. 
+                </p>
+                <div class="narrative__desc-group">
+                  <div class="narrative__desc-group-item">
+                    <p class="text-bold">Расчет чистовых материалов:</p>
+                    <ul>
+                      <li>Плитка</li>
+                      <li>Обои</li>
+                      <li>Напольные покрытие</li>
+                      <li>Электротовары </li>
+                      <li>Радиаторы</li>
+                      <li>Сантехника</li>
+                    </ul>
+                  </div>
+                  <div class="narrative__desc-group-item">
+                    <p class="text-bold">Мебель на заказ:</p>
+                    <ul>
+                      <li>Кухонные гарнитуры </li>
+                      <li>Шкафы тумбы и прочее</li>
+                      <li>Гардеробные</li>
+                      <li>Мягкая мебель </li>
+                      <li>Мебель для офиса</li>
+                    </ul>
+                  </div>
+                </div>
+                <ul>
+              </div>
+              <div class="narrative__buttons">
+                <button class="button-primary narrative__button" type="button">Записаться в Шоурум</button>
+              </div>
+            </div>
+            <div class="narrative__media">
+              <div class="yt-video" data-yt-id="2VcEI3KF7tA"></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section team">
+          <div class="container team__container">
+            <h2 class="section-title team__title">
+              Наша 
+              <span class="text-colored"> команда</span>
+            </h2>
+            <div class="team__tabs tabs">
+              <div class="tabs__tablist">
+                <button class="tabs__button tabs__button--active" type="button">
+                  <span class="tabs__button-text">Мастера</span>
+                </button>
+                <button class="tabs__button" type="button">
+                  <span class="tabs__button-text">Дизайнеры</span>
+                </button>
+                <button class="tabs__button" type="button">
+                  <span class="tabs__button-text">Менеджеры</span>
+                </button>
+                <button class="tabs__button" type="button">
+                  <span class="tabs__button-text">Контроль качества</span>
+                </button>
+              </div>
+              <div class="tabs__panel-list">
+                
+                <div class="tabs__panel">
+                  <div class="team-carousel">
+                    <div class="swiper team-swiper">
+                      <div class="swiper-wrapper">
+                        
+                        <div class="swiper-slide team-carousel-slide">
+                          <article class="team-card">
+                            <div class="team-card__media">
+                              <picture class="team-card__media-pic">
+                                <img src="./img/sklh_team/team-01.jpg" alt="" class="team-card__media-img">
+                              </picture>
+                            </div>
+                            <div class="team-card__head">
+                              <h3 class="team-card__name">Сергей Иванов 0</h3>
+                              <p class="team-card__subtitle text-bold">Прораб</p>
+                            </div>
+                            <div class="team-card__body">
+                              <p>
+                                Прораб — обучает мастеров. Эта должность относится к руководителям среднего звена.
+                              </p>
+                              <p>
+                                Обязанности: обеспечение выполнения заданий по вводу объектов в эксплуатацию; соблюдение сроков ввода; организация процесса производства работ; учет выполненных работ; руководство бригадой.
+                              </p>
+                            </div>
+                          </article>
+                        </div>
+                        
+                        <div class="swiper-slide team-carousel-slide">
+                          <article class="team-card">
+                            <div class="team-card__media">
+                              <picture class="team-card__media-pic">
+                                <img src="./img/sklh_team/team-01.jpg" alt="" class="team-card__media-img">
+                              </picture>
+                            </div>
+                            <div class="team-card__head">
+                              <h3 class="team-card__name">Сергей Иванов 0</h3>
+                              <p class="team-card__subtitle text-bold">Прораб</p>
+                            </div>
+                            <div class="team-card__body">
+                              <p>
+                                Прораб — обучает мастеров. Эта должность относится к руководителям среднего звена.
+                              </p>
+                              <p>
+                                Обязанности: обеспечение выполнения заданий по вводу объектов в эксплуатацию; соблюдение сроков ввода; организация процесса производства работ; учет выполненных работ; руководство бригадой.
+                              </p>
+                            </div>
+                          </article>
+                        </div>
+                        
+                        <div class="swiper-slide team-carousel-slide">
+                          <article class="team-card">
+                            <div class="team-card__media">
+                              <picture class="team-card__media-pic">
+                                <img src="./img/sklh_team/team-01.jpg" alt="" class="team-card__media-img">
+                              </picture>
+                            </div>
+                            <div class="team-card__head">
+                              <h3 class="team-card__name">Сергей Иванов 0</h3>
+                              <p class="team-card__subtitle text-bold">Прораб</p>
+                            </div>
+                            <div class="team-card__body">
+                              <p>
+                                Прораб — обучает мастеров. Эта должность относится к руководителям среднего звена.
+                              </p>
+                              <p>
+                                Обязанности: обеспечение выполнения заданий по вводу объектов в эксплуатацию; соблюдение сроков ввода; организация процесса производства работ; учет выполненных работ; руководство бригадой.
+                              </p>
+                            </div>
+                          </article>
+                        </div>
+                        
+                        <div class="swiper-slide team-carousel-slide">
+                          <article class="team-card">
+                            <div class="team-card__media">
+                              <picture class="team-card__media-pic">
+                                <img src="./img/sklh_team/team-01.jpg" alt="" class="team-card__media-img">
+                              </picture>
+                            </div>
+                            <div class="team-card__head">
+                              <h3 class="team-card__name">Сергей Иванов 0</h3>
+                              <p class="team-card__subtitle text-bold">Прораб</p>
+                            </div>
+                            <div class="team-card__body">
+                              <p>
+                                Прораб — обучает мастеров. Эта должность относится к руководителям среднего звена.
+                              </p>
+                              <p>
+                                Обязанности: обеспечение выполнения заданий по вводу объектов в эксплуатацию; соблюдение сроков ввода; организация процесса производства работ; учет выполненных работ; руководство бригадой.
+                              </p>
+                            </div>
+                          </article>
+                        </div>
+                        
+                        <div class="swiper-slide team-carousel-slide">
+                          <article class="team-card">
+                            <div class="team-card__media">
+                              <picture class="team-card__media-pic">
+                                <img src="./img/sklh_team/team-01.jpg" alt="" class="team-card__media-img">
+                              </picture>
+                            </div>
+                            <div class="team-card__head">
+                              <h3 class="team-card__name">Сергей Иванов 0</h3>
+                              <p class="team-card__subtitle text-bold">Прораб</p>
+                            </div>
+                            <div class="team-card__body">
+                              <p>
+                                Прораб — обучает мастеров. Эта должность относится к руководителям среднего звена.
+                              </p>
+                              <p>
+                                Обязанности: обеспечение выполнения заданий по вводу объектов в эксплуатацию; соблюдение сроков ввода; организация процесса производства работ; учет выполненных работ; руководство бригадой.
+                              </p>
+                            </div>
+                          </article>
+                        </div>
+                        
+                      </div>
+                      <div class="carousel-nav">
+                        <div class="swiper-pagination team-carousel-pagination"></div>
+                        <div class="swiper-buttons team-carousel-buttons">
+                          <div class="swiper-button-prev team-carousel-button-prev"></div>
+                          <div class="swiper-button-next team-carousel-button-next"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="tabs__panel">
+                  <div class="team-carousel">
+                    <div class="swiper team-swiper">
+                      <div class="swiper-wrapper">
+                        
+                        <div class="swiper-slide team-carousel-slide">
+                          <article class="team-card">
+                            <div class="team-card__media">
+                              <picture class="team-card__media-pic">
+                                <img src="./img/sklh_team/team-01.jpg" alt="" class="team-card__media-img">
+                              </picture>
+                            </div>
+                            <div class="team-card__head">
+                              <h3 class="team-card__name">Сергей Иванов 1</h3>
+                              <p class="team-card__subtitle text-bold">Прораб</p>
+                            </div>
+                            <div class="team-card__body">
+                              <p>
+                                Прораб — обучает мастеров. Эта должность относится к руководителям среднего звена.
+                              </p>
+                              <p>
+                                Обязанности: обеспечение выполнения заданий по вводу объектов в эксплуатацию; соблюдение сроков ввода; организация процесса производства работ; учет выполненных работ; руководство бригадой.
+                              </p>
+                            </div>
+                          </article>
+                        </div>
+                        
+                        <div class="swiper-slide team-carousel-slide">
+                          <article class="team-card">
+                            <div class="team-card__media">
+                              <picture class="team-card__media-pic">
+                                <img src="./img/sklh_team/team-01.jpg" alt="" class="team-card__media-img">
+                              </picture>
+                            </div>
+                            <div class="team-card__head">
+                              <h3 class="team-card__name">Сергей Иванов 1</h3>
+                              <p class="team-card__subtitle text-bold">Прораб</p>
+                            </div>
+                            <div class="team-card__body">
+                              <p>
+                                Прораб — обучает мастеров. Эта должность относится к руководителям среднего звена.
+                              </p>
+                              <p>
+                                Обязанности: обеспечение выполнения заданий по вводу объектов в эксплуатацию; соблюдение сроков ввода; организация процесса производства работ; учет выполненных работ; руководство бригадой.
+                              </p>
+                            </div>
+                          </article>
+                        </div>
+                        
+                        <div class="swiper-slide team-carousel-slide">
+                          <article class="team-card">
+                            <div class="team-card__media">
+                              <picture class="team-card__media-pic">
+                                <img src="./img/sklh_team/team-01.jpg" alt="" class="team-card__media-img">
+                              </picture>
+                            </div>
+                            <div class="team-card__head">
+                              <h3 class="team-card__name">Сергей Иванов 1</h3>
+                              <p class="team-card__subtitle text-bold">Прораб</p>
+                            </div>
+                            <div class="team-card__body">
+                              <p>
+                                Прораб — обучает мастеров. Эта должность относится к руководителям среднего звена.
+                              </p>
+                              <p>
+                                Обязанности: обеспечение выполнения заданий по вводу объектов в эксплуатацию; соблюдение сроков ввода; организация процесса производства работ; учет выполненных работ; руководство бригадой.
+                              </p>
+                            </div>
+                          </article>
+                        </div>
+                        
+                        <div class="swiper-slide team-carousel-slide">
+                          <article class="team-card">
+                            <div class="team-card__media">
+                              <picture class="team-card__media-pic">
+                                <img src="./img/sklh_team/team-01.jpg" alt="" class="team-card__media-img">
+                              </picture>
+                            </div>
+                            <div class="team-card__head">
+                              <h3 class="team-card__name">Сергей Иванов 1</h3>
+                              <p class="team-card__subtitle text-bold">Прораб</p>
+                            </div>
+                            <div class="team-card__body">
+                              <p>
+                                Прораб — обучает мастеров. Эта должность относится к руководителям среднего звена.
+                              </p>
+                              <p>
+                                Обязанности: обеспечение выполнения заданий по вводу объектов в эксплуатацию; соблюдение сроков ввода; организация процесса производства работ; учет выполненных работ; руководство бригадой.
+                              </p>
+                            </div>
+                          </article>
+                        </div>
+                        
+                        <div class="swiper-slide team-carousel-slide">
+                          <article class="team-card">
+                            <div class="team-card__media">
+                              <picture class="team-card__media-pic">
+                                <img src="./img/sklh_team/team-01.jpg" alt="" class="team-card__media-img">
+                              </picture>
+                            </div>
+                            <div class="team-card__head">
+                              <h3 class="team-card__name">Сергей Иванов 1</h3>
+                              <p class="team-card__subtitle text-bold">Прораб</p>
+                            </div>
+                            <div class="team-card__body">
+                              <p>
+                                Прораб — обучает мастеров. Эта должность относится к руководителям среднего звена.
+                              </p>
+                              <p>
+                                Обязанности: обеспечение выполнения заданий по вводу объектов в эксплуатацию; соблюдение сроков ввода; организация процесса производства работ; учет выполненных работ; руководство бригадой.
+                              </p>
+                            </div>
+                          </article>
+                        </div>
+                        
+                      </div>
+                      <div class="carousel-nav">
+                        <div class="swiper-pagination team-carousel-pagination"></div>
+                        <div class="swiper-buttons team-carousel-buttons">
+                          <div class="swiper-button-prev team-carousel-button-prev"></div>
+                          <div class="swiper-button-next team-carousel-button-next"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="tabs__panel">
+                  <div class="team-carousel">
+                    <div class="swiper team-swiper">
+                      <div class="swiper-wrapper">
+                        
+                        <div class="swiper-slide team-carousel-slide">
+                          <article class="team-card">
+                            <div class="team-card__media">
+                              <picture class="team-card__media-pic">
+                                <img src="./img/sklh_team/team-01.jpg" alt="" class="team-card__media-img">
+                              </picture>
+                            </div>
+                            <div class="team-card__head">
+                              <h3 class="team-card__name">Сергей Иванов 2</h3>
+                              <p class="team-card__subtitle text-bold">Прораб</p>
+                            </div>
+                            <div class="team-card__body">
+                              <p>
+                                Прораб — обучает мастеров. Эта должность относится к руководителям среднего звена.
+                              </p>
+                              <p>
+                                Обязанности: обеспечение выполнения заданий по вводу объектов в эксплуатацию; соблюдение сроков ввода; организация процесса производства работ; учет выполненных работ; руководство бригадой.
+                              </p>
+                            </div>
+                          </article>
+                        </div>
+                        
+                        <div class="swiper-slide team-carousel-slide">
+                          <article class="team-card">
+                            <div class="team-card__media">
+                              <picture class="team-card__media-pic">
+                                <img src="./img/sklh_team/team-01.jpg" alt="" class="team-card__media-img">
+                              </picture>
+                            </div>
+                            <div class="team-card__head">
+                              <h3 class="team-card__name">Сергей Иванов 2</h3>
+                              <p class="team-card__subtitle text-bold">Прораб</p>
+                            </div>
+                            <div class="team-card__body">
+                              <p>
+                                Прораб — обучает мастеров. Эта должность относится к руководителям среднего звена.
+                              </p>
+                              <p>
+                                Обязанности: обеспечение выполнения заданий по вводу объектов в эксплуатацию; соблюдение сроков ввода; организация процесса производства работ; учет выполненных работ; руководство бригадой.
+                              </p>
+                            </div>
+                          </article>
+                        </div>
+                        
+                        <div class="swiper-slide team-carousel-slide">
+                          <article class="team-card">
+                            <div class="team-card__media">
+                              <picture class="team-card__media-pic">
+                                <img src="./img/sklh_team/team-01.jpg" alt="" class="team-card__media-img">
+                              </picture>
+                            </div>
+                            <div class="team-card__head">
+                              <h3 class="team-card__name">Сергей Иванов 2</h3>
+                              <p class="team-card__subtitle text-bold">Прораб</p>
+                            </div>
+                            <div class="team-card__body">
+                              <p>
+                                Прораб — обучает мастеров. Эта должность относится к руководителям среднего звена.
+                              </p>
+                              <p>
+                                Обязанности: обеспечение выполнения заданий по вводу объектов в эксплуатацию; соблюдение сроков ввода; организация процесса производства работ; учет выполненных работ; руководство бригадой.
+                              </p>
+                            </div>
+                          </article>
+                        </div>
+                        
+                        <div class="swiper-slide team-carousel-slide">
+                          <article class="team-card">
+                            <div class="team-card__media">
+                              <picture class="team-card__media-pic">
+                                <img src="./img/sklh_team/team-01.jpg" alt="" class="team-card__media-img">
+                              </picture>
+                            </div>
+                            <div class="team-card__head">
+                              <h3 class="team-card__name">Сергей Иванов 2</h3>
+                              <p class="team-card__subtitle text-bold">Прораб</p>
+                            </div>
+                            <div class="team-card__body">
+                              <p>
+                                Прораб — обучает мастеров. Эта должность относится к руководителям среднего звена.
+                              </p>
+                              <p>
+                                Обязанности: обеспечение выполнения заданий по вводу объектов в эксплуатацию; соблюдение сроков ввода; организация процесса производства работ; учет выполненных работ; руководство бригадой.
+                              </p>
+                            </div>
+                          </article>
+                        </div>
+                        
+                        <div class="swiper-slide team-carousel-slide">
+                          <article class="team-card">
+                            <div class="team-card__media">
+                              <picture class="team-card__media-pic">
+                                <img src="./img/sklh_team/team-01.jpg" alt="" class="team-card__media-img">
+                              </picture>
+                            </div>
+                            <div class="team-card__head">
+                              <h3 class="team-card__name">Сергей Иванов 2</h3>
+                              <p class="team-card__subtitle text-bold">Прораб</p>
+                            </div>
+                            <div class="team-card__body">
+                              <p>
+                                Прораб — обучает мастеров. Эта должность относится к руководителям среднего звена.
+                              </p>
+                              <p>
+                                Обязанности: обеспечение выполнения заданий по вводу объектов в эксплуатацию; соблюдение сроков ввода; организация процесса производства работ; учет выполненных работ; руководство бригадой.
+                              </p>
+                            </div>
+                          </article>
+                        </div>
+                        
+                      </div>
+                      <div class="carousel-nav">
+                        <div class="swiper-pagination team-carousel-pagination"></div>
+                        <div class="swiper-buttons team-carousel-buttons">
+                          <div class="swiper-button-prev team-carousel-button-prev"></div>
+                          <div class="swiper-button-next team-carousel-button-next"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="tabs__panel">
+                  <div class="team-carousel">
+                    <div class="swiper team-swiper">
+                      <div class="swiper-wrapper">
+                        
+                        <div class="swiper-slide team-carousel-slide">
+                          <article class="team-card">
+                            <div class="team-card__media">
+                              <picture class="team-card__media-pic">
+                                <img src="./img/sklh_team/team-01.jpg" alt="" class="team-card__media-img">
+                              </picture>
+                            </div>
+                            <div class="team-card__head">
+                              <h3 class="team-card__name">Сергей Иванов 3</h3>
+                              <p class="team-card__subtitle text-bold">Прораб</p>
+                            </div>
+                            <div class="team-card__body">
+                              <p>
+                                Прораб — обучает мастеров. Эта должность относится к руководителям среднего звена.
+                              </p>
+                              <p>
+                                Обязанности: обеспечение выполнения заданий по вводу объектов в эксплуатацию; соблюдение сроков ввода; организация процесса производства работ; учет выполненных работ; руководство бригадой.
+                              </p>
+                            </div>
+                          </article>
+                        </div>
+                        
+                        <div class="swiper-slide team-carousel-slide">
+                          <article class="team-card">
+                            <div class="team-card__media">
+                              <picture class="team-card__media-pic">
+                                <img src="./img/sklh_team/team-01.jpg" alt="" class="team-card__media-img">
+                              </picture>
+                            </div>
+                            <div class="team-card__head">
+                              <h3 class="team-card__name">Сергей Иванов 3</h3>
+                              <p class="team-card__subtitle text-bold">Прораб</p>
+                            </div>
+                            <div class="team-card__body">
+                              <p>
+                                Прораб — обучает мастеров. Эта должность относится к руководителям среднего звена.
+                              </p>
+                              <p>
+                                Обязанности: обеспечение выполнения заданий по вводу объектов в эксплуатацию; соблюдение сроков ввода; организация процесса производства работ; учет выполненных работ; руководство бригадой.
+                              </p>
+                            </div>
+                          </article>
+                        </div>
+                        
+                        <div class="swiper-slide team-carousel-slide">
+                          <article class="team-card">
+                            <div class="team-card__media">
+                              <picture class="team-card__media-pic">
+                                <img src="./img/sklh_team/team-01.jpg" alt="" class="team-card__media-img">
+                              </picture>
+                            </div>
+                            <div class="team-card__head">
+                              <h3 class="team-card__name">Сергей Иванов 3</h3>
+                              <p class="team-card__subtitle text-bold">Прораб</p>
+                            </div>
+                            <div class="team-card__body">
+                              <p>
+                                Прораб — обучает мастеров. Эта должность относится к руководителям среднего звена.
+                              </p>
+                              <p>
+                                Обязанности: обеспечение выполнения заданий по вводу объектов в эксплуатацию; соблюдение сроков ввода; организация процесса производства работ; учет выполненных работ; руководство бригадой.
+                              </p>
+                            </div>
+                          </article>
+                        </div>
+                        
+                        <div class="swiper-slide team-carousel-slide">
+                          <article class="team-card">
+                            <div class="team-card__media">
+                              <picture class="team-card__media-pic">
+                                <img src="./img/sklh_team/team-01.jpg" alt="" class="team-card__media-img">
+                              </picture>
+                            </div>
+                            <div class="team-card__head">
+                              <h3 class="team-card__name">Сергей Иванов 3</h3>
+                              <p class="team-card__subtitle text-bold">Прораб</p>
+                            </div>
+                            <div class="team-card__body">
+                              <p>
+                                Прораб — обучает мастеров. Эта должность относится к руководителям среднего звена.
+                              </p>
+                              <p>
+                                Обязанности: обеспечение выполнения заданий по вводу объектов в эксплуатацию; соблюдение сроков ввода; организация процесса производства работ; учет выполненных работ; руководство бригадой.
+                              </p>
+                            </div>
+                          </article>
+                        </div>
+                        
+                        <div class="swiper-slide team-carousel-slide">
+                          <article class="team-card">
+                            <div class="team-card__media">
+                              <picture class="team-card__media-pic">
+                                <img src="./img/sklh_team/team-01.jpg" alt="" class="team-card__media-img">
+                              </picture>
+                            </div>
+                            <div class="team-card__head">
+                              <h3 class="team-card__name">Сергей Иванов 3</h3>
+                              <p class="team-card__subtitle text-bold">Прораб</p>
+                            </div>
+                            <div class="team-card__body">
+                              <p>
+                                Прораб — обучает мастеров. Эта должность относится к руководителям среднего звена.
+                              </p>
+                              <p>
+                                Обязанности: обеспечение выполнения заданий по вводу объектов в эксплуатацию; соблюдение сроков ввода; организация процесса производства работ; учет выполненных работ; руководство бригадой.
+                              </p>
+                            </div>
+                          </article>
+                        </div>
+                        
+                      </div>
+                      <div class="carousel-nav">
+                        <div class="swiper-pagination team-carousel-pagination"></div>
+                        <div class="swiper-buttons team-carousel-buttons">
+                          <div class="swiper-button-prev team-carousel-button-prev"></div>
+                          <div class="swiper-button-next team-carousel-button-next"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </section>
+
       </main>
 
-      @include('tpls/footer.html',{})
+      <footer class="footer">
+	<section class="section contacts">
+	  <div class="container contacts__container">
+	  	<div class="section__head">
+		    <h2 class="section-title contacts__title">
+		    	Наши <span class="text-colored"> контакты</span>
+		    </h2>
+				<div class="socials contacts__socials">
+  
+    <a class="socials__link socials__link--youtube" aria-label="YT"
+      href="https://youtube.com" target="_blank" rel="noopener noreferrer"
+      >
+      <svg class="socials__icon">
+        <use href="./img/sklh_common/icon-youtube.svg#icon-youtube"></use>
+      </svg>
+    </a>
+  
+    <a class="socials__link socials__link--instagram" aria-label="IG"
+      href="https://instagram.com" target="_blank" rel="noopener noreferrer"
+      >
+      <svg class="socials__icon">
+        <use href="./img/sklh_common/icon-instagram.svg#icon-instagram"></use>
+      </svg>
+    </a>
+  
+    <a class="socials__link socials__link--telegram" aria-label="TG"
+      href="https://t.me" target="_blank" rel="noopener noreferrer"
+      >
+      <svg class="socials__icon">
+        <use href="./img/sklh_common/icon-telegram.svg#icon-telegram"></use>
+      </svg>
+    </a>
+  
+    <a class="socials__link socials__link--whatsapp" aria-label="WA"
+      href="https://wa.me" target="_blank" rel="noopener noreferrer"
+      >
+      <svg class="socials__icon">
+        <use href="./img/sklh_common/icon-whatsapp.svg#icon-whatsapp"></use>
+      </svg>
+    </a>
+  
+</div>
+
+	  	</div>
+
+	  	<div class="contacts__list">
+	  		<ul class="contacts__linklist">
+	  			<li class="contacts__linklist-item">
+	  				<a href="tel:" class="contacts-linklinst-link">
+	  					+7(996) 316-39-99
+	  				</a>
+	  			</li>
+	  			<li class="contacts__linklist-item">
+	  				<a href="tel:" class="contacts-linklinst-link">
+							+7(499) 111-39-99
+	  				</a>
+	  			</li>
+	  		</ul>
+	  		<div class="contacts__entries">
+	  			<a class="contacts__entries-item">
+	  				<span class="text-bold">Email: </span> info@skill-house.ru
+	  			</a>
+	  			<a class="contacts__entries-item">
+	  				<span class="text-bold">Адрес: </span> г. Москва, ул. Большая Якиманка 31, офис 105
+	  			</a>
+	  			<a class="contacts__entries-item">
+	  				<span class="text-bold">ИНН: </span> 9721188852
+	  				<br>
+	  				<span class="text-bold">ОГРН: </span> 1227700804891
+	  			</a>
+	  		</div>
+
+	  		<button class="button-secondary contacts__button-callback" type=button>
+	  			Заказать звонок
+	  		</button>
+
+	  		<div class="contacts__footnotes">
+	  			<p>© 2023 СкилХаус</p>
+	  		</div>
+	  	</div>
+
+	  	<div class="contacts__media">
+	  		<picture class="contacts__media-pic">
+	  			<img src="./img/sklh_contacts/map.png" alt="" class="contacts__media-img">
+	  		</picture>
+	  	</div>
+	  </div>
+	</section>
+</footer>
+
+
     </div>
 
-    @include('tpls/modals.html', {})
+    <!-- @include('./miri/modal-form.html', {id: "online"}) -->
 
-    <script src="./js/index.min.js?_v=20230920144803"></script>
+
+    <script src="./js/index.min.js?_v=20230921094541"></script>
   </body>
 </html>
