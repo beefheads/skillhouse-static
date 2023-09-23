@@ -112,3 +112,11 @@ body._lock {
 @import "./sections";
 @import "./pages";
 @import "./modifiers";
+
+
+.text-bold {
+  font-weight: 700;
+}
+.text-colored {
+  color: var(--c-primary);
+}

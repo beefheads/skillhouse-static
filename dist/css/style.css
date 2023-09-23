@@ -989,7 +989,7 @@ body._lock {
 
 .socials {
   --icon-size: 2.4rem;
-  --icon-gap: 3rem;
+  --icon-gap: 1.6rem;
   --link-padding: 0;
   --icon-brad: ;
 }
@@ -1503,6 +1503,7 @@ body._lock {
   color: var(--fg);
   cursor: pointer;
   transition: all 0.3s ease;
+  letter-spacing: var(--ls);
 }
 
 .link {
@@ -1511,6 +1512,7 @@ body._lock {
   --fz: 2rem;
   --fw: 500;
   --lh: initial;
+  --ls: initial;
 
   --padding-block: 1.25em;
   --padding-inline: 1.5em;
@@ -1615,6 +1617,7 @@ body._lock {
   --padding-inline: 1.5em;
   --padding: 0;
   --text-padding: 0.4em 0 0.44rem 0;
+  --ls: -0.27px;
   --fg: var(--c-primary);
   --bg: transparent;
   --border-width: 0.1rem;
@@ -1632,6 +1635,182 @@ body._lock {
   --fw: 700;
 }
 
+.menu {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  display: block;
+  background: rgba(0, 0, 0, 0.9);
+  padding: 3.8rem 4rem;
+  height: 100%;
+  max-width: 40rem;
+  display: flex;
+  flex-direction: column;
+  pointer-events: none;
+  transform: translateX(-100%);
+  transition: all 0.45s var(--tr-jolly-enter);
+}
+
+.menu--visible {
+  transform: translateX(0);
+}
+
+.menu__body {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.menu__nav {
+  counter-reset: menu-nav;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.menu__nav-item {
+  counter-increment: menu-nav;
+  color: var(--fg-regular, #FFF);
+  leading-trim: both;
+  text-edge: cap;
+  font-family: var(--ff-regular);
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 115%;
+  letter-spacing: -0.8px;
+  margin-bottom: 4rem;
+  transition: var(--tr);
+}
+
+.menu__nav-item:last-of-type {
+  margin-bottom: 0;
+}
+
+.menu__nav-link {
+  transition: inherit;
+  display: inline-block;
+}
+
+@media (any-hover: hover) {
+  .menu__nav-link:hover {
+    transform: translateX(1rem);
+  }
+}
+
+.menu__nav-link::before {
+  content: counters(menu-nav, ".", decimal-leading-zero);
+  color: var(--c-primary);
+  transition: var(--tr);
+  margin-right: 0.3em;
+}
+
+.menu__nav-link:hover::before {
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.9), 0 0 40px rgba(255, 255, 255, 0.7), 0 0 1rem var(--c-primary), 0 0 70px var(--c-primary), 0 0 30px var(--c-primary);
+}
+
+.menu__button-callback {
+  font-size: 1rem;
+}
+
+.menu__footer {
+  display: grid;
+  grid-template-areas: "links contacts" "buttons contacts" "footnote socials";
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding-top: 4rem;
+  border-top: 0.1rem solid var(--c-primary);
+}
+
+.menu__linklist {
+  grid-area: links;
+  color: #D7BF7F;
+  leading-trim: both;
+  text-edge: cap;
+  font-variant-numeric: lining-nums tabular-nums;
+  font-family: var(--ff-regular);
+  font-size: 1.2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 130%; /* 15.6px */
+}
+
+.menu__linklist-link {
+  transition: var(--tr);
+}
+
+@media (any-hover: hover) {
+  .menu__linklist-link:hover {
+    color: var(--fg-regular);
+  }
+}
+
+.menu__contacts {
+  grid-area: contacts;
+  color: var(--fg-regular);
+  leading-trim: both;
+  text-edge: cap;
+  font-family: var(--ff-regular);
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 130%;
+  letter-spacing: -0.4px;
+}
+
+.menu__contacts-item {
+  display: block;
+  margin-bottom: 2rem;
+  transition: var(--tr);
+}
+
+.menu__contacts-item * {
+  transition: inherit;
+}
+
+@media (any-hover: hover) {
+  a.menu__contacts-item:hover {
+    color: var(--c-primary);
+  }
+}
+
+@media (any-hover: hover) {
+  a.menu__contacts-item:hover > *:first-child {
+    color: var(--fg-regular);
+  }
+}
+
+.menu__contacts-item:last-child {
+  margin-bottom: 0;
+}
+
+.menu__contacts-item > *:first-child {
+  margin-right: 0.3em;
+  display: inline-block;
+}
+
+.menu__footbuttons {
+  grid-area: buttons;
+}
+
+.menu__socials {
+  padding-top: 2rem;
+  grid-area: socials;
+}
+
+.menu__footnotes {
+  align-self: center;
+  padding-top: 2rem;
+  grid-area: footnote;
+  color: rgba(255, 255, 255, 0.6);
+  leading-trim: both;
+  text-edge: cap;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 130%; /* 13px */
+  letter-spacing: -0.4px;
+}
+
 /*
     <button class="burger header__burger">
       <span class="burger__line"></span>
@@ -1642,12 +1821,14 @@ body._lock {
 .burger {
   --line-width: 47.5%;
   --line-height: 3px;
+  --line-offset: 0.8rem;
   --c-burger-line: #000;
   position: relative;
   width: var(--burger-width, 40px);
   height: var(--burger-height, 40px);
   transition: var(--tr);
   margin-left: 3rem;
+  cursor: pointer;
 }
 @media (min-width: 993px) {
   .burger {
@@ -1668,7 +1849,7 @@ body._lock {
 }
 
 .burger__line:nth-child(1) {
-  transform: translate(-50%, calc(-50% - 8px));
+  transform: translate(-50%, calc(-50% - var(--line-offset)));
 }
 
 .burger__line:nth-child(2) {
@@ -1676,7 +1857,7 @@ body._lock {
 }
 
 .burger__line:nth-child(3) {
-  transform: translate(-50%, calc(-50% + 8px));
+  transform: translate(-50%, calc(-50% + var(--line-offset)));
   transform-origin: left;
 }
 
@@ -1693,14 +1874,77 @@ body._lock {
   transform-origin: unset;
 }
 
+.header {
+  background: rgba(0, 0, 0, 0.7);
+  position: sticky;
+  top: 0;
+  z-index: var(--z-header);
+}
+
 .header .burger {
   --c-burger-line: var(--c-primary);
+  --line-width: 100%;
+  --line-offset: 1.1rem;
+  --burger-width: 4rem;
+  --burger-height: 2.8rem;
+  margin-left: 0;
+  margin-top: 0.7rem;
+  margin-right: 1rem;
+  z-index: 3;
+}
+@media (min-width: 993px) {
+  .header .burger {
+    display: block;
+  }
 }
 
 .header__container {
+  padding-top: 2.6rem;
+  padding-bottom: 3.5rem;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+}
+
+.header__socials {
+  margin-left: auto;
+}
+
+.header__logo {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 17rem;
+}
+
+.header__menu {
+  margin-left: 4rem;
+  margin-right: 3.6rem;
+}
+
+.header__menu-link {
+  --text-padding: 1rem 0 0 0;
+  --lh: 1;
+}
+
+.header__contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.header__contacts-item {
+  leading-trim: both;
+  text-edge: cap;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 1.4px;
+}
+
+.header__button-callback {
+  font-size: 1.8rem;
+  --text-padding: 0;
 }
 
 .is-hidden {
@@ -1717,5 +1961,13 @@ body._lock {
 .is-transparent {
   opacity: 0 !important;
   pointer-events: none !important;
+}
+
+.text-bold {
+  font-weight: 700;
+}
+
+.text-colored {
+  color: var(--c-primary);
 }
 /*# sourceMappingURL=../maps/style.css.map */

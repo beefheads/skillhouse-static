@@ -18,29 +18,30 @@
 
 // $w-burger: $tablet-xlg;
 
-$desktop-xxlg: 3460px;
-$desktop-xlg: 2560px;
-$desktop-lg: 1920px;
-$desktop-md: 1600px;
-$desktop-lgz: 1536px;
+$desktop-xxlg: 3840px; // 3840×2160
+$desktop-xlg: 2560px; // 2560×1440
+$desktop-lg: 1920px; // 1920×1000
+$desktop-md: 1600px; // 1600×900
+$desktop-lgz: 1536px; // 1536×864
 
-$laptop-lg: 1440px;
-$laptop-xlg: 1366px;
-$laptop-lg: 1280px;
-$laptop-md: 1100px;
-$laptop-sm: 1024px;
+$laptop-xxlg: 1440px; // 1440×800
+$laptop-xlg: 1366px; // 1366×650
+$laptop-lg: 1280px; // 1280×1024
+$laptop-md: 1100px; // 1100×768
+$laptop-sm: 1024px; // 1024×768
 
-$tablet-xlg: 992px;
-$tablet-lg: 810px;
-$tablet-md: 768px;
+$tablet-xlg: 992px; // 992×601
+$tablet-lg: 810px; // 810×1080
+$tablet-md: 768px; // 768×1024
+$tablet-sm: 720px; // 720×1280
 
-$mobile-xxlg: 601px;
-$mobile-xlg: 450px;
-$mobile-lg: 414px;
-$mobile-md: 412px;
-$mobile-sm: 393px;
-$mobile-xs: 375px;
-$mobile-xxs: 360px;
-$mobile-xxx: 320px;
+$mobile-xxlg: 601px; // 601×962
+$mobile-xlg: 450px; // 450×846
+$mobile-lg: 414px; // 414×892
+$mobile-md: 412px; // 412×846
+$mobile-sm: 393px; // 393×812
+$mobile-xs: 375px; // 375×812
+$mobile-xxs: 360px; // 360×720
+$mobile-xxx: 320px; // 320×700
 
 $has-burger: $tablet-xlg;

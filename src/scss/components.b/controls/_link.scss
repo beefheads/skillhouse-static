@@ -21,6 +21,7 @@
 
   cursor: pointer;
   transition: all 0.3s ease;
+  letter-spacing: var(--ls);
 }
 
 .link__text {
@@ -33,6 +34,7 @@
   --fz: 2rem;
   --fw: 500;
   --lh: initial;
+  --ls: initial;
 
   --padding-block: 1.25em;
   --padding-inline: 1.5em;

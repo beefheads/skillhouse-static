@@ -9,12 +9,14 @@
 .burger {
   --line-width: 47.5%;
   --line-height: 3px;
+  --line-offset: 0.8rem;
   --c-burger-line: #000;
   position: relative;
   width: var(--burger-width, 40px);
   height: var(--burger-height, 40px);
   transition: var(--tr);
   margin-left: 3rem;
+  cursor: pointer;
 
   @media (min-width: $has-burger + 1) {
     display: none;
@@ -34,7 +36,7 @@
 }
 
 .burger__line:nth-child(1) {
-  transform: translate(-50%, calc(-50% - 8px));
+  transform: translate(-50%, calc(-50% - var(--line-offset)));
 }
 
 .burger__line:nth-child(2) {
@@ -42,7 +44,7 @@
 }
 
 .burger__line:nth-child(3) {
-  transform: translate(-50%, calc(-50% + 8px));
+  transform: translate(-50%, calc(-50% + var(--line-offset)));
   transform-origin: left;
 }
 
