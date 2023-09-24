@@ -1,0 +1,19 @@
+.features {
+		padding-bottom: 18.3rem;
+}
+
+.features__gallery {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	column-gap: 6.8rem;
+	row-gap: 10.8rem;
+
+	@media (min-width: $tablet + 1) {
+	}
+}
+
+.features__gallery-button {
+	align-self: center;
+	justify-self: end;
+	min-width: 30rem;
+}

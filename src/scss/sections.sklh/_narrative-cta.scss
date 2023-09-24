@@ -1,0 +1,39 @@
+.narrative-cta {
+
+}
+
+.narrative-cta__container {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	column-gap: 3rem;
+}
+.narrative-cta--small-media .narrative-cta__container {
+	grid-template-columns: 2fr 1fr;
+}
+
+.narrative-cta__desc {
+	margin-top: -1.5rem;
+	margin-bottom: 9.2rem;
+}
+
+
+.narrative-cta__media {
+	max-height: 54rem;
+	margin-left: -2rem;
+	margin-top: -1rem;
+}
+
+.narrative-cta__media-pic {
+	height: 100%;
+	max-height: inherit;
+}
+.narrative-cta__media-img {
+	height: 100%;
+	max-height: inherit;
+}	
+
+
+.narrative-cta__button {
+	max-width: 30rem;
+	width: 100%;
+}

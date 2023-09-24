@@ -34,6 +34,7 @@ $tablet-xlg: 992px; // 992×601
 $tablet-lg: 810px; // 810×1080
 $tablet-md: 768px; // 768×1024
 $tablet-sm: 720px; // 720×1280
+$tablet: $tablet-xlg;
 
 $mobile-xxlg: 601px; // 601×962
 $mobile-xlg: 450px; // 450×846
@@ -43,5 +44,6 @@ $mobile-sm: 393px; // 393×812
 $mobile-xs: 375px; // 375×812
 $mobile-xxs: 360px; // 360×720
 $mobile-xxx: 320px; // 320×700
+$mobile: $mobile-xxlg;
 
 $has-burger: $tablet-xlg;

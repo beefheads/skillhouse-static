@@ -13,9 +13,14 @@
 @include font('Muller', normal, 500, '../resources/fonts/muller/mullermedium');
 @include font('Muller', normal, 700, '../resources/fonts/muller/mullerbold');
 
-@include font('Georgia', normal, 400, '../resources/fonts/georgia/georgiaregular');
+@include font('Georgia', normal, 400, '../resources/fonts/georgia/georgia');
+@include font('Georgia', normal, 700, '../resources/fonts/georgia/georgia-bold');
 :root {
   --ff-regular: "Muller", sans-serif;
+  --ff-title: "Georgia", serif;
+
+  --fz-regular: 2rem;
+  --fz-title: 5.5rem;
 }
 
 // Сброс CSS
@@ -29,8 +34,6 @@ fieldset {
 
 
 html {
-  --fz-regular: 2rem;
-  --fz-title: 5.5rem;
 
   overscroll-behavior: none;
   --fz-modifier: 0.520834;
@@ -104,19 +107,43 @@ body._lock {
 }
 
 // Библиотеки
-@import "./libs/vanilla-datepicker";
-// @import "./libs/swiper";
+// @import "./libs/vanilla-datepicker";
+@import "./libs/swiper";
 // @import "./libs/fancybox";
 
-@import "./components";
-@import "./sections";
-@import "./pages";
-@import "./modifiers";
 
+.js_use-bg {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.js_use-bg > * {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: inherit;
+  height: inherit;
+  background-size: inherit;
+  background-repeat: inherit;
+  background-position: inherit;
+}
 
 .text-bold {
   font-weight: 700;
 }
 .text-colored {
   color: var(--c-primary);
+}
+
+
+@import "./keyframes";
+@import "./components";
+@import "./sections";
+@import "./pages";
+@import "./modifiers";
+
+
+.wrapper {
+  max-width: 100vw;
+  overflow-x: hidden;
 }

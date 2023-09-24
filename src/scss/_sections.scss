@@ -1,1 +1,9 @@
-@import "./sections.sklh/header.scss";
+@import "./sections.sklh/header";
+@import "./sections.sklh/section";
+
+@import "./sections.sklh/hero";
+@import "./sections.sklh/features";
+@import "./sections.sklh/portfolio-gallery";
+@import "./sections.sklh/price";
+@import "./sections.sklh/narrative-cta";
+@import "./sections.sklh/section-quiz";

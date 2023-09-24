@@ -1,0 +1,126 @@
+.price-table {
+	padding-top: 2rem;
+	z-index: 1;
+	position: relative;
+}
+
+.price-table-slide {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	flex: 1;
+	width: auto;
+	min-height: 51rem;
+	border-left: 0.1rem solid var(--c-primary);
+	border-right: 0.1rem solid var(--c-primary);
+	padding-top: 9.2rem;
+	padding-bottom: 7.5rem;
+	text-align: center;
+	transition: all 0.45s var(--tr-jolly-enter);
+}
+
+.price-table-slide__body {
+	transition: inherit;
+}
+
+.price-table-slide:first-of-type {
+	border-left: none;
+}
+
+.price-table-slide:last-of-type {
+	border-right: none;
+}
+
+.price-table-slide:hover {
+	@media (any-hover:hover) {
+		flex: 1.1;
+		background: var(--Black, #1A1A1A);
+		box-shadow: 0px 0px 100px 0px rgba(1, 1, 1, 0.50);
+	}
+}
+
+.price-table-swiper .swiper-wrapper {
+	border-left: 0.1rem solid var(--c-primary);
+	border-right: 0.1rem solid var(--c-primary);
+}
+
+.price-table-slide__title {
+	margin-bottom: 5.3rem;
+
+	color: var(--fg-regular, #FFF);
+	leading-trim: both;
+	text-edge: cap;
+
+	font-family: var(--ff-title);
+	font-size: 4rem;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 100%; /* 40px */
+	letter-spacing: 0.08rem;
+	transition: all 0.45s var(--tr-jolly-enter);
+}
+
+.price-table-slide:hover .price-table-slide__title {
+	@media (any-hover:hover) {
+		font-weight: 700;
+		animation: minipulse 0.75s;
+	}
+}
+
+.price-table-slide__cost {
+	// margin-bottom: 3rem;
+
+	color: var(--c-primary);
+	leading-trim: both;
+	text-edge: cap;
+	font-variant-numeric: lining-nums tabular-nums;
+
+	font-family: var(--ff-regular);
+	font-size: 6rem;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 133.333%;
+}
+
+.price-table-slide__cost-value {
+	margin-right: 0.1em;
+}
+
+.price-table-slide__cost .text-sub--square {
+	margin-left: 0.2em;
+}
+
+.price-table-slide__desc {
+	color: var(--fg-second, #BDBDBD);
+	text-align: center;
+	leading-trim: both;
+	text-edge: cap;
+
+	font-family: var(--ff-regular);
+	font-size: 1.8rem;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 130%;
+	letter-spacing: -0.072rem;
+}
+
+
+.price-table-slide__button-more {
+	margin-top: auto;
+}
+.price-table-slide__button-more::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 2;
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.price-table-slide:hover {
+	@media (any-hover:hover) {
+	}
+}

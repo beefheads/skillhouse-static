@@ -10,7 +10,7 @@ import "./helpers.b/_quickfix.js"
 // import "./components.b/spawners/b_modal.js";
 // import "./components.b/controls/_button-sticky.js";
 
-// import "./components.miri/_input-calendar.js";
+import "./components.sklh/_price-table.js";
 
 window.addEventListener('DOMContentLoaded', (event) => {
 });
