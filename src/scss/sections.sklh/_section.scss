@@ -50,3 +50,9 @@
 	bottom: 0.45em;
 	left: 0.1em;
 }
+
+.section__head {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+}

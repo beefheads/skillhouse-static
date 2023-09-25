@@ -18,9 +18,12 @@
 
 
 .narrative-cta__media {
-	max-height: 54rem;
+	max-height: 53.5rem;
 	margin-left: -2rem;
 	margin-top: -1rem;
+	margin-bottom: 0;
+}
+.narrative-cta--small-media .narrative-cta__media {
 }
 
 .narrative-cta__media-pic {
@@ -32,8 +35,27 @@
 	max-height: inherit;
 }	
 
+.narrative-cta__buttons:last-child {
+	margin-bottom: 0;
+}
 
 .narrative-cta__button {
-	max-width: 30rem;
-	width: 100%;
+	min-width: 30rem;
+}
+
+.narrative-cta__desc-group {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	column-gap: 3rem;
+}
+
+.narrative-cta__desc-group:last-child {
+	margin-bottom: -3rem;
+}
+
+.narrative-cta__desc-group-item	*:first-child {
+	margin-top: 0;
+}
+.narrative-cta__desc-group-item *:last-child {
+	margin-bottom: 0;
 }

@@ -2,6 +2,10 @@ function getTopOffset(percents = 100) {
     return window.innerHeight / 100 * percents;
 }
 
+function isMenuLinkClicked(link) {
+    return link.classList.contains('menu__nav-link') || link.classList.contains('header__nav-link');
+}
+
 function scrollTosectionToScroll(percents = 9) {
     const linkElems = document.querySelectorAll('[href^="#"]')
     if (!linkElems) return;
@@ -16,7 +20,7 @@ function scrollTosectionToScroll(percents = 9) {
             if (sectionToScroll.classList.contains('poppa')) return;
             if (sectionToScroll.classList.contains('b_modal')) return;
 
-            if (link.classList.contains('header__nav-link')) {
+            if (isMenuLinkClicked(link)) {
                 window.closeBurger();
             }
             window.scroll({
@@ -27,4 +31,4 @@ function scrollTosectionToScroll(percents = 9) {
         })
     }
 }
-scrollTosectionToScroll(0);
+scrollTosectionToScroll(10);

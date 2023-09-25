@@ -4,6 +4,12 @@
 	position: relative;
 }
 
+.price-table-swiper {
+	@media (min-width: $tablet + 1) {
+		overflow: visible;
+	}
+}
+
 .price-table-slide {
 	display: flex;
 	flex-direction: column;

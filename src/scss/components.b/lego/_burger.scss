@@ -33,6 +33,7 @@
   background: var(--c-burger-line);
   transition: var(--tr);
   border-radius: 2rem;
+  pointer-events: none;
 }
 
 .burger__line:nth-child(1) {

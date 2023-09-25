@@ -6,7 +6,7 @@
 
 	--fw-regular: 300;
 	--fw-title: 700;
-	--lh-regular: 1.5;
+	--lh-regular: 1.4;
 	--ls-regular: -0.8px;
 
 
@@ -18,7 +18,7 @@
 	--fz-ul: 2em;
 	--lh-ul: 1.25;
 	--ls-ul: var(--ls-regular);
-	--margin-bottom-ul: 3em;
+	--margin-bottom-ul: 2em;
 	--padding-left-ul: 1.55em;
 	--margin-bottom-li: 0.2em;
 
@@ -135,6 +135,9 @@
 		margin-top: 1.5em;
 	}
 
+	> *:first-child {
+		margin-top: 0;
+	}
 	> *:last-child {
 		margin-bottom: 0;
 	}

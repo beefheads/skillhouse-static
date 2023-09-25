@@ -1,25 +1,25 @@
 
 function disableDefaultInvalid() {
-	// Выключает стандартные подсказки валидации
-	document.addEventListener(
-	  "invalid",
-	  (function (e) {
-	    return function (e) {
-	      e.preventDefault();
-	      const input = e.target.closest('.js_form__control');
-	      setInputInvalid(input);
+  // Выключает стандартные подсказки валидации
+  document.addEventListener(
+    "invalid",
+    (function (e) {
+      return function (e) {
+        e.preventDefault();
+        const input = e.target.closest('.form-control');
+        setInputInvalid(input);
 
         if (e.target.form.querySelector('.is-invalid') == undefined) return
         e.target.form.querySelector('.is-invalid').focus();
-	    };
-	  })(),
-	  true
-	);
+      };
+    })(),
+    true
+  );
 }
 disableDefaultInvalid();
 
 export function setInputInvalid(input) {
-  if (input.classList.contains('iti')) input = input.parentElement
+  input = input.classList.contains('iti') ? input.parentElement : input;
 
   input.classList.add("is-invalid");
   const field = input.querySelector('[required]');
@@ -27,14 +27,14 @@ export function setInputInvalid(input) {
   let isValid;
 
   if (field.validity != null) {
-  	isValid = field.validity.valid;
+    isValid = field.validity.valid;
   } else if (field.checked) {
-  	isValid = field.checked;
+    isValid = field.checked;
   }
 
   if (field.validationMessage) {
-	  changeErrorText(input);
-	}
+    changeErrorText(input);
+  }
 
   return isValid;
 }
@@ -45,13 +45,13 @@ export function setInputValid(input) {
 
   let isValid;
   if (field.validity != null) {
-  	isValid = field.validity.valid;
+    isValid = field.validity.valid;
   } else if (field.checked) {
-  	isValid = field.checked;
+    isValid = field.checked;
   }
 
   if (field.validationMessage) {
-	  changeErrorText(input);
+    changeErrorText(input);
   }
   return isValid;
 }
@@ -67,6 +67,7 @@ export function changeErrorText(input) {
 
 export function validateInput(input) {
   // return
+  // console.log(input)
   const field = input.querySelector("[required]");
   if (field == null) return;
 
@@ -92,17 +93,11 @@ export function validateInputLength(input) {
 export function validatePhone(input) {
   // return
   const field = input.querySelector("[required]");
-  // let regex = /^(\+7|8)\s?\(?[489][0-9]{2}\)?\s?[0-9]{3}[-\s]?[0-9]{2}[-\s]?[0-9]{2}$/;
-  // let regex = /^\+7\(\d{3}\)\s\d{3}-\d{2}-\d{2}$/;
-  let regex = /^\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}$/;
-  let phoneRegex = {
-    by: /^(?:\+375|375|80)\d{9}$/,
-
-  }
-  if (phoneRegex.by.test(field.value)) {
-    return setInputValid(input);
-  } else {
+  let regex = /^(\+7|8)?[\-\s]?\(?\d{3}\)?[\-\s]?\d{3}[\-\s]?\d{2}[\-\s]?\d{2}$/;
+  if (!regex.test(field.value)) {
     return setInputInvalid(input);
+  } else {
+    return setInputValid(input);
   }
 }
 

@@ -40,7 +40,7 @@
 
 
 
-      <link rel="stylesheet" href="./css/style.css?_v=20230924161329">
+      <link rel="stylesheet" href="./css/style.css?_v=20230925233455">
   </head>
   
   <body class="page-home">
@@ -48,7 +48,7 @@
     <div class="wrapper">
       <header class="header">
 	<div class="container header__container">
-		<div class="burger">
+		<div class="burger" id="burger">
 			<span class="burger__line"></span>
 			<span class="burger__line"></span>
 			<span class="burger__line"></span>
@@ -98,7 +98,7 @@
 		<div class="header__menu">
 			<ul class="header__menu-links">
 				<li class="header__menu-links-item">
-					<a href="#" class="header__menu-link link">
+					<a href="/reviews" class="header__menu-link link">
 						<span class="link__text">Отзывы клиентов</span>
 					</a>
 				</li>
@@ -106,7 +106,7 @@
 		</div>
 		<div class="header__contacts">
 			<a href="tel:" class="header__contacts-item">+7(499) 111-39-99</a>
-			<button class="link header__button-callback">
+			<button class="link header__button-callback" type="button" data-b_modal-open="callback">
 				<span class="link__text">Заказать звонок</span>
 			</button>
 		</div>
@@ -122,19 +122,19 @@
 		<div class="menu__body">
 			<ul class="menu__nav">
 				<li class="menu__nav-item">
-					<a href="#" class="menu__nav-link">Портфолио</a>
+					<a href="#section-portfolio" class="menu__nav-link">Портфолио</a>
 				</li>
 				<li class="menu__nav-item">
-					<a href="#" class="menu__nav-link">Заказать дизайн-проект</a>
+					<a href="#section-price" class="menu__nav-link">Заказать дизайн-проект</a>
 				</li>
 				<li class="menu__nav-item">
-					<a href="#" class="menu__nav-link">Рассчитать ремонт</a>
+					<a href="#section-quiz" class="menu__nav-link">Рассчитать ремонт</a>
 				</li>
 				<li class="menu__nav-item">
-					<a href="#" class="menu__nav-link">О нас</a>
+					<a href="#section-showroom" class="menu__nav-link">О нас</a>
 				</li>
 				<li class="menu__nav-item">
-					<a href="#" class="menu__nav-link"> Контакты</a>
+					<a href="#section-contacts" class="menu__nav-link"> Контакты</a>
 				</li>
 			</ul>
 		</div>
@@ -166,7 +166,7 @@
 				</p>
 			</div>
 			<div class="menu__footbuttons">
-				<button class="button-secondary menu__button-callback" type="button">Заказать звонок</button>
+				<button class="button-secondary menu__button-callback" type="button" data-b_modal-open="callback">Заказать звонок</button>
 			</div>
 			<div class="socials menu__socials">
   
@@ -221,8 +221,8 @@
                 и ремонт <br> квартир под ключ в&nbsp;Москве
               </h2>
               <div class="hero__buttons section-buttons">
-                <a class="button-primary" href="#">Узнать стоимость ремонта</a>
-                <button class="button-secondary" type="button">Заказать дизайн-проект</button>
+                <a class="button-primary" href="#section-quiz">Узнать стоимость ремонта</a>
+                <a class="button-secondary" href="#section-price">Заказать дизайн-проект</a>
               </div>
             </div>
           </div>
@@ -277,12 +277,12 @@
                   приступим к  выполнению работ в течении недели
                 </p>
               </article>
-              <button class="button-secondary features__gallery-button features__button-callback" type="button">Заказать звонок</button>
+              <button class="button-secondary features__gallery-button features__button-callback" type="button" data-b_modal-open="callback">Заказать звонок</button>
             </div>
           </div>
         </section>
 
-        <section class="section portfolio-gallery">
+        <section class="section portfolio-gallery" id="section-portfolio">
           <div class="container portfolio-gallery__container">
             <h2 class="section-title portfolio-gallery__title">
               <span class="text-colored">Портфолио</span>
@@ -410,14 +410,14 @@
               </article>
             </div>
             <div class="portfolio-gallery__buttons section-buttons">
-              <button class="button-primary" type="button">Узнать стоимость ремонта</button>
-              <button class="button-secondary" type="button">Записаться на просмотр</button>
+              <a class="button-primary" href="#section-quiz">Узнать стоимость ремонта</a>
+              <button class="button-secondary" type="button" data-b_modal-open="showroom">Записаться на просмотр</button>
             </div>
           </div>
         </section>
 
 
-        <section class="section price">
+        <section class="section price" id="section-price">
           <div class="container price__container">
             <h2 class="section-title price__title">
               <span class="text-colored">Стоимость </span>
@@ -439,7 +439,7 @@
                       </p>
                     </div>
                     <div class="price-table-slide__foot">
-                      <button class="link price-table-slide__button-more" type="button">
+                      <button class="link price-table-slide__button-more" type="button" data-b_modal-open="tariff">
                         <span class="link__text">Подробнее</span>
                       </button>
                     </div>
@@ -457,7 +457,7 @@
                       </p>
                     </div>
                     <div class="price-table-slide__foot">
-                      <button class="link price-table-slide__button-more" type="button">
+                      <button class="link price-table-slide__button-more" type="button" data-b_modal-open="tariff">
                         <span class="link__text">Подробнее</span>
                       </button>
                     </div>
@@ -475,7 +475,7 @@
                       </p>
                     </div>
                     <div class="price-table-slide__foot">
-                      <button class="link price-table-slide__button-more" type="button">
+                      <button class="link price-table-slide__button-more" type="button" data-b_modal-open="tariff">
                         <span class="link__text">Подробнее</span>
                       </button>
                     </div>
@@ -489,7 +489,7 @@
           </div>
         </section>
 
-        <section class="section narrative-cta narrative-cta--small-media">
+        <section class="section narrative-cta narrative-cta--small-media" id="section-quiz-cta">
           <div class="container narrative-cta__container">
             <div class="narrative-cta__content">
               <h2 class="section-title narrative-cta__title">
@@ -506,7 +506,7 @@
                 </ul>
               </div>
               <div class="narrative-cta__buttons">
-                <a href="#" class="button-primary narrative-cta__button">Узнать стоимость ремонта</a>
+                <a href="#section-quiz" class="button-primary narrative-cta__button">Узнать стоимость ремонта</a>
               </div>
             </div>
             <div class="narrative-cta__media">
@@ -518,19 +518,19 @@
         </section>
 
 
-        <section class="section section-quiz">
+        <section class="section section-quiz" id="section-quiz">
           <div class="container section-quiz__container">
             <div class="quiz">
               <div class="quiz__progress">
                 <div class="swiper-pagination quiz__progress-pagination">
                 </div>
-                <p class="quiz__progress-value">
+                <p class="quiz__progress-value is-hidden">
                   <span class="quiz__progress-value-current">1</span>
                   <span class="quiz__progress-value-separator">/</span>
                   <span class="quiz__progress-value-max">6</span>
                 </p>
               </div>
-              <div class="swiper quiz-swiper">
+              <div class="swiper quiz__swiper js_form">
                 <div class="swiper-wrapper">
                   
                   <article class="swiper-slide quiz-slide" data-step-button-next="Последний вопрос">
@@ -540,25 +540,25 @@
                       </h3>
                       <div class="quiz-slide__answerlist quiz-slide__answerlist--vertical-list">
                         <label class="radio quiz-slide__answer">
-  <input type="radio" name="quiz_step_1" class="radio__input" value="Новостройка" required checked >
+  <input type="radio" name="quiz_step_0" class="radio__input" value="Новостройка" checked required>
   <span class="radio__check"></span>
   <p class="radio__label">Новостройка</p>
 </label>
 
                         <label class="radio quiz-slide__answer">
-  <input type="radio" name="quiz_step_1" class="radio__input" value="Вторичка" required >
+  <input type="radio" name="quiz_step_0" class="radio__input" value="Вторичка" required>
   <span class="radio__check"></span>
   <p class="radio__label">Вторичка</p>
 </label>
 
                         <label class="radio quiz-slide__answer">
-  <input type="radio" name="quiz_step_1" class="radio__input" value="Коттедж / Таунхаус" required >
+  <input type="radio" name="quiz_step_0" class="radio__input" value="Коттедж / Таунхаус" required>
   <span class="radio__check"></span>
   <p class="radio__label">Коттедж / Таунхаус</p>
 </label>
 
                         <label class="radio quiz-slide__answer">
-  <input type="radio" name="quiz_step_1" class="radio__input" value="Коммерческий объект" required >
+  <input type="radio" name="quiz_step_0" class="radio__input" value="Коммерческий объект" required>
   <span class="radio__check"></span>
   <p class="radio__label">Коммерческий объект</p>
 </label>
@@ -579,25 +579,25 @@
                       </h3>
                       <div class="quiz-slide__answerlist quiz-slide__answerlist--vertical-list">
                         <label class="radio quiz-slide__answer">
-  <input type="radio" name="quiz_step_1" class="radio__input" value="Новостройка" required checked >
+  <input type="radio" name="quiz_step_1" class="radio__input" value="Новостройка" checked required>
   <span class="radio__check"></span>
   <p class="radio__label">Новостройка</p>
 </label>
 
                         <label class="radio quiz-slide__answer">
-  <input type="radio" name="quiz_step_1" class="radio__input" value="Вторичка" required >
+  <input type="radio" name="quiz_step_1" class="radio__input" value="Вторичка" required>
   <span class="radio__check"></span>
   <p class="radio__label">Вторичка</p>
 </label>
 
                         <label class="radio quiz-slide__answer">
-  <input type="radio" name="quiz_step_1" class="radio__input" value="Коттедж / Таунхаус" required >
+  <input type="radio" name="quiz_step_1" class="radio__input" value="Коттедж / Таунхаус" required>
   <span class="radio__check"></span>
   <p class="radio__label">Коттедж / Таунхаус</p>
 </label>
 
                         <label class="radio quiz-slide__answer">
-  <input type="radio" name="quiz_step_1" class="radio__input" value="Коммерческий объект" required >
+  <input type="radio" name="quiz_step_1" class="radio__input" value="Коммерческий объект" required>
   <span class="radio__check"></span>
   <p class="radio__label">Коммерческий объект</p>
 </label>
@@ -618,25 +618,25 @@
                       </h3>
                       <div class="quiz-slide__answerlist quiz-slide__answerlist--vertical-list">
                         <label class="radio quiz-slide__answer">
-  <input type="radio" name="quiz_step_1" class="radio__input" value="Новостройка" required checked >
+  <input type="radio" name="quiz_step_2" class="radio__input" value="Новостройка" checked required>
   <span class="radio__check"></span>
   <p class="radio__label">Новостройка</p>
 </label>
 
                         <label class="radio quiz-slide__answer">
-  <input type="radio" name="quiz_step_1" class="radio__input" value="Вторичка" required >
+  <input type="radio" name="quiz_step_2" class="radio__input" value="Вторичка" required>
   <span class="radio__check"></span>
   <p class="radio__label">Вторичка</p>
 </label>
 
                         <label class="radio quiz-slide__answer">
-  <input type="radio" name="quiz_step_1" class="radio__input" value="Коттедж / Таунхаус" required >
+  <input type="radio" name="quiz_step_2" class="radio__input" value="Коттедж / Таунхаус" required>
   <span class="radio__check"></span>
   <p class="radio__label">Коттедж / Таунхаус</p>
 </label>
 
                         <label class="radio quiz-slide__answer">
-  <input type="radio" name="quiz_step_1" class="radio__input" value="Коммерческий объект" required >
+  <input type="radio" name="quiz_step_2" class="radio__input" value="Коммерческий объект" required>
   <span class="radio__check"></span>
   <p class="radio__label">Коммерческий объект</p>
 </label>
@@ -657,25 +657,25 @@
                       </h3>
                       <div class="quiz-slide__answerlist quiz-slide__answerlist--vertical-list">
                         <label class="radio quiz-slide__answer">
-  <input type="radio" name="quiz_step_1" class="radio__input" value="Новостройка" required checked >
+  <input type="radio" name="quiz_step_3" class="radio__input" value="Новостройка" checked required>
   <span class="radio__check"></span>
   <p class="radio__label">Новостройка</p>
 </label>
 
                         <label class="radio quiz-slide__answer">
-  <input type="radio" name="quiz_step_1" class="radio__input" value="Вторичка" required >
+  <input type="radio" name="quiz_step_3" class="radio__input" value="Вторичка" required>
   <span class="radio__check"></span>
   <p class="radio__label">Вторичка</p>
 </label>
 
                         <label class="radio quiz-slide__answer">
-  <input type="radio" name="quiz_step_1" class="radio__input" value="Коттедж / Таунхаус" required >
+  <input type="radio" name="quiz_step_3" class="radio__input" value="Коттедж / Таунхаус" required>
   <span class="radio__check"></span>
   <p class="radio__label">Коттедж / Таунхаус</p>
 </label>
 
                         <label class="radio quiz-slide__answer">
-  <input type="radio" name="quiz_step_1" class="radio__input" value="Коммерческий объект" required >
+  <input type="radio" name="quiz_step_3" class="radio__input" value="Коммерческий объект" required>
   <span class="radio__check"></span>
   <p class="radio__label">Коммерческий объект</p>
 </label>
@@ -696,64 +696,25 @@
                       </h3>
                       <div class="quiz-slide__answerlist quiz-slide__answerlist--vertical-list">
                         <label class="radio quiz-slide__answer">
-  <input type="radio" name="quiz_step_1" class="radio__input" value="Новостройка" required checked >
+  <input type="radio" name="quiz_step_4" class="radio__input" value="Новостройка" checked required>
   <span class="radio__check"></span>
   <p class="radio__label">Новостройка</p>
 </label>
 
                         <label class="radio quiz-slide__answer">
-  <input type="radio" name="quiz_step_1" class="radio__input" value="Вторичка" required >
+  <input type="radio" name="quiz_step_4" class="radio__input" value="Вторичка" required>
   <span class="radio__check"></span>
   <p class="radio__label">Вторичка</p>
 </label>
 
                         <label class="radio quiz-slide__answer">
-  <input type="radio" name="quiz_step_1" class="radio__input" value="Коттедж / Таунхаус" required >
+  <input type="radio" name="quiz_step_4" class="radio__input" value="Коттедж / Таунхаус" required>
   <span class="radio__check"></span>
   <p class="radio__label">Коттедж / Таунхаус</p>
 </label>
 
                         <label class="radio quiz-slide__answer">
-  <input type="radio" name="quiz_step_1" class="radio__input" value="Коммерческий объект" required >
-  <span class="radio__check"></span>
-  <p class="radio__label">Коммерческий объект</p>
-</label>
-
-                      </div>
-                    </div>
-                    <div class="quiz-slide__media">
-                      <picture class="quiz-slide__media-pic">
-                        <img src="./img/sklh_quiz/quiz-step-1.jpg" alt="Где Вы планируете делать ремонт?" class="quiz-slide__media-img">
-                      </picture>
-                    </div>
-                  </article>
-                  
-                  <article class="swiper-slide quiz-slide" data-step-button-next="Последний вопрос">
-                    <div class="quiz-slide__question">
-                      <h3 class="quiz-slide__title section-title">
-                        Где Вы планируете делать ремонт?
-                      </h3>
-                      <div class="quiz-slide__answerlist quiz-slide__answerlist--vertical-list">
-                        <label class="radio quiz-slide__answer">
-  <input type="radio" name="quiz_step_1" class="radio__input" value="Новостройка" required checked >
-  <span class="radio__check"></span>
-  <p class="radio__label">Новостройка</p>
-</label>
-
-                        <label class="radio quiz-slide__answer">
-  <input type="radio" name="quiz_step_1" class="radio__input" value="Вторичка" required >
-  <span class="radio__check"></span>
-  <p class="radio__label">Вторичка</p>
-</label>
-
-                        <label class="radio quiz-slide__answer">
-  <input type="radio" name="quiz_step_1" class="radio__input" value="Коттедж / Таунхаус" required >
-  <span class="radio__check"></span>
-  <p class="radio__label">Коттедж / Таунхаус</p>
-</label>
-
-                        <label class="radio quiz-slide__answer">
-  <input type="radio" name="quiz_step_1" class="radio__input" value="Коммерческий объект" required >
+  <input type="radio" name="quiz_step_4" class="radio__input" value="Коммерческий объект" required>
   <span class="radio__check"></span>
   <p class="radio__label">Коммерческий объект</p>
 </label>
@@ -787,7 +748,7 @@
           </div>
         </section>
 
-        <section class="section narrative-cta">
+        <section class="section narrative-cta" id="section-contract">
           <div class="container narrative-cta__container">
             <div class="narrative-cta__content">
               <h2 class="section-title narrative-cta__title">
@@ -798,11 +759,11 @@
                 <p>
                   <span class="text-bold">Никаких доплат и затягивания сроков. </span>
                   До начала ремонта Вы точно знаете сколько он стоит и когда закончится. Цена, сроки, 
-                  3 этапа оплаты — <span class="text-bold">всё фиксируется в договоре.</span>
+                  3&nbsp;этапа оплаты — <span class="text-bold">всё фиксируется в договоре.</span>
                 </p>
               </div>
               <div class="narrative-cta__buttons">
-                <a href="#" class="button-primary narrative-cta__button">Скачать договор</a>
+                <button type="button" class="button-primary narrative-cta__button" data-b_modal-open="contract">Скачать договор</button>
               </div>
             </div>
             <div class="narrative-cta__media">
@@ -813,20 +774,21 @@
           </div>
         </section>
 
-
-        <section class="section problems">
+        <section class="section problems" id="section-problems">
           <div class="container problems__container">
             <h2 class="section-title problems__title">
-              Самые распространенные 
-              <span class="text-color">проблемы </span>
+              Самые распространенные <br>
+              <span class="text-colored">проблемы </span>
               клиентов
             </h2>
-            <p class="section-desc problems__desc">
-              с которыми они сталкиваются 
-              <span class="text-bold">в других компаниях</span>
-            </p>
+            <div class="wysiwyg section-desc problems__desc">
+              <p>
+                с которыми они сталкиваются 
+                <span class="text-bold">в других компаниях</span>
+              </p>
+            </div>
             <div class="problems-carousel">
-              <div class="swiper problems-swiper">
+              <div class="swiper problems-carousel__swiper">
                 <div class="swiper-wrapper">
                   
                   <article class="swiper-slide problems-carousel-slide">
@@ -840,10 +802,10 @@
                         Нет общего бюджета <br>
                         всего ремонта
                       </h3>
-                      <div class="problems-carousel-slide__desc">
-                        <h4 class="problems-carousel-slide__subtitle">Наше решение:</h4>
+                      <div class="problems-carousel-slide__desc wysiwyg">
+                        <p class="text-colored text-bold">Наше решение:</p>
                         <p>
-                          Мы даем полную картину, через <span class="text-bold">предваритрельную смету </span>и точно корректируем её после разработки дизайн-проекта, что <span class="text-bold">экономит бюджет в 1,5-2 раза.</span>
+                          Мы даем полную картину, через <span class="text-bold">предваритрельную смету </span> и точно корректируем её после разработки дизайн-проекта, что <span class="text-bold">экономит бюджет в 1,5-2 раза.</span>
                         </p>
                       </div>
                     </div>
@@ -860,10 +822,10 @@
                         Нет общего бюджета <br>
                         всего ремонта
                       </h3>
-                      <div class="problems-carousel-slide__desc">
-                        <h4 class="problems-carousel-slide__subtitle">Наше решение:</h4>
+                      <div class="problems-carousel-slide__desc wysiwyg">
+                        <p class="text-colored text-bold">Наше решение:</p>
                         <p>
-                          Мы даем полную картину, через <span class="text-bold">предваритрельную смету </span>и точно корректируем её после разработки дизайн-проекта, что <span class="text-bold">экономит бюджет в 1,5-2 раза.</span>
+                          Мы даем полную картину, через <span class="text-bold">предваритрельную смету </span> и точно корректируем её после разработки дизайн-проекта, что <span class="text-bold">экономит бюджет в 1,5-2 раза.</span>
                         </p>
                       </div>
                     </div>
@@ -880,10 +842,10 @@
                         Нет общего бюджета <br>
                         всего ремонта
                       </h3>
-                      <div class="problems-carousel-slide__desc">
-                        <h4 class="problems-carousel-slide__subtitle">Наше решение:</h4>
+                      <div class="problems-carousel-slide__desc wysiwyg">
+                        <p class="text-colored text-bold">Наше решение:</p>
                         <p>
-                          Мы даем полную картину, через <span class="text-bold">предваритрельную смету </span>и точно корректируем её после разработки дизайн-проекта, что <span class="text-bold">экономит бюджет в 1,5-2 раза.</span>
+                          Мы даем полную картину, через <span class="text-bold">предваритрельную смету </span> и точно корректируем её после разработки дизайн-проекта, что <span class="text-bold">экономит бюджет в 1,5-2 раза.</span>
                         </p>
                       </div>
                     </div>
@@ -900,10 +862,10 @@
                         Нет общего бюджета <br>
                         всего ремонта
                       </h3>
-                      <div class="problems-carousel-slide__desc">
-                        <h4 class="problems-carousel-slide__subtitle">Наше решение:</h4>
+                      <div class="problems-carousel-slide__desc wysiwyg">
+                        <p class="text-colored text-bold">Наше решение:</p>
                         <p>
-                          Мы даем полную картину, через <span class="text-bold">предваритрельную смету </span>и точно корректируем её после разработки дизайн-проекта, что <span class="text-bold">экономит бюджет в 1,5-2 раза.</span>
+                          Мы даем полную картину, через <span class="text-bold">предваритрельную смету </span> и точно корректируем её после разработки дизайн-проекта, что <span class="text-bold">экономит бюджет в 1,5-2 раза.</span>
                         </p>
                       </div>
                     </div>
@@ -920,10 +882,10 @@
                         Нет общего бюджета <br>
                         всего ремонта
                       </h3>
-                      <div class="problems-carousel-slide__desc">
-                        <h4 class="problems-carousel-slide__subtitle">Наше решение:</h4>
+                      <div class="problems-carousel-slide__desc wysiwyg">
+                        <p class="text-colored text-bold">Наше решение:</p>
                         <p>
-                          Мы даем полную картину, через <span class="text-bold">предваритрельную смету </span>и точно корректируем её после разработки дизайн-проекта, что <span class="text-bold">экономит бюджет в 1,5-2 раза.</span>
+                          Мы даем полную картину, через <span class="text-bold">предваритрельную смету </span> и точно корректируем её после разработки дизайн-проекта, что <span class="text-bold">экономит бюджет в 1,5-2 раза.</span>
                         </p>
                       </div>
                     </div>
@@ -940,10 +902,10 @@
                         Нет общего бюджета <br>
                         всего ремонта
                       </h3>
-                      <div class="problems-carousel-slide__desc">
-                        <h4 class="problems-carousel-slide__subtitle">Наше решение:</h4>
+                      <div class="problems-carousel-slide__desc wysiwyg">
+                        <p class="text-colored text-bold">Наше решение:</p>
                         <p>
-                          Мы даем полную картину, через <span class="text-bold">предваритрельную смету </span>и точно корректируем её после разработки дизайн-проекта, что <span class="text-bold">экономит бюджет в 1,5-2 раза.</span>
+                          Мы даем полную картину, через <span class="text-bold">предваритрельную смету </span> и точно корректируем её после разработки дизайн-проекта, что <span class="text-bold">экономит бюджет в 1,5-2 раза.</span>
                         </p>
                       </div>
                     </div>
@@ -951,25 +913,23 @@
                   
                 </div>
               </div>
-              <div class="carousel-nav problems-carousel__nav">
-                <div class="swiper-pagination problems-carousel-pagination"></div>
-                <div class="swiper-buttons problems-buttons">
-                  <div class="swiper-button-prev problems-carousel-button-prev"></div>
-                  <div class="swiper-button-next problems-carousel-button-next"></div>
-                </div>
+              <div class="b_swiper__nav problems-carousel__nav">
+                <div class="swiper-button-prev problems-carousel__button-prev"></div>
+                <div class="swiper-pagination problems-carousel__pagination"></div>
+                <div class="swiper-button-next problems-carousel__button-next"></div>
               </div>
             </div>
           </div>
         </section>
 
-        <section class="section narrative-cta">
+        <section class="section narrative-cta" id="section-showroom">
           <div class="container narrative-cta__container">
             <div class="narrative-cta__content">
               <h2 class="section-title narrative-cta__title">
                 Посетите наш <br>
                 <span class="text-colored">Шоурум</span>
               </h2>
-              <div class="narrative-cta__desc">
+              <div class="narrative-cta__desc wysiwyg">
                 <p>
                   <span class="text-bold">Комплектация объекта под ключ. </span> Мы реализуем любые идеи вашего проекта: подберем нужные материалы и предметы интерьера. 
                 </p>
@@ -996,10 +956,9 @@
                     </ul>
                   </div>
                 </div>
-                <ul>
               </div>
               <div class="narrative-cta__buttons">
-                <button class="button-primary narrative-cta__button" type="button">Записаться в Шоурум</button>
+                <button class="button-primary narrative-cta__button" type="button" data-b_modal-open="showroom">Записаться в Шоурум</button>
               </div>
             </div>
             <div class="narrative-cta__media">
@@ -1008,32 +967,32 @@
           </div>
         </section>
 
-        <section class="section team">
+        <section class="section team" id="section-team">
           <div class="container team__container">
             <h2 class="section-title team__title">
               Наша 
               <span class="text-colored"> команда</span>
             </h2>
             <div class="team__tabs tabs">
-              <div class="tabs__tablist">
-                <button class="tabs__button tabs__button--active" type="button">
-                  <span class="tabs__button-text">Мастера</span>
+              <div class="tabs__tablist" data-tabs="team">
+                <button class="tabs__button active link" type="button">
+                  <span class="tabs__button-text link__text">Мастера</span>
                 </button>
-                <button class="tabs__button" type="button">
-                  <span class="tabs__button-text">Дизайнеры</span>
+                <button class="tabs__button link" type="button">
+                  <span class="tabs__button-text link__text">Дизайнеры</span>
                 </button>
-                <button class="tabs__button" type="button">
-                  <span class="tabs__button-text">Менеджеры</span>
+                <button class="tabs__button link" type="button">
+                  <span class="tabs__button-text link__text">Менеджеры</span>
                 </button>
-                <button class="tabs__button" type="button">
-                  <span class="tabs__button-text">Контроль качества</span>
+                <button class="tabs__button link" type="button">
+                  <span class="tabs__button-text link__text">Контроль качества</span>
                 </button>
               </div>
-              <div class="tabs__panel-list">
+              <div class="tabs__panel-list" data-tabs="team">
                 
                 <div class="tabs__panel">
                   <div class="team-carousel">
-                    <div class="swiper team-swiper">
+                    <div class="swiper team-carousel__swiper">
                       <div class="swiper-wrapper">
                         
                         <div class="swiper-slide team-carousel-slide">
@@ -1047,34 +1006,12 @@
                               <h3 class="team-card__name">Сергей Иванов 0</h3>
                               <p class="team-card__subtitle text-bold">Прораб</p>
                             </div>
-                            <div class="team-card__body">
+                            <div class="team-card__body wysiwyg">
                               <p>
-                                Прораб — обучает мастеров. Эта должность относится к руководителям среднего звена.
+                                <span class="text-bold">Прораб </span> — обучает мастеров. Эта должность относится к руководителям среднего звена.
                               </p>
                               <p>
-                                Обязанности: обеспечение выполнения заданий по вводу объектов в эксплуатацию; соблюдение сроков ввода; организация процесса производства работ; учет выполненных работ; руководство бригадой.
-                              </p>
-                            </div>
-                          </article>
-                        </div>
-                        
-                        <div class="swiper-slide team-carousel-slide">
-                          <article class="team-card">
-                            <div class="team-card__media">
-                              <picture class="team-card__media-pic">
-                                <img src="./img/sklh_team/team-01.jpg" alt="" class="team-card__media-img">
-                              </picture>
-                            </div>
-                            <div class="team-card__head">
-                              <h3 class="team-card__name">Сергей Иванов 0</h3>
-                              <p class="team-card__subtitle text-bold">Прораб</p>
-                            </div>
-                            <div class="team-card__body">
-                              <p>
-                                Прораб — обучает мастеров. Эта должность относится к руководителям среднего звена.
-                              </p>
-                              <p>
-                                Обязанности: обеспечение выполнения заданий по вводу объектов в эксплуатацию; соблюдение сроков ввода; организация процесса производства работ; учет выполненных работ; руководство бригадой.
+                                <span class="text-bold">Обязанности: </span> обеспечение выполнения заданий по вводу объектов в эксплуатацию; соблюдение сроков ввода; организация процесса производства работ; учет выполненных работ; руководство бригадой.
                               </p>
                             </div>
                           </article>
@@ -1091,34 +1028,12 @@
                               <h3 class="team-card__name">Сергей Иванов 0</h3>
                               <p class="team-card__subtitle text-bold">Прораб</p>
                             </div>
-                            <div class="team-card__body">
+                            <div class="team-card__body wysiwyg">
                               <p>
-                                Прораб — обучает мастеров. Эта должность относится к руководителям среднего звена.
+                                <span class="text-bold">Прораб </span> — обучает мастеров. Эта должность относится к руководителям среднего звена.
                               </p>
                               <p>
-                                Обязанности: обеспечение выполнения заданий по вводу объектов в эксплуатацию; соблюдение сроков ввода; организация процесса производства работ; учет выполненных работ; руководство бригадой.
-                              </p>
-                            </div>
-                          </article>
-                        </div>
-                        
-                        <div class="swiper-slide team-carousel-slide">
-                          <article class="team-card">
-                            <div class="team-card__media">
-                              <picture class="team-card__media-pic">
-                                <img src="./img/sklh_team/team-01.jpg" alt="" class="team-card__media-img">
-                              </picture>
-                            </div>
-                            <div class="team-card__head">
-                              <h3 class="team-card__name">Сергей Иванов 0</h3>
-                              <p class="team-card__subtitle text-bold">Прораб</p>
-                            </div>
-                            <div class="team-card__body">
-                              <p>
-                                Прораб — обучает мастеров. Эта должность относится к руководителям среднего звена.
-                              </p>
-                              <p>
-                                Обязанности: обеспечение выполнения заданий по вводу объектов в эксплуатацию; соблюдение сроков ввода; организация процесса производства работ; учет выполненных работ; руководство бригадой.
+                                <span class="text-bold">Обязанности: </span> обеспечение выполнения заданий по вводу объектов в эксплуатацию; соблюдение сроков ввода; организация процесса производства работ; учет выполненных работ; руководство бригадой.
                               </p>
                             </div>
                           </article>
@@ -1135,32 +1050,74 @@
                               <h3 class="team-card__name">Сергей Иванов 0</h3>
                               <p class="team-card__subtitle text-bold">Прораб</p>
                             </div>
-                            <div class="team-card__body">
+                            <div class="team-card__body wysiwyg">
                               <p>
-                                Прораб — обучает мастеров. Эта должность относится к руководителям среднего звена.
+                                <span class="text-bold">Прораб </span> — обучает мастеров. Эта должность относится к руководителям среднего звена.
                               </p>
                               <p>
-                                Обязанности: обеспечение выполнения заданий по вводу объектов в эксплуатацию; соблюдение сроков ввода; организация процесса производства работ; учет выполненных работ; руководство бригадой.
+                                <span class="text-bold">Обязанности: </span> обеспечение выполнения заданий по вводу объектов в эксплуатацию; соблюдение сроков ввода; организация процесса производства работ; учет выполненных работ; руководство бригадой.
+                              </p>
+                            </div>
+                          </article>
+                        </div>
+                        
+                        <div class="swiper-slide team-carousel-slide">
+                          <article class="team-card">
+                            <div class="team-card__media">
+                              <picture class="team-card__media-pic">
+                                <img src="./img/sklh_team/team-01.jpg" alt="" class="team-card__media-img">
+                              </picture>
+                            </div>
+                            <div class="team-card__head">
+                              <h3 class="team-card__name">Сергей Иванов 0</h3>
+                              <p class="team-card__subtitle text-bold">Прораб</p>
+                            </div>
+                            <div class="team-card__body wysiwyg">
+                              <p>
+                                <span class="text-bold">Прораб </span> — обучает мастеров. Эта должность относится к руководителям среднего звена.
+                              </p>
+                              <p>
+                                <span class="text-bold">Обязанности: </span> обеспечение выполнения заданий по вводу объектов в эксплуатацию; соблюдение сроков ввода; организация процесса производства работ; учет выполненных работ; руководство бригадой.
+                              </p>
+                            </div>
+                          </article>
+                        </div>
+                        
+                        <div class="swiper-slide team-carousel-slide">
+                          <article class="team-card">
+                            <div class="team-card__media">
+                              <picture class="team-card__media-pic">
+                                <img src="./img/sklh_team/team-01.jpg" alt="" class="team-card__media-img">
+                              </picture>
+                            </div>
+                            <div class="team-card__head">
+                              <h3 class="team-card__name">Сергей Иванов 0</h3>
+                              <p class="team-card__subtitle text-bold">Прораб</p>
+                            </div>
+                            <div class="team-card__body wysiwyg">
+                              <p>
+                                <span class="text-bold">Прораб </span> — обучает мастеров. Эта должность относится к руководителям среднего звена.
+                              </p>
+                              <p>
+                                <span class="text-bold">Обязанности: </span> обеспечение выполнения заданий по вводу объектов в эксплуатацию; соблюдение сроков ввода; организация процесса производства работ; учет выполненных работ; руководство бригадой.
                               </p>
                             </div>
                           </article>
                         </div>
                         
                       </div>
-                      <div class="carousel-nav">
-                        <div class="swiper-pagination team-carousel-pagination"></div>
-                        <div class="swiper-buttons team-carousel-buttons">
-                          <div class="swiper-button-prev team-carousel-button-prev"></div>
-                          <div class="swiper-button-next team-carousel-button-next"></div>
-                        </div>
-                      </div>
+                    </div>
+                    <div class="b_swiper__nav team-carousel__nav">
+                      <div class="swiper-button-prev team-carousel__button-prev"></div>
+                      <div class="swiper-pagination team-carousel__pagination"></div>
+                      <div class="swiper-button-next team-carousel__button-next"></div>
                     </div>
                   </div>
                 </div>
                 
                 <div class="tabs__panel">
                   <div class="team-carousel">
-                    <div class="swiper team-swiper">
+                    <div class="swiper team-carousel__swiper">
                       <div class="swiper-wrapper">
                         
                         <div class="swiper-slide team-carousel-slide">
@@ -1174,34 +1131,12 @@
                               <h3 class="team-card__name">Сергей Иванов 1</h3>
                               <p class="team-card__subtitle text-bold">Прораб</p>
                             </div>
-                            <div class="team-card__body">
+                            <div class="team-card__body wysiwyg">
                               <p>
-                                Прораб — обучает мастеров. Эта должность относится к руководителям среднего звена.
+                                <span class="text-bold">Прораб </span> — обучает мастеров. Эта должность относится к руководителям среднего звена.
                               </p>
                               <p>
-                                Обязанности: обеспечение выполнения заданий по вводу объектов в эксплуатацию; соблюдение сроков ввода; организация процесса производства работ; учет выполненных работ; руководство бригадой.
-                              </p>
-                            </div>
-                          </article>
-                        </div>
-                        
-                        <div class="swiper-slide team-carousel-slide">
-                          <article class="team-card">
-                            <div class="team-card__media">
-                              <picture class="team-card__media-pic">
-                                <img src="./img/sklh_team/team-01.jpg" alt="" class="team-card__media-img">
-                              </picture>
-                            </div>
-                            <div class="team-card__head">
-                              <h3 class="team-card__name">Сергей Иванов 1</h3>
-                              <p class="team-card__subtitle text-bold">Прораб</p>
-                            </div>
-                            <div class="team-card__body">
-                              <p>
-                                Прораб — обучает мастеров. Эта должность относится к руководителям среднего звена.
-                              </p>
-                              <p>
-                                Обязанности: обеспечение выполнения заданий по вводу объектов в эксплуатацию; соблюдение сроков ввода; организация процесса производства работ; учет выполненных работ; руководство бригадой.
+                                <span class="text-bold">Обязанности: </span> обеспечение выполнения заданий по вводу объектов в эксплуатацию; соблюдение сроков ввода; организация процесса производства работ; учет выполненных работ; руководство бригадой.
                               </p>
                             </div>
                           </article>
@@ -1218,34 +1153,12 @@
                               <h3 class="team-card__name">Сергей Иванов 1</h3>
                               <p class="team-card__subtitle text-bold">Прораб</p>
                             </div>
-                            <div class="team-card__body">
+                            <div class="team-card__body wysiwyg">
                               <p>
-                                Прораб — обучает мастеров. Эта должность относится к руководителям среднего звена.
+                                <span class="text-bold">Прораб </span> — обучает мастеров. Эта должность относится к руководителям среднего звена.
                               </p>
                               <p>
-                                Обязанности: обеспечение выполнения заданий по вводу объектов в эксплуатацию; соблюдение сроков ввода; организация процесса производства работ; учет выполненных работ; руководство бригадой.
-                              </p>
-                            </div>
-                          </article>
-                        </div>
-                        
-                        <div class="swiper-slide team-carousel-slide">
-                          <article class="team-card">
-                            <div class="team-card__media">
-                              <picture class="team-card__media-pic">
-                                <img src="./img/sklh_team/team-01.jpg" alt="" class="team-card__media-img">
-                              </picture>
-                            </div>
-                            <div class="team-card__head">
-                              <h3 class="team-card__name">Сергей Иванов 1</h3>
-                              <p class="team-card__subtitle text-bold">Прораб</p>
-                            </div>
-                            <div class="team-card__body">
-                              <p>
-                                Прораб — обучает мастеров. Эта должность относится к руководителям среднего звена.
-                              </p>
-                              <p>
-                                Обязанности: обеспечение выполнения заданий по вводу объектов в эксплуатацию; соблюдение сроков ввода; организация процесса производства работ; учет выполненных работ; руководство бригадой.
+                                <span class="text-bold">Обязанности: </span> обеспечение выполнения заданий по вводу объектов в эксплуатацию; соблюдение сроков ввода; организация процесса производства работ; учет выполненных работ; руководство бригадой.
                               </p>
                             </div>
                           </article>
@@ -1262,32 +1175,74 @@
                               <h3 class="team-card__name">Сергей Иванов 1</h3>
                               <p class="team-card__subtitle text-bold">Прораб</p>
                             </div>
-                            <div class="team-card__body">
+                            <div class="team-card__body wysiwyg">
                               <p>
-                                Прораб — обучает мастеров. Эта должность относится к руководителям среднего звена.
+                                <span class="text-bold">Прораб </span> — обучает мастеров. Эта должность относится к руководителям среднего звена.
                               </p>
                               <p>
-                                Обязанности: обеспечение выполнения заданий по вводу объектов в эксплуатацию; соблюдение сроков ввода; организация процесса производства работ; учет выполненных работ; руководство бригадой.
+                                <span class="text-bold">Обязанности: </span> обеспечение выполнения заданий по вводу объектов в эксплуатацию; соблюдение сроков ввода; организация процесса производства работ; учет выполненных работ; руководство бригадой.
+                              </p>
+                            </div>
+                          </article>
+                        </div>
+                        
+                        <div class="swiper-slide team-carousel-slide">
+                          <article class="team-card">
+                            <div class="team-card__media">
+                              <picture class="team-card__media-pic">
+                                <img src="./img/sklh_team/team-01.jpg" alt="" class="team-card__media-img">
+                              </picture>
+                            </div>
+                            <div class="team-card__head">
+                              <h3 class="team-card__name">Сергей Иванов 1</h3>
+                              <p class="team-card__subtitle text-bold">Прораб</p>
+                            </div>
+                            <div class="team-card__body wysiwyg">
+                              <p>
+                                <span class="text-bold">Прораб </span> — обучает мастеров. Эта должность относится к руководителям среднего звена.
+                              </p>
+                              <p>
+                                <span class="text-bold">Обязанности: </span> обеспечение выполнения заданий по вводу объектов в эксплуатацию; соблюдение сроков ввода; организация процесса производства работ; учет выполненных работ; руководство бригадой.
+                              </p>
+                            </div>
+                          </article>
+                        </div>
+                        
+                        <div class="swiper-slide team-carousel-slide">
+                          <article class="team-card">
+                            <div class="team-card__media">
+                              <picture class="team-card__media-pic">
+                                <img src="./img/sklh_team/team-01.jpg" alt="" class="team-card__media-img">
+                              </picture>
+                            </div>
+                            <div class="team-card__head">
+                              <h3 class="team-card__name">Сергей Иванов 1</h3>
+                              <p class="team-card__subtitle text-bold">Прораб</p>
+                            </div>
+                            <div class="team-card__body wysiwyg">
+                              <p>
+                                <span class="text-bold">Прораб </span> — обучает мастеров. Эта должность относится к руководителям среднего звена.
+                              </p>
+                              <p>
+                                <span class="text-bold">Обязанности: </span> обеспечение выполнения заданий по вводу объектов в эксплуатацию; соблюдение сроков ввода; организация процесса производства работ; учет выполненных работ; руководство бригадой.
                               </p>
                             </div>
                           </article>
                         </div>
                         
                       </div>
-                      <div class="carousel-nav">
-                        <div class="swiper-pagination team-carousel-pagination"></div>
-                        <div class="swiper-buttons team-carousel-buttons">
-                          <div class="swiper-button-prev team-carousel-button-prev"></div>
-                          <div class="swiper-button-next team-carousel-button-next"></div>
-                        </div>
-                      </div>
+                    </div>
+                    <div class="b_swiper__nav team-carousel__nav">
+                      <div class="swiper-button-prev team-carousel__button-prev"></div>
+                      <div class="swiper-pagination team-carousel__pagination"></div>
+                      <div class="swiper-button-next team-carousel__button-next"></div>
                     </div>
                   </div>
                 </div>
                 
                 <div class="tabs__panel">
                   <div class="team-carousel">
-                    <div class="swiper team-swiper">
+                    <div class="swiper team-carousel__swiper">
                       <div class="swiper-wrapper">
                         
                         <div class="swiper-slide team-carousel-slide">
@@ -1301,34 +1256,12 @@
                               <h3 class="team-card__name">Сергей Иванов 2</h3>
                               <p class="team-card__subtitle text-bold">Прораб</p>
                             </div>
-                            <div class="team-card__body">
+                            <div class="team-card__body wysiwyg">
                               <p>
-                                Прораб — обучает мастеров. Эта должность относится к руководителям среднего звена.
+                                <span class="text-bold">Прораб </span> — обучает мастеров. Эта должность относится к руководителям среднего звена.
                               </p>
                               <p>
-                                Обязанности: обеспечение выполнения заданий по вводу объектов в эксплуатацию; соблюдение сроков ввода; организация процесса производства работ; учет выполненных работ; руководство бригадой.
-                              </p>
-                            </div>
-                          </article>
-                        </div>
-                        
-                        <div class="swiper-slide team-carousel-slide">
-                          <article class="team-card">
-                            <div class="team-card__media">
-                              <picture class="team-card__media-pic">
-                                <img src="./img/sklh_team/team-01.jpg" alt="" class="team-card__media-img">
-                              </picture>
-                            </div>
-                            <div class="team-card__head">
-                              <h3 class="team-card__name">Сергей Иванов 2</h3>
-                              <p class="team-card__subtitle text-bold">Прораб</p>
-                            </div>
-                            <div class="team-card__body">
-                              <p>
-                                Прораб — обучает мастеров. Эта должность относится к руководителям среднего звена.
-                              </p>
-                              <p>
-                                Обязанности: обеспечение выполнения заданий по вводу объектов в эксплуатацию; соблюдение сроков ввода; организация процесса производства работ; учет выполненных работ; руководство бригадой.
+                                <span class="text-bold">Обязанности: </span> обеспечение выполнения заданий по вводу объектов в эксплуатацию; соблюдение сроков ввода; организация процесса производства работ; учет выполненных работ; руководство бригадой.
                               </p>
                             </div>
                           </article>
@@ -1345,34 +1278,12 @@
                               <h3 class="team-card__name">Сергей Иванов 2</h3>
                               <p class="team-card__subtitle text-bold">Прораб</p>
                             </div>
-                            <div class="team-card__body">
+                            <div class="team-card__body wysiwyg">
                               <p>
-                                Прораб — обучает мастеров. Эта должность относится к руководителям среднего звена.
+                                <span class="text-bold">Прораб </span> — обучает мастеров. Эта должность относится к руководителям среднего звена.
                               </p>
                               <p>
-                                Обязанности: обеспечение выполнения заданий по вводу объектов в эксплуатацию; соблюдение сроков ввода; организация процесса производства работ; учет выполненных работ; руководство бригадой.
-                              </p>
-                            </div>
-                          </article>
-                        </div>
-                        
-                        <div class="swiper-slide team-carousel-slide">
-                          <article class="team-card">
-                            <div class="team-card__media">
-                              <picture class="team-card__media-pic">
-                                <img src="./img/sklh_team/team-01.jpg" alt="" class="team-card__media-img">
-                              </picture>
-                            </div>
-                            <div class="team-card__head">
-                              <h3 class="team-card__name">Сергей Иванов 2</h3>
-                              <p class="team-card__subtitle text-bold">Прораб</p>
-                            </div>
-                            <div class="team-card__body">
-                              <p>
-                                Прораб — обучает мастеров. Эта должность относится к руководителям среднего звена.
-                              </p>
-                              <p>
-                                Обязанности: обеспечение выполнения заданий по вводу объектов в эксплуатацию; соблюдение сроков ввода; организация процесса производства работ; учет выполненных работ; руководство бригадой.
+                                <span class="text-bold">Обязанности: </span> обеспечение выполнения заданий по вводу объектов в эксплуатацию; соблюдение сроков ввода; организация процесса производства работ; учет выполненных работ; руководство бригадой.
                               </p>
                             </div>
                           </article>
@@ -1389,32 +1300,74 @@
                               <h3 class="team-card__name">Сергей Иванов 2</h3>
                               <p class="team-card__subtitle text-bold">Прораб</p>
                             </div>
-                            <div class="team-card__body">
+                            <div class="team-card__body wysiwyg">
                               <p>
-                                Прораб — обучает мастеров. Эта должность относится к руководителям среднего звена.
+                                <span class="text-bold">Прораб </span> — обучает мастеров. Эта должность относится к руководителям среднего звена.
                               </p>
                               <p>
-                                Обязанности: обеспечение выполнения заданий по вводу объектов в эксплуатацию; соблюдение сроков ввода; организация процесса производства работ; учет выполненных работ; руководство бригадой.
+                                <span class="text-bold">Обязанности: </span> обеспечение выполнения заданий по вводу объектов в эксплуатацию; соблюдение сроков ввода; организация процесса производства работ; учет выполненных работ; руководство бригадой.
+                              </p>
+                            </div>
+                          </article>
+                        </div>
+                        
+                        <div class="swiper-slide team-carousel-slide">
+                          <article class="team-card">
+                            <div class="team-card__media">
+                              <picture class="team-card__media-pic">
+                                <img src="./img/sklh_team/team-01.jpg" alt="" class="team-card__media-img">
+                              </picture>
+                            </div>
+                            <div class="team-card__head">
+                              <h3 class="team-card__name">Сергей Иванов 2</h3>
+                              <p class="team-card__subtitle text-bold">Прораб</p>
+                            </div>
+                            <div class="team-card__body wysiwyg">
+                              <p>
+                                <span class="text-bold">Прораб </span> — обучает мастеров. Эта должность относится к руководителям среднего звена.
+                              </p>
+                              <p>
+                                <span class="text-bold">Обязанности: </span> обеспечение выполнения заданий по вводу объектов в эксплуатацию; соблюдение сроков ввода; организация процесса производства работ; учет выполненных работ; руководство бригадой.
+                              </p>
+                            </div>
+                          </article>
+                        </div>
+                        
+                        <div class="swiper-slide team-carousel-slide">
+                          <article class="team-card">
+                            <div class="team-card__media">
+                              <picture class="team-card__media-pic">
+                                <img src="./img/sklh_team/team-01.jpg" alt="" class="team-card__media-img">
+                              </picture>
+                            </div>
+                            <div class="team-card__head">
+                              <h3 class="team-card__name">Сергей Иванов 2</h3>
+                              <p class="team-card__subtitle text-bold">Прораб</p>
+                            </div>
+                            <div class="team-card__body wysiwyg">
+                              <p>
+                                <span class="text-bold">Прораб </span> — обучает мастеров. Эта должность относится к руководителям среднего звена.
+                              </p>
+                              <p>
+                                <span class="text-bold">Обязанности: </span> обеспечение выполнения заданий по вводу объектов в эксплуатацию; соблюдение сроков ввода; организация процесса производства работ; учет выполненных работ; руководство бригадой.
                               </p>
                             </div>
                           </article>
                         </div>
                         
                       </div>
-                      <div class="carousel-nav">
-                        <div class="swiper-pagination team-carousel-pagination"></div>
-                        <div class="swiper-buttons team-carousel-buttons">
-                          <div class="swiper-button-prev team-carousel-button-prev"></div>
-                          <div class="swiper-button-next team-carousel-button-next"></div>
-                        </div>
-                      </div>
+                    </div>
+                    <div class="b_swiper__nav team-carousel__nav">
+                      <div class="swiper-button-prev team-carousel__button-prev"></div>
+                      <div class="swiper-pagination team-carousel__pagination"></div>
+                      <div class="swiper-button-next team-carousel__button-next"></div>
                     </div>
                   </div>
                 </div>
                 
                 <div class="tabs__panel">
                   <div class="team-carousel">
-                    <div class="swiper team-swiper">
+                    <div class="swiper team-carousel__swiper">
                       <div class="swiper-wrapper">
                         
                         <div class="swiper-slide team-carousel-slide">
@@ -1428,34 +1381,12 @@
                               <h3 class="team-card__name">Сергей Иванов 3</h3>
                               <p class="team-card__subtitle text-bold">Прораб</p>
                             </div>
-                            <div class="team-card__body">
+                            <div class="team-card__body wysiwyg">
                               <p>
-                                Прораб — обучает мастеров. Эта должность относится к руководителям среднего звена.
+                                <span class="text-bold">Прораб </span> — обучает мастеров. Эта должность относится к руководителям среднего звена.
                               </p>
                               <p>
-                                Обязанности: обеспечение выполнения заданий по вводу объектов в эксплуатацию; соблюдение сроков ввода; организация процесса производства работ; учет выполненных работ; руководство бригадой.
-                              </p>
-                            </div>
-                          </article>
-                        </div>
-                        
-                        <div class="swiper-slide team-carousel-slide">
-                          <article class="team-card">
-                            <div class="team-card__media">
-                              <picture class="team-card__media-pic">
-                                <img src="./img/sklh_team/team-01.jpg" alt="" class="team-card__media-img">
-                              </picture>
-                            </div>
-                            <div class="team-card__head">
-                              <h3 class="team-card__name">Сергей Иванов 3</h3>
-                              <p class="team-card__subtitle text-bold">Прораб</p>
-                            </div>
-                            <div class="team-card__body">
-                              <p>
-                                Прораб — обучает мастеров. Эта должность относится к руководителям среднего звена.
-                              </p>
-                              <p>
-                                Обязанности: обеспечение выполнения заданий по вводу объектов в эксплуатацию; соблюдение сроков ввода; организация процесса производства работ; учет выполненных работ; руководство бригадой.
+                                <span class="text-bold">Обязанности: </span> обеспечение выполнения заданий по вводу объектов в эксплуатацию; соблюдение сроков ввода; организация процесса производства работ; учет выполненных работ; руководство бригадой.
                               </p>
                             </div>
                           </article>
@@ -1472,34 +1403,12 @@
                               <h3 class="team-card__name">Сергей Иванов 3</h3>
                               <p class="team-card__subtitle text-bold">Прораб</p>
                             </div>
-                            <div class="team-card__body">
+                            <div class="team-card__body wysiwyg">
                               <p>
-                                Прораб — обучает мастеров. Эта должность относится к руководителям среднего звена.
+                                <span class="text-bold">Прораб </span> — обучает мастеров. Эта должность относится к руководителям среднего звена.
                               </p>
                               <p>
-                                Обязанности: обеспечение выполнения заданий по вводу объектов в эксплуатацию; соблюдение сроков ввода; организация процесса производства работ; учет выполненных работ; руководство бригадой.
-                              </p>
-                            </div>
-                          </article>
-                        </div>
-                        
-                        <div class="swiper-slide team-carousel-slide">
-                          <article class="team-card">
-                            <div class="team-card__media">
-                              <picture class="team-card__media-pic">
-                                <img src="./img/sklh_team/team-01.jpg" alt="" class="team-card__media-img">
-                              </picture>
-                            </div>
-                            <div class="team-card__head">
-                              <h3 class="team-card__name">Сергей Иванов 3</h3>
-                              <p class="team-card__subtitle text-bold">Прораб</p>
-                            </div>
-                            <div class="team-card__body">
-                              <p>
-                                Прораб — обучает мастеров. Эта должность относится к руководителям среднего звена.
-                              </p>
-                              <p>
-                                Обязанности: обеспечение выполнения заданий по вводу объектов в эксплуатацию; соблюдение сроков ввода; организация процесса производства работ; учет выполненных работ; руководство бригадой.
+                                <span class="text-bold">Обязанности: </span> обеспечение выполнения заданий по вводу объектов в эксплуатацию; соблюдение сроков ввода; организация процесса производства работ; учет выполненных работ; руководство бригадой.
                               </p>
                             </div>
                           </article>
@@ -1516,25 +1425,67 @@
                               <h3 class="team-card__name">Сергей Иванов 3</h3>
                               <p class="team-card__subtitle text-bold">Прораб</p>
                             </div>
-                            <div class="team-card__body">
+                            <div class="team-card__body wysiwyg">
                               <p>
-                                Прораб — обучает мастеров. Эта должность относится к руководителям среднего звена.
+                                <span class="text-bold">Прораб </span> — обучает мастеров. Эта должность относится к руководителям среднего звена.
                               </p>
                               <p>
-                                Обязанности: обеспечение выполнения заданий по вводу объектов в эксплуатацию; соблюдение сроков ввода; организация процесса производства работ; учет выполненных работ; руководство бригадой.
+                                <span class="text-bold">Обязанности: </span> обеспечение выполнения заданий по вводу объектов в эксплуатацию; соблюдение сроков ввода; организация процесса производства работ; учет выполненных работ; руководство бригадой.
+                              </p>
+                            </div>
+                          </article>
+                        </div>
+                        
+                        <div class="swiper-slide team-carousel-slide">
+                          <article class="team-card">
+                            <div class="team-card__media">
+                              <picture class="team-card__media-pic">
+                                <img src="./img/sklh_team/team-01.jpg" alt="" class="team-card__media-img">
+                              </picture>
+                            </div>
+                            <div class="team-card__head">
+                              <h3 class="team-card__name">Сергей Иванов 3</h3>
+                              <p class="team-card__subtitle text-bold">Прораб</p>
+                            </div>
+                            <div class="team-card__body wysiwyg">
+                              <p>
+                                <span class="text-bold">Прораб </span> — обучает мастеров. Эта должность относится к руководителям среднего звена.
+                              </p>
+                              <p>
+                                <span class="text-bold">Обязанности: </span> обеспечение выполнения заданий по вводу объектов в эксплуатацию; соблюдение сроков ввода; организация процесса производства работ; учет выполненных работ; руководство бригадой.
+                              </p>
+                            </div>
+                          </article>
+                        </div>
+                        
+                        <div class="swiper-slide team-carousel-slide">
+                          <article class="team-card">
+                            <div class="team-card__media">
+                              <picture class="team-card__media-pic">
+                                <img src="./img/sklh_team/team-01.jpg" alt="" class="team-card__media-img">
+                              </picture>
+                            </div>
+                            <div class="team-card__head">
+                              <h3 class="team-card__name">Сергей Иванов 3</h3>
+                              <p class="team-card__subtitle text-bold">Прораб</p>
+                            </div>
+                            <div class="team-card__body wysiwyg">
+                              <p>
+                                <span class="text-bold">Прораб </span> — обучает мастеров. Эта должность относится к руководителям среднего звена.
+                              </p>
+                              <p>
+                                <span class="text-bold">Обязанности: </span> обеспечение выполнения заданий по вводу объектов в эксплуатацию; соблюдение сроков ввода; организация процесса производства работ; учет выполненных работ; руководство бригадой.
                               </p>
                             </div>
                           </article>
                         </div>
                         
                       </div>
-                      <div class="carousel-nav">
-                        <div class="swiper-pagination team-carousel-pagination"></div>
-                        <div class="swiper-buttons team-carousel-buttons">
-                          <div class="swiper-button-prev team-carousel-button-prev"></div>
-                          <div class="swiper-button-next team-carousel-button-next"></div>
-                        </div>
-                      </div>
+                    </div>
+                    <div class="b_swiper__nav team-carousel__nav">
+                      <div class="swiper-button-prev team-carousel__button-prev"></div>
+                      <div class="swiper-pagination team-carousel__pagination"></div>
+                      <div class="swiper-button-next team-carousel__button-next"></div>
                     </div>
                   </div>
                 </div>
@@ -1547,13 +1498,14 @@
       </main>
 
       <footer class="footer">
-	<section class="section contacts">
-	  <div class="container contacts__container">
-	  	<div class="section__head">
-		    <h2 class="section-title contacts__title">
-		    	Наши <span class="text-colored"> контакты</span>
-		    </h2>
-				<div class="socials contacts__socials">
+	<div class="container">
+		<section class="section contacts" id="section-contacts">
+		  <div class="container contacts__container">
+		  	<div class="section__head">
+			    <h2 class="section-title contacts__title">
+			    	Наши <span class="text-colored"> контакты</span>
+			    </h2>
+					<div class="socials contacts__socials">
   
     <a class="socials__link socials__link--youtube" aria-label="YT"
       href="https://youtube.com" target="_blank" rel="noopener noreferrer"
@@ -1589,51 +1541,52 @@
   
 </div>
 
-	  	</div>
+		  	</div>
 
-	  	<div class="contacts__list">
-	  		<ul class="contacts__linklist">
-	  			<li class="contacts__linklist-item">
-	  				<a href="tel:" class="contacts-linklinst-link">
-	  					+7(996) 316-39-99
-	  				</a>
-	  			</li>
-	  			<li class="contacts__linklist-item">
-	  				<a href="tel:" class="contacts-linklinst-link">
-							+7(499) 111-39-99
-	  				</a>
-	  			</li>
-	  		</ul>
-	  		<div class="contacts__entries">
-	  			<a class="contacts__entries-item">
-	  				<span class="text-bold">Email: </span> info@skill-house.ru
-	  			</a>
-	  			<a class="contacts__entries-item">
-	  				<span class="text-bold">Адрес: </span> г. Москва, ул. Большая Якиманка 31, офис 105
-	  			</a>
-	  			<a class="contacts__entries-item">
-	  				<span class="text-bold">ИНН: </span> 9721188852
-	  				<br>
-	  				<span class="text-bold">ОГРН: </span> 1227700804891
-	  			</a>
-	  		</div>
+		  	<div class="contacts__list">
+		  		<ul class="contacts__linklist">
+		  			<li class="contacts__linklist-item">
+		  				<a href="tel:" class="contacts__linklist-link">
+		  					+7(996) 316-39-99
+		  				</a>
+		  			</li>
+		  			<li class="contacts__linklist-item">
+		  				<a href="tel:" class="contacts__linklist-link">
+								+7(499) 111-39-99
+		  				</a>
+		  			</li>
+		  		</ul>
+		  		<div class="contacts__entries">
+		  			<a class="contacts__entries-item" href="#">
+		  				<span class="text-bold">Email: </span> info@skill-house.ru
+		  			</a>
+		  			<a class="contacts__entries-item" href="#">
+		  				<span class="text-bold">Адрес: </span> г. Москва, ул. Большая Якиманка 31, офис 105
+		  			</a>
+		  			<p class="contacts__entries-item">
+		  				<span class="text-bold">ИНН: </span> 9721188852
+		  				<br>
+		  				<span class="text-bold">ОГРН: </span> 1227700804891
+		  			</p>
+		  		</div>
 
-	  		<button class="button-secondary contacts__button-callback" type=button>
-	  			Заказать звонок
-	  		</button>
+		  		<button class="button-secondary contacts__button-callback" type="button" data-b_modal-open="callback">
+		  			Заказать звонок
+		  		</button>
 
-	  		<div class="contacts__footnotes">
-	  			<p>© 2023 СкилХаус</p>
-	  		</div>
-	  	</div>
+		  		<div class="contacts__footnotes">
+		  			<p>© 2023 СкилХаус</p>
+		  		</div>
+		  	</div>
 
-	  	<div class="contacts__media">
-	  		<picture class="contacts__media-pic">
-	  			<img src="./img/sklh_contacts/map.png" alt="" class="contacts__media-img">
-	  		</picture>
-	  	</div>
-	  </div>
-	</section>
+		  	<div class="contacts__media">
+		  		<picture class="contacts__media-pic">
+		  			<img src="./img/sklh_contacts/map.png" alt="" class="contacts__media-img">
+		  		</picture>
+		  	</div>
+		  </div>
+		</section>
+	</div>
 </footer>
 
 
@@ -1649,7 +1602,7 @@
 	</header>
 	<div class="modal__body">
 		<h3 class="modal__title">Оставьте свои контакты.</h3>
-		<p class="modal_desc"> Мы перезвоним и&nbsp;<span class="text-bold">договоримся о встрече </span> в&nbsp;удобное для вас время. </p>
+		<p class="modal__desc"> Мы перезвоним и&nbsp;<span class="text-bold">договоримся о встрече </span> в&nbsp;удобное для вас время. </p>
 		<div class="modal__form form js_form">
 			<div class="form__fieldset">
 				<label class="input">
@@ -1686,7 +1639,7 @@
 </label>
 
 			</div>
-			<button class="button-primary form__submit" type="button">Записаться в Шоурум</button>
+			<button class="button-primary form__submit" type="button">Перезвоните мне</button>
 		</div>
 	</div>
 </div>
@@ -1701,7 +1654,7 @@
 	</header>
 	<div class="modal__body">
 		<h3 class="modal__title">Оставьте свои контакты.</h3>
-		<p class="modal_desc"> Мы перезвоним и&nbsp;<span class="text-bold">договоримся о встрече </span> в&nbsp;удобное для вас время. </p>
+		<p class="modal__desc"> Мы перезвоним и&nbsp;<span class="text-bold">договоримся о встрече </span> в&nbsp;удобное для вас время. </p>
 		<div class="modal__form form js_form">
 			<div class="form__fieldset">
 				<label class="input">
@@ -1738,7 +1691,7 @@
 </label>
 
 			</div>
-			<button class="button-primary form__submit" type="button">Записаться в Шоурум</button>
+			<button class="button-primary form__submit" type="button">Перезвоните мне</button>
 		</div>
 	</div>
 </div>
@@ -1753,7 +1706,7 @@
 	</header>
 	<div class="modal__body">
 		<h3 class="modal__title">Оставьте свои контакты.</h3>
-		<p class="modal_desc"> Мы перезвоним и&nbsp;<span class="text-bold">договоримся о встрече </span> в&nbsp;удобное для вас время. </p>
+		<p class="modal__desc"> Мы перезвоним и&nbsp;<span class="text-bold">договоримся о встрече </span> в&nbsp;удобное для вас время. </p>
 		<div class="modal__form form js_form">
 			<div class="form__fieldset">
 				<label class="input">
@@ -1790,7 +1743,7 @@
 </label>
 
 			</div>
-			<button class="button-primary form__submit" type="button">Записаться в Шоурум</button>
+			<button class="button-primary form__submit" type="button">Перезвоните мне</button>
 		</div>
 	</div>
 </div>
@@ -1805,7 +1758,7 @@
 	</header>
 	<div class="modal__body">
 		<h3 class="modal__title">Оставьте свой телефон.</h3>
-		<p class="modal_desc"> Мы отправим образец договора вам в WhatsApp </p>
+		<p class="modal__desc"> Мы отправим образец договора вам&nbsp;в&nbsp;WhatsApp </p>
 		<div class="modal__form form js_form">
 			<div class="form__fieldset">
 				<label class="input">
@@ -1842,7 +1795,7 @@
 </label>
 
 			</div>
-			<button class="button-primary form__submit" type="button">Записаться в Шоурум</button>
+			<button class="button-primary form__submit" type="button">Запросить образец</button>
 		</div>
 	</div>
 </div>
@@ -1857,7 +1810,7 @@
 	</header>
 	<div class="modal__body">
 		<h3 class="modal__title">Оставьте свои контакты.</h3>
-		<p class="modal_desc"> Мы перезвоним и&nbsp;<span class="text-bold">договоримся о встрече </span> в&nbsp;удобное для вас время. </p>
+		<p class="modal__desc"> Мы перезвоним и&nbsp;<span class="text-bold">договоримся о встрече </span> в&nbsp;удобное для вас время. </p>
 		<div class="modal__form form js_form">
 			<div class="form__fieldset">
 				<label class="input">
@@ -1900,6 +1853,6 @@
 </div>
 
 
-    <script src="./js/index.min.js?_v=20230924161329"></script>
+    <script src="./js/index.min.js?_v=20230925233455"></script>
   </body>
 </html>

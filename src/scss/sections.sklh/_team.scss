@@ -1,0 +1,37 @@
+.team {
+	padding-top: 11rem;
+	padding-bottom: 11rem;
+	background: linear-gradient(113deg, #303030 11.83%, #101010 87.31%);
+}
+
+.team__tabs .tabs__tablist {
+	margin-top: -2rem;
+	display: flex;
+	justify-content: flex-end;
+}
+
+.team__tabs .tabs__button {
+	margin-left: 4.4rem;
+	margin-right: 4.4rem;
+}
+
+.team__tabs .tabs__button:first-of-type {
+	margin-left: 0;
+}
+.team__tabs .tabs__button:last-of-type {
+	margin-right: 0;
+}
+
+.team__tabs .tabs__button.active {
+	--border-color: ;
+}
+
+.team-carousel {
+	position: relative;
+	overflow: hidden;
+	padding-bottom: 1rem;
+}
+.team-carousel__swiper {
+	overflow: visible;
+	margin-bottom: 8rem;
+}

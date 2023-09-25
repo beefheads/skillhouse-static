@@ -1,6 +1,6 @@
 <header class="header">
 	<div class="container header__container">
-		<div class="burger">
+		<div class="burger" id="burger">
 			<span class="burger__line"></span>
 			<span class="burger__line"></span>
 			<span class="burger__line"></span>
@@ -39,7 +39,7 @@
 		<div class="header__menu">
 			<ul class="header__menu-links">
 				<li class="header__menu-links-item">
-					<a href="#" class="header__menu-link link">
+					<a href="/reviews" class="header__menu-link link">
 						<span class="link__text">Отзывы клиентов</span>
 					</a>
 				</li>
@@ -47,7 +47,7 @@
 		</div>
 		<div class="header__contacts">
 			<a href="tel:" class="header__contacts-item">+7(499) 111-39-99</a>
-			<button class="link header__button-callback">
+			<button class="link header__button-callback" type="button" data-b_modal-open="callback">
 				<span class="link__text">Заказать звонок</span>
 			</button>
 		</div>
@@ -63,19 +63,19 @@
 		<div class="menu__body">
 			<ul class="menu__nav">
 				<li class="menu__nav-item">
-					<a href="#" class="menu__nav-link">Портфолио</a>
+					<a href="#section-portfolio" class="menu__nav-link">Портфолио</a>
 				</li>
 				<li class="menu__nav-item">
-					<a href="#" class="menu__nav-link">Заказать дизайн-проект</a>
+					<a href="#section-price" class="menu__nav-link">Заказать дизайн-проект</a>
 				</li>
 				<li class="menu__nav-item">
-					<a href="#" class="menu__nav-link">Рассчитать ремонт</a>
+					<a href="#section-quiz" class="menu__nav-link">Рассчитать ремонт</a>
 				</li>
 				<li class="menu__nav-item">
-					<a href="#" class="menu__nav-link">О нас</a>
+					<a href="#section-showroom" class="menu__nav-link">О нас</a>
 				</li>
 				<li class="menu__nav-item">
-					<a href="#" class="menu__nav-link"> Контакты</a>
+					<a href="#section-contacts" class="menu__nav-link"> Контакты</a>
 				</li>
 			</ul>
 		</div>
@@ -107,7 +107,7 @@
 				</p>
 			</div>
 			<div class="menu__footbuttons">
-				<button class="button-secondary menu__button-callback" type="button">Заказать звонок</button>
+				<button class="button-secondary menu__button-callback" type="button" data-b_modal-open="callback">Заказать звонок</button>
 			</div>
 			@@include('../b/socials.html', {
 				className: 'menu__socials',

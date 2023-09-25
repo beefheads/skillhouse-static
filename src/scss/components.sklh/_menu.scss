@@ -16,6 +16,7 @@
 }
 .menu--visible {
 	transform: translateX(0);
+	pointer-events: initial;
 }
 
 .menu__body {
@@ -86,7 +87,7 @@
 
 .menu__linklist {
 	grid-area: links;
-	color: #D7BF7F;
+	color: var(--c-primary);
 	leading-trim: both;
 	text-edge: cap;
 	font-variant-numeric: lining-nums tabular-nums;
@@ -117,10 +118,6 @@
 	line-height: 130%;
 	letter-spacing: -0.4px;
 }
-
-// .menu__contacts > *:last-chlid {
-// 	margin-bottom: 0;
-// }
 
 .menu__contacts-item {
 	display: block;

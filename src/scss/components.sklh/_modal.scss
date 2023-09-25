@@ -1,0 +1,55 @@
+.modal {
+	background: var(--bg-app);
+	padding: 4rem;
+	padding-bottom: 8rem;
+	max-width: 49.5rem;
+}
+
+.modal__head {
+	padding-bottom: 14rem;
+}
+
+.modal__title {
+	color: var(--fg-regular, #FFF);
+	text-align: center;
+	leading-trim: both;
+	text-edge: cap;
+	font-family: var(--ff-regular);
+	font-size: 2rem;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 140%;
+	letter-spacing: -0.08rem;
+}
+.modal__desc {
+	color: var(--fg-regular, #FFF);
+	text-align: center;
+	leading-trim: both;
+	text-edge: cap;
+	font-family: var(--ff-regular);
+	font-size: 2rem;
+	font-style: normal;
+	font-weight: 300;
+	line-height: 140%;
+	letter-spacing: -0.08rem;
+	margin-bottom: 6rem;
+}
+
+.modal__form {
+	max-width: 30rem;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.b_modal__closer {
+	background-color: transparent;
+	top: 4rem;
+	right: 4.5rem;	
+}
+.b_modal__closer::before,
+.b_modal__closer::after {
+	background-color: var(--c-primary);
+	border-radius: 0;
+	width: 90%;
+	height: 8%;
+}

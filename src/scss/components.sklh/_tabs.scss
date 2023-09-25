@@ -1,0 +1,14 @@
+.tabs {
+
+}
+
+.tabs__tablist {
+	margin-bottom: 10.5rem;
+}
+
+.tabs__panel {
+	display: none;
+}
+.tabs__panel.active {
+	display: block;
+}
