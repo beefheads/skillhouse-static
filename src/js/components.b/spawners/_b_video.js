@@ -27,6 +27,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
       const videoUrl = videoElement.dataset.videoUrl;
       const source = getVideoSource(videoUrl);
+      videoElement.dataset.source = source;
       switch (source) {
         case 'youtube':
           initYoutubeVideo(videoElement, index);
@@ -36,6 +37,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
           break;
         default:
           console.log('regular')
+          initRegularVideo(videoElement, index)
           break;
       }
 
@@ -43,6 +45,12 @@ window.addEventListener('DOMContentLoaded', (event) => {
     });
   }
 
+
+  function initRegularVideo(videoElement, index) {
+      makeVideoMarkup(videoElement, index);
+      // setVideoThumbs(videoElement, ytId);
+      videoElement.classList.add(CLASSES.ready);
+  }
 
   function initYoutubeVideo(videoElement, index) {
       const ytId = new URL(videoElement.dataset.videoUrl).searchParams.get('v');
@@ -89,7 +97,12 @@ window.addEventListener('DOMContentLoaded', (event) => {
     let media = document.createElement('div');
     media.classList.add('b_video__media', 'js_spawned');
 
-    let videoFrame = document.createElement('div');
+    let videoFrame;
+    if (videoElement.dataset.source == 'youtube') {
+      videoFrame = document.createElement('div');
+    } else if (videoElement.dataset.source == 'regular') {
+      videoFrame = document.createElement('video');
+    }
     videoFrame.classList.add('b_video__player', 'js_spawned');
     videoFrame.id = `b_video-${index}`;
 
@@ -97,6 +110,15 @@ window.addEventListener('DOMContentLoaded', (event) => {
     pic.appendChild(img);
     cover.appendChild(pic);
 
+    if (videoElement.dataset.source == 'regular') {
+      let videoSource = document.createElement("source");
+      videoSource.src = videoElement.dataset.videoUrl;
+      const extension = videoSource.src.substring(videoSource.src.lastIndexOf(".") + 1);
+      videoSource.type = `video/${extension}`;
+
+      videoFrame.src = videoSource.src
+      // videoFrame.appendChild(videoSource);
+    }
     media.appendChild(videoFrame);
 
     videoElement.appendChild(cover);
@@ -138,7 +160,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     videoElement.classList.remove(CLASSES.playing)
     setTimeout(() => {
       videoElement._b_video.player.pauseVideo();
-    }, 100)
+    }, 400)
   }
 
   function toggleVideo(videoElement) {
@@ -158,6 +180,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
         hasAutoplay = 1;
         isMuted = 1;
       }
+
+      if (getVideoSource(video.dataset.videoUrl) != 'youtube') return;
 
       // const videoElementId = video.id;//`b_video-${index}`
       video._b_video.player = new YT.Player(video._b_video.videoFrame.id, {
