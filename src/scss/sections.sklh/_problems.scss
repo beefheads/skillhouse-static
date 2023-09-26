@@ -2,6 +2,7 @@
 	padding-top: 12rem;
 	padding-bottom: 12rem;
 	background: linear-gradient(113deg, #303030 11.83%, #101010 87.31%);
+	overflow-x: hidden;
 }
 
 .problems__desc {
@@ -11,3 +12,9 @@
 .problems-carousel {
 	position: relative;
 }
+
+.problems-carousel__swiper {
+	margin-bottom: 10rem;
+	overflow: visible;
+}
+

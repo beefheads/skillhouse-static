@@ -4,6 +4,10 @@
 	background: linear-gradient(113deg, #303030 11.83%, #101010 87.31%);
 }
 
+.team__container {
+	overflow: hidden;
+}
+
 .team__tabs .tabs__tablist {
 	margin-top: -2rem;
 	display: flex;
@@ -34,4 +38,7 @@
 .team-carousel__swiper {
 	overflow: visible;
 	margin-bottom: 8rem;
+}
+.team-carousel__swiper .swiper-wrapper {
+	overflow: inherit;
 }
