@@ -1,4 +1,4 @@
-import Swiper, { Navigation, Autoplay, Pagination, Thumbs, EffectFade, Grid } from "swiper";
+import Swiper, { Navigation, Pagination, EffectCreative } from "swiper";
 
 window.addEventListener('DOMContentLoaded', (event) => {
 	const problemsCarousel = document.querySelector('.problems-carousel');
@@ -6,9 +6,22 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 
 	const swiperConfig = {
+		speed: 450,
 		slidesPerView: 1,
-	  modules: [Navigation, Pagination, EffectFade],
+	  modules: [Navigation, Pagination, EffectCreative],
 	  spaceBetween: 10,
+		effect: "creative",
+    creativeEffect: {
+      prev: {
+        shadow: true,
+        translate: ["-20%", 0, -1],
+        opacity: 0,
+      },
+      next: {
+        translate: ["130%", 0, 0],
+      },
+    },
+
 	  pagination: {
 	    el: ".problems-carousel__pagination",
 	    clickable: true,

@@ -7,8 +7,20 @@
 }
 
 .tabs__panel {
-	display: none;
+	// display: none;
+	max-height: 1rem;
+	opacity: 0;
+	pointer-events: none;
+	transition: all 0.45s var(--tr-jolly-enter);
+	transform: scale(0.7);
 }
 .tabs__panel.active {
-	display: block;
+	// display: block;
+	max-height: 100rem;
+	pointer-events: initial;
+}
+
+.tabs__panel.tab--animated {
+	opacity: 1;
+	transform: scale(1);
 }

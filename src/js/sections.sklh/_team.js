@@ -1,4 +1,4 @@
-import Swiper, { Navigation, Pagination } from "swiper";
+import Swiper, { Navigation, Pagination, EffectCreative } from "swiper";
 
 window.addEventListener('DOMContentLoaded', (event) => {
 	const problemsCarousel = document.querySelector('.team-carousel');
@@ -12,9 +12,22 @@ window.addEventListener('DOMContentLoaded', (event) => {
 		carousel.classList.add(uniqueClass);
 
 		const swiperConfig = {
+			speed: 450,
 			slidesPerView: 1,
-		  modules: [Navigation, Pagination],
-		  spaceBetween: 10,
+		  modules: [Navigation, Pagination, EffectCreative],
+		  spaceBetween: 100,
+			effect: "creative",
+      creativeEffect: {
+        prev: {
+          shadow: true,
+          translate: ["-20%", 0, -1],
+          opacity: 0,
+        },
+        next: {
+          translate: ["130%", 0, 0],
+        },
+      },
+
 		  pagination: {
 		    el: `.${uniqueClass} .team-carousel__pagination`,
 		    clickable: true,

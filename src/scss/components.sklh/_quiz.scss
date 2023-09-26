@@ -11,6 +11,15 @@
 
 .quiz-slide__title {
 	padding-top: 11.4rem;
+	transition: all 0.3s var(--tr-jolly-enter) 0.2s;
+}
+.swiper-slide .quiz-slide__title {
+	opacity: 0;
+	transform: translateY(2rem);
+}
+.swiper-slide-active .quiz-slide__title {
+	opacity: 1;
+	transform: translateY(0);
 }
 
 .quiz-slide__question {
@@ -32,6 +41,21 @@
 .quiz-slide--wide .quiz-slide__content {
 	padding-left: 1.5rem;
 	padding-right: 1.5rem;
+}
+
+$transition-delay: 0.05s;
+@for $i from 1 through 10 {
+	.quiz-slide__answer:nth-of-type(#{$i}) {
+		transition: all 0.3s var(--tr-jolly-enter) $transition-delay * $i;
+	}
+}
+.swiper-slide .quiz-slide__answer {
+	opacity: 0;
+	transform: translateY(2rem);
+}
+.swiper-slide-active .quiz-slide__answer {
+	opacity: 1;
+	transform: translateY(0);
 }
 
 .quiz-slide__answerlist {
