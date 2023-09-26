@@ -38,8 +38,9 @@ radio.html
 
   display: inline-flex;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
   cursor: pointer;
+  flex-wrap: wrap;
 }
 .radio__input {
   appearance: none;
@@ -64,4 +65,37 @@ radio.html
 .radio__input:checked ~ .radio__check {
   border-width: var(--border-width-check--checked);
   border-color: var(--border-color-check--checked);
+}
+
+.radio__label {
+  flex-basis: 75%;
+}
+
+.radio-imaged {
+}
+
+.radio__media {
+  display: block;
+  flex-basis: 100%;
+  margin-bottom: 1.6rem;
+  transition: all 0.25s var(--tr-jolly-enter);
+  height: 40rem;
+}
+.radio__media-pic {
+  display: block;
+  height: 100%;
+  width: 100%;
+  transition: inherit;
+}
+.radio__media-img {
+  display: block;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: inherit;
+}
+
+.radio__input:checked ~ .radio__media {
+  border: 0.1rem solid var(--c-primary);
+  padding: 1.2rem;
 }

@@ -40,7 +40,7 @@
 
 
 
-      <link rel="stylesheet" href="./css/style.css?_v=20230925233455">
+      <link rel="stylesheet" href="./css/style.css?_v=20230926114616">
   </head>
   
   <body class="page-home">
@@ -520,7 +520,7 @@
 
         <section class="section section-quiz" id="section-quiz">
           <div class="container section-quiz__container">
-            <div class="quiz">
+            <div class="quiz js_form">
               <div class="quiz__progress">
                 <div class="swiper-pagination quiz__progress-pagination">
                 </div>
@@ -530,39 +530,41 @@
                   <span class="quiz__progress-value-max">6</span>
                 </p>
               </div>
-              <div class="swiper quiz__swiper js_form">
+              <div class="swiper quiz__swiper">
                 <div class="swiper-wrapper">
                   
-                  <article class="swiper-slide quiz-slide" data-step-button-next="Последний вопрос">
+                  <article class="swiper-slide quiz-slide">
                     <div class="quiz-slide__question">
                       <h3 class="quiz-slide__title section-title">
                         Где Вы планируете делать ремонт?
                       </h3>
-                      <div class="quiz-slide__answerlist quiz-slide__answerlist--vertical-list">
-                        <label class="radio quiz-slide__answer">
+                      <div class="quiz-slide__content">
+                        <div class="quiz-slide__answerlist">
+                          <label class="radio quiz-slide__answer">
   <input type="radio" name="quiz_step_0" class="radio__input" value="Новостройка" checked required>
   <span class="radio__check"></span>
   <p class="radio__label">Новостройка</p>
 </label>
 
-                        <label class="radio quiz-slide__answer">
+                          <label class="radio quiz-slide__answer">
   <input type="radio" name="quiz_step_0" class="radio__input" value="Вторичка" required>
   <span class="radio__check"></span>
   <p class="radio__label">Вторичка</p>
 </label>
 
-                        <label class="radio quiz-slide__answer">
+                          <label class="radio quiz-slide__answer">
   <input type="radio" name="quiz_step_0" class="radio__input" value="Коттедж / Таунхаус" required>
   <span class="radio__check"></span>
   <p class="radio__label">Коттедж / Таунхаус</p>
 </label>
 
-                        <label class="radio quiz-slide__answer">
+                          <label class="radio quiz-slide__answer">
   <input type="radio" name="quiz_step_0" class="radio__input" value="Коммерческий объект" required>
   <span class="radio__check"></span>
   <p class="radio__label">Коммерческий объект</p>
 </label>
 
+                        </div>
                       </div>
                     </div>
                     <div class="quiz-slide__media">
@@ -572,75 +574,123 @@
                     </div>
                   </article>
                   
-                  <article class="swiper-slide quiz-slide" data-step-button-next="Последний вопрос">
+                  <article class="swiper-slide quiz-slide quiz-slide--wide">
                     <div class="quiz-slide__question">
                       <h3 class="quiz-slide__title section-title">
-                        Где Вы планируете делать ремонт?
+                        Выберите картинку
                       </h3>
-                      <div class="quiz-slide__answerlist quiz-slide__answerlist--vertical-list">
-                        <label class="radio quiz-slide__answer">
-  <input type="radio" name="quiz_step_1" class="radio__input" value="Новостройка" checked required>
+                      <div class="quiz-slide__content">
+                        <div class="quiz-slide__answerlist quiz-slide__answerlist--horizontal-list">
+                          <label class="radio quiz-slide__answer">
+  <input type="radio" name="quiz_step_image" class="radio__input" value="Новостройка" checked required>
+	<span class="radio__media">
+		<picture class="radio__media-pic">
+			<img src="./img/sklh_quiz/quiz-step-1.jpg" alt="Новостройка" class="radio__media-img">
+		</picture>
+	</span>
   <span class="radio__check"></span>
   <p class="radio__label">Новостройка</p>
 </label>
 
-                        <label class="radio quiz-slide__answer">
-  <input type="radio" name="quiz_step_1" class="radio__input" value="Вторичка" required>
+                          <label class="radio quiz-slide__answer">
+  <input type="radio" name="quiz_step_image" class="radio__input" value="Вторичка" checked required>
+	<span class="radio__media">
+		<picture class="radio__media-pic">
+			<img src="./img/sklh_quiz/quiz-step-1.jpg" alt="Вторичка" class="radio__media-img">
+		</picture>
+	</span>
   <span class="radio__check"></span>
   <p class="radio__label">Вторичка</p>
 </label>
 
-                        <label class="radio quiz-slide__answer">
-  <input type="radio" name="quiz_step_1" class="radio__input" value="Коттедж / Таунхаус" required>
+                          <label class="radio quiz-slide__answer">
+  <input type="radio" name="quiz_step_image" class="radio__input" value="Коттедж / Таунхаус" checked required>
+	<span class="radio__media">
+		<picture class="radio__media-pic">
+			<img src="./img/sklh_quiz/quiz-step-1.jpg" alt="Коттедж / Таунхаус" class="radio__media-img">
+		</picture>
+	</span>
   <span class="radio__check"></span>
   <p class="radio__label">Коттедж / Таунхаус</p>
 </label>
 
-                        <label class="radio quiz-slide__answer">
-  <input type="radio" name="quiz_step_1" class="radio__input" value="Коммерческий объект" required>
+                          <label class="radio quiz-slide__answer">
+  <input type="radio" name="quiz_step_image" class="radio__input" value="Коммерческий объект" checked required>
+	<span class="radio__media">
+		<picture class="radio__media-pic">
+			<img src="./img/sklh_quiz/quiz-step-1.jpg" alt="Коммерческий объект" class="radio__media-img">
+		</picture>
+	</span>
   <span class="radio__check"></span>
   <p class="radio__label">Коммерческий объект</p>
 </label>
 
+                        </div>
                       </div>
                     </div>
-                    <div class="quiz-slide__media">
-                      <picture class="quiz-slide__media-pic">
-                        <img src="./img/sklh_quiz/quiz-step-1.jpg" alt="Где Вы планируете делать ремонт?" class="quiz-slide__media-img">
-                      </picture>
-                    </div>
                   </article>
-                  
                   <article class="swiper-slide quiz-slide" data-step-button-next="Последний вопрос">
                     <div class="quiz-slide__question">
                       <h3 class="quiz-slide__title section-title">
-                        Где Вы планируете делать ремонт?
+                        Как с Вами связаться?
                       </h3>
-                      <div class="quiz-slide__answerlist quiz-slide__answerlist--vertical-list">
-                        <label class="radio quiz-slide__answer">
-  <input type="radio" name="quiz_step_2" class="radio__input" value="Новостройка" checked required>
+                      <div class="quiz-slide__content">
+                        <div class="quiz-slide__answerlist">
+                          <label class="radio quiz-slide__answer">
+  <input type="radio" name="quiz_step_`+i+`" class="radio__input" value="Перезвоните, у меня еще остались вопросы" checked required>
   <span class="radio__check"></span>
-  <p class="radio__label">Новостройка</p>
+  <p class="radio__label">Перезвоните, у меня <br>еще остались вопросы</p>
 </label>
 
-                        <label class="radio quiz-slide__answer">
-  <input type="radio" name="quiz_step_2" class="radio__input" value="Вторичка" required>
+                          <label class="radio quiz-slide__answer">
+  <input type="radio" name="quiz_step_`+i+`" class="radio__input" value="Whatsapp" required>
   <span class="radio__check"></span>
-  <p class="radio__label">Вторичка</p>
+  <p class="radio__label">Whatsapp</p>
 </label>
 
-                        <label class="radio quiz-slide__answer">
-  <input type="radio" name="quiz_step_2" class="radio__input" value="Коттедж / Таунхаус" required>
+                          <label class="radio quiz-slide__answer">
+  <input type="radio" name="quiz_step_`+i+`" class="radio__input" value="Telegram" required>
   <span class="radio__check"></span>
-  <p class="radio__label">Коттедж / Таунхаус</p>
+  <p class="radio__label">Telegram</p>
 </label>
 
-                        <label class="radio quiz-slide__answer">
-  <input type="radio" name="quiz_step_2" class="radio__input" value="Коммерческий объект" required>
-  <span class="radio__check"></span>
-  <p class="radio__label">Коммерческий объект</p>
+                        </div>
+                        <div class="quiz-slide__answerlist">
+                          <label class="input">
+  <span class="input__area">
+    <input
+      class="input__field"
+      name="user_name"
+      
+        placeholder="Ваше имя"
+      
+      autocomplete="name"
+      type="text"
+    >
+  </span>
+  <span class="input__error">Текст ошибки</span>
 </label>
 
+                          <label class="input">
+  <span class="input__area">
+    <input
+      class="input__field"
+      name="user_tel"
+      type="tel"
+      maxlength="25"
+      minlength="10"
+      autocomplete="tel"
+      
+      placeholder="Номер телефона"
+      
+      required
+    >
+  </span>
+  <span class="input__error">Текст ошибки</span>
+</label>
+
+                          <div class="button-primary js_form__submit">Узнать цену</div>
+                        </div>
                       </div>
                     </div>
                     <div class="quiz-slide__media">
@@ -649,85 +699,6 @@
                       </picture>
                     </div>
                   </article>
-                  
-                  <article class="swiper-slide quiz-slide" data-step-button-next="Последний вопрос">
-                    <div class="quiz-slide__question">
-                      <h3 class="quiz-slide__title section-title">
-                        Где Вы планируете делать ремонт?
-                      </h3>
-                      <div class="quiz-slide__answerlist quiz-slide__answerlist--vertical-list">
-                        <label class="radio quiz-slide__answer">
-  <input type="radio" name="quiz_step_3" class="radio__input" value="Новостройка" checked required>
-  <span class="radio__check"></span>
-  <p class="radio__label">Новостройка</p>
-</label>
-
-                        <label class="radio quiz-slide__answer">
-  <input type="radio" name="quiz_step_3" class="radio__input" value="Вторичка" required>
-  <span class="radio__check"></span>
-  <p class="radio__label">Вторичка</p>
-</label>
-
-                        <label class="radio quiz-slide__answer">
-  <input type="radio" name="quiz_step_3" class="radio__input" value="Коттедж / Таунхаус" required>
-  <span class="radio__check"></span>
-  <p class="radio__label">Коттедж / Таунхаус</p>
-</label>
-
-                        <label class="radio quiz-slide__answer">
-  <input type="radio" name="quiz_step_3" class="radio__input" value="Коммерческий объект" required>
-  <span class="radio__check"></span>
-  <p class="radio__label">Коммерческий объект</p>
-</label>
-
-                      </div>
-                    </div>
-                    <div class="quiz-slide__media">
-                      <picture class="quiz-slide__media-pic">
-                        <img src="./img/sklh_quiz/quiz-step-1.jpg" alt="Где Вы планируете делать ремонт?" class="quiz-slide__media-img">
-                      </picture>
-                    </div>
-                  </article>
-                  
-                  <article class="swiper-slide quiz-slide" data-step-button-next="Последний вопрос">
-                    <div class="quiz-slide__question">
-                      <h3 class="quiz-slide__title section-title">
-                        Где Вы планируете делать ремонт?
-                      </h3>
-                      <div class="quiz-slide__answerlist quiz-slide__answerlist--vertical-list">
-                        <label class="radio quiz-slide__answer">
-  <input type="radio" name="quiz_step_4" class="radio__input" value="Новостройка" checked required>
-  <span class="radio__check"></span>
-  <p class="radio__label">Новостройка</p>
-</label>
-
-                        <label class="radio quiz-slide__answer">
-  <input type="radio" name="quiz_step_4" class="radio__input" value="Вторичка" required>
-  <span class="radio__check"></span>
-  <p class="radio__label">Вторичка</p>
-</label>
-
-                        <label class="radio quiz-slide__answer">
-  <input type="radio" name="quiz_step_4" class="radio__input" value="Коттедж / Таунхаус" required>
-  <span class="radio__check"></span>
-  <p class="radio__label">Коттедж / Таунхаус</p>
-</label>
-
-                        <label class="radio quiz-slide__answer">
-  <input type="radio" name="quiz_step_4" class="radio__input" value="Коммерческий объект" required>
-  <span class="radio__check"></span>
-  <p class="radio__label">Коммерческий объект</p>
-</label>
-
-                      </div>
-                    </div>
-                    <div class="quiz-slide__media">
-                      <picture class="quiz-slide__media-pic">
-                        <img src="./img/sklh_quiz/quiz-step-1.jpg" alt="Где Вы планируете делать ремонт?" class="quiz-slide__media-img">
-                      </picture>
-                    </div>
-                  </article>
-                  
                 </div>
               </div>
               <div class="b_swiper__buttons quiz__buttons">
@@ -1853,6 +1824,6 @@
 </div>
 
 
-    <script src="./js/index.min.js?_v=20230925233455"></script>
+    <script src="./js/index.min.js?_v=20230926114616"></script>
   </body>
 </html>

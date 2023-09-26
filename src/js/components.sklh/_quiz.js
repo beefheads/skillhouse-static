@@ -6,6 +6,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 
 	const swiperConfig = {
+		autoHeight: true,
 		allowTouchMove: false,
 		slidesPerView: 1,
 	  modules: [Navigation, Pagination, EffectFade],
@@ -20,36 +21,45 @@ window.addEventListener('DOMContentLoaded', (event) => {
 	  },
 	  on: {
 	  	init() {
-				const progressCurrentValueElement = quiz.querySelector('.quiz__progress-value-current');
-				progressCurrentValueElement.innerText = this.activeIndex + 1;
-
-				const progressMaxValueElement = quiz.querySelector('.quiz__progress-value-max');
-				progressMaxValueElement.innerText = this.slides.length;
-
-				const progressValueElement = quiz.querySelector('.quiz__progress-value');
-				progressValueElement.classList.remove('is-hidden');
+	  		initSwiperProgress(this);
+	  		handleRadioChange(this);
 	  	},
 	  }
 	}
 
 	let quizSwiper = new Swiper('.quiz__swiper', swiperConfig);
 
-	quizSwiper.on('init', () => {
-	});
-
 	quizSwiper.on('slideChange', () => {
 		updateSwiperProgress(".quiz__progress-value-current");
 
-		if (isPassedHaldSlides(quizSwiper)) {
-			const halfSlidesPassed = new CustomEvent('half-slides-passed', { 
-			  detail: {
-			  },
-			  bubbles: true, // Allow event to bubble up the DOM tree
-			  cancelable: true // Allow event to be canceled
-			});
-			quiz.dispatchEvent(halfSlidesPassed);
+		if (isPassedHalfSlides(quizSwiper)) {
+			dispatchQuizEvent('half-slides-passed');
 		}
+
+		handleQuizFinishing(quizSwiper)
 	})
+
+
+	function handleRadioChange(context) {
+		context.el.querySelectorAll('input[type="radio"]').forEach(radio => {
+			radio.addEventListener('change', () => {
+				setTimeout(() => {
+					context.slideNext();
+				}, 400)
+			})
+		})
+	}
+
+	function initSwiperProgress(context) {
+		const progressCurrentValueElement = quiz.querySelector('.quiz__progress-value-current');
+		progressCurrentValueElement.innerText = context.activeIndex + 1;
+
+		const progressMaxValueElement = quiz.querySelector('.quiz__progress-value-max');
+		progressMaxValueElement.innerText = context.slides.length;
+
+		const progressValueElement = quiz.querySelector('.quiz__progress-value');
+		progressValueElement.classList.remove('is-hidden');
+	}
 
 	function updateSwiperProgress(currentValueSelector) {
 		const currentValueElement = quizSwiper.el.closest('.quiz').querySelector(currentValueSelector);
@@ -58,7 +68,35 @@ window.addEventListener('DOMContentLoaded', (event) => {
 		currentValueElement.innerText = quizSwiper.activeIndex + 1;
 	}
 
-	function isPassedHaldSlides(swiperVar) {
+	function handleQuizFinishing(context) {
+		const CURRENT_SLIDE = context.activeIndex + 1;
+		const LAST_SLIDE_INDEX = context.slides.length;
+
+		if (CURRENT_SLIDE === LAST_SLIDE_INDEX) {
+			// console.log('последний')
+			dispatchQuizEvent('slide-last')
+			quiz.classList.add('quiz--slide-final')
+		} else {
+			dispatchQuizEvent('slide-not-last')
+			quiz.classList.remove('quiz--slide-final')
+		}
+
+		if (CURRENT_SLIDE === LAST_SLIDE_INDEX - 1) {
+			// console.log('предпоследний')
+			dispatchQuizEvent('slide-before-last')
+		}
+	}
+
+	function dispatchQuizEvent(eventName, data = {}) {
+		const event = new CustomEvent(eventName, { 
+		  detail: data,
+		  bubbles: true, // Allow event to bubble up the DOM tree
+		  cancelable: true // Allow event to be canceled
+		});
+		quiz.dispatchEvent(event);
+	}
+
+	function isPassedHalfSlides(swiperVar) {
 		const HALF_SLIDES = Math.ceil(swiperVar.slides.length / 2);
 		const CURRENT_SLIDE = swiperVar.activeIndex + 1;
 
@@ -66,6 +104,13 @@ window.addEventListener('DOMContentLoaded', (event) => {
 	}
 
 	quiz.addEventListener('half-slides-passed', () => {
+		// console.log('half')
+	})
+	quiz.addEventListener('slide-last', () => {
+		// console.log('slide-last')
+	})
+	quiz.addEventListener('slide-before-last', () => {
+		// console.log('slides-before-last')
 	})
 
 });
