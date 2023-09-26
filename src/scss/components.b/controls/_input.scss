@@ -28,11 +28,6 @@
   font-family: var(--ff-regular);
   transition:  all 0.3s ease;
 }
-.input.has-error {
-  --border-color: var(--error-color, #FF3b30);
-  --fg: var(--error-color, #FF3b30);
-  --fg-placeholder: var(--error-color, #FF3b30);
-}
 
 .input__area {
   position: relative;
@@ -82,6 +77,15 @@
   --border-color: var(--border-focus);
 }
 
+.input.is-invalid {
+  --border-color: var(--error-color, #FF3b30);
+  --fg: var(--error-color, #FF3b30);
+  --fg-placeholder: var(--error-color, #FF3b30);
+}
+.input.is-invalid .input__field {
+  --border-color: var(--error-color, #FF3b30);
+}
+
 .input--has-icon .input__field {
   padding-left: 3.2rem;
 }
@@ -93,12 +97,13 @@
   font-size: var(--error-fz, 1rem);
   color: var(--error-color);
   line-height: 1;
+  min-height: var(--error-fz);
   transition: inherit;
   padding-top: 0.5em;
   margin-top: -1.5em;
-  opacity: 1;
-}
-.has-error .input__error {
-  margin-top: 0;
   opacity: 0;
+}
+.is-invalid .input__error {
+  margin-top: 0;
+  opacity: 1;
 }

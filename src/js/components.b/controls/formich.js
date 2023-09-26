@@ -62,7 +62,7 @@ function getFormData(serealizedForm) {
 
 const formsList = document.querySelectorAll(".js_form");
 formsList.forEach((form) => {
-  const button = form.querySelector('button[type="submit"]')
+  const button = form.querySelector('.js_form__submit')
   if (button) {
     button.addEventListener('click', () => {
       const submit =  new Event('submit', { bubbles: true, cancelable: false });
@@ -74,7 +74,7 @@ formsList.forEach((form) => {
     event.preventDefault();
 
     const inputsToValidate = [
-      ...form.querySelectorAll('.form-control')
+      ...form.querySelectorAll('.js_form__control')
     ];
 
     inputsToValidate.forEach((input) => {
@@ -94,7 +94,7 @@ formsList.forEach((form) => {
       body: formData,
     });
 
-    const submitButton = form.querySelector('button[type="submit"]');
+    const submitButton = form.querySelector('.js_form__submit');
     submitButton.classList.add('button--wait');
 
     try {
@@ -106,7 +106,7 @@ formsList.forEach((form) => {
 
       let buttonText;
       let buttonTextElement
-      const submitButtonText = submitButton.querySelector('.button__text')
+      let submitButtonText = submitButton.querySelector('.button__text')
 
       if (submitButtonText) {
         buttonTextElement = submitButtonText;
@@ -116,17 +116,31 @@ formsList.forEach((form) => {
       buttonText = buttonTextElement.innerText;
       buttonTextElement.innerText = '✓ Ваша заявка принята';
 
-      form.reset();
+      resetForm(form)
 
       setTimeout(() => {
         submitButton.classList.remove('button--wait');
         buttonTextElement.innerText = buttonText;
-      }, 10000)
+      }, 5000)
     } catch {
     }
     
   });
 });
+
+function resetForm (form) {
+  form.querySelectorAll('input').forEach(input => {
+    const INPUTS_TO_IGNORE_RESET = [
+      'radio',
+      'checkbox',
+      'hidden',
+    ]
+    if (INPUTS_TO_IGNORE_RESET.includes(input.type)) return;
+    if (input.getAttribute('readonly') != null) return;
+
+    input.value = ''
+  })
+}
 
 function extractUTM(form) {
   const urlParams = new URLSearchParams(window.location.search);
@@ -174,7 +188,7 @@ function extractUTM(form) {
 }
 
 // #region input-labels
-const inputs = document.querySelectorAll(".js_form .form-control");
+const inputs = document.querySelectorAll(".js_form .js_form__control");
 
 const inputClasses = {
   invalid: "is-invalid",
@@ -223,6 +237,10 @@ function initInputs(inputs) {
 
     field.addEventListener('input', () => {
       setInputValid(input);
+
+      if (field.type != 'tel') return;
+
+      field.value = field.value.replace(/[^\d-+()]/g, '');
     });
     field.addEventListener('change', () => {
       setInputValid(input);

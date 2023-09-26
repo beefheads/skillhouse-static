@@ -1950,12 +1950,6 @@ body._lock {
   transition: all 0.3s ease;
 }
 
-.input.has-error {
-  --border-color: var(--error-color, #FF3b30);
-  --fg: var(--error-color, #FF3b30);
-  --fg-placeholder: var(--error-color, #FF3b30);
-}
-
 .input__area {
   position: relative;
   display: block;
@@ -2007,6 +2001,16 @@ body._lock {
   --border-color: var(--border-focus);
 }
 
+.input.is-invalid {
+  --border-color: var(--error-color, #FF3b30);
+  --fg: var(--error-color, #FF3b30);
+  --fg-placeholder: var(--error-color, #FF3b30);
+}
+
+.input.is-invalid .input__field {
+  --border-color: var(--error-color, #FF3b30);
+}
+
 .input--has-icon .input__field {
   padding-left: 3.2rem;
 }
@@ -2018,15 +2022,16 @@ body._lock {
   font-size: var(--error-fz, 1rem);
   color: var(--error-color);
   line-height: 1;
+  min-height: var(--error-fz);
   transition: inherit;
   padding-top: 0.5em;
   margin-top: -1.5em;
-  opacity: 1;
+  opacity: 0;
 }
 
-.has-error .input__error {
+.is-invalid .input__error {
   margin-top: 0;
-  opacity: 0;
+  opacity: 1;
 }
 
 .input {
@@ -2287,10 +2292,13 @@ body._lock {
 /*
   Swiper Buttons
  */
+/*
+.swiper-button-prev {
+
+}
 .swiper-button-prev:after {
   color: transparent;
 }
-
 .swiper-button-prev .swiper-button__icon {
   position: absolute;
   display: block;
@@ -2298,31 +2306,35 @@ body._lock {
   height: 100%;
   transform: scale(-1, 1);
 }
+.swiper-button-next {
 
+}
 .swiper-button-next:after {
   color: transparent;
 }
-
 .swiper-button-next .swiper-button__icon {
   position: absolute;
   display: block;
   width: 100%;
   height: 100%;
 }
-
 .swiper-button-prev .swiper-button__icon,
 .swiper-button-next .swiper-button__icon {
   fill: var(--bg-element);
   stroke: var(--c-text-regular);
   transition: var(--tr);
 }
-
-@media (any-hover: hover) {
-  .swiper-button-prev:hover .swiper-button__icon,
+.swiper-button-prev:hover .swiper-button__icon,
 .swiper-button-next:hover .swiper-button__icon {
+  @media (any-hover:hover) {
     fill: var(--c-text-regular);
     stroke: var(--bg-element);
   }
+}
+*/
+.button--wait {
+  opacity: 0.6;
+  pointer-events: none;
 }
 
 .button-primary {

@@ -247,6 +247,7 @@
 /*
   Swiper Buttons
  */
+ /*
 .swiper-button-prev {
 
 }
@@ -285,4 +286,10 @@
     stroke: var(--bg-element);
   }
 }
+*/
 
+
+.button--wait {
+  opacity: 0.6;
+  pointer-events: none;
+}
