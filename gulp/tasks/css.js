@@ -8,9 +8,8 @@ import cleanCSS from "gulp-clean-css";
 import rename from "gulp-rename";
 import dartSass from "sass";
 import gulpSass from "gulp-sass";
-import groupCssMediaQueries from "gulp-group-css-media-queries";
+// import groupCssMediaQueries from "gulp-group-css-media-queries";
 import replace from "gulp-replace";
-import webpcss from "gulp-webpcss";
 
 const sass = gulpSass(dartSass);
 
@@ -21,22 +20,13 @@ export default function cssBuild() {
     .pipe(sourcemaps.init())
     .pipe(sass())
     .pipe(replace(/@img\//g, "../img/"))
-    .pipe(app.plugins.if(app.isProd, groupCssMediaQueries()))
+    // .pipe(app.plugins.if(app.isProd, groupCssMediaQueries()))
     .pipe(
       app.plugins.if(
         app.isProd,
         autoPrefixer({
           grid: true,
           overrideBrowserslist: ["last 3 versions"],
-        })
-      )
-    )
-    .pipe(
-      app.plugins.if(
-        app.isProd && app.useWebp,
-        webpcss({
-          webpClass: ".webp",
-          noWebpClass: ".no-webp",
         })
       )
     )

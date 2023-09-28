@@ -8,7 +8,6 @@ import cssBuild from "./gulp/tasks/css.js";
 import jsBuild from "./gulp/tasks/js.js";
 import { imagesBuild, convertImages, imagesCopy } from "./gulp/tasks/images.js";
 import resourcesBuild from "./gulp/tasks/resources.js";
-// import sprite from './gulp/tasks/sprite.js'
 
 // Импорт общих путей
 import path from "./gulp/config/path.js";
@@ -21,7 +20,6 @@ global.app = {
   path,
   gulp,
   plugins,
-  useWebp: true,
 };
 
 function webServer() {
@@ -82,6 +80,5 @@ export const prodCopyImages = gulp.series(
 );
 
 export { convertImages };
-// export { sprite }
 
 gulp.task("default", dev);

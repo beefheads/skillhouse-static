@@ -1304,7 +1304,7 @@ body._lock {
 }
 @media (max-width: 992px) {
   .b_modal__closer::before,
-.b_modal__closer::after {
+  .b_modal__closer::after {
     top: 46%;
     width: 70%;
   }
@@ -1320,7 +1320,7 @@ body._lock {
 
 @media (any-hover: hover) {
   .b_modal__closer:hover::before,
-.b_modal__closer:hover::after {
+  .b_modal__closer:hover::after {
     --closer-color: var(--c-b_modal-closer-hover);
   }
 }
@@ -1564,7 +1564,7 @@ body._lock {
 
 @media (any-hover: hover) {
   .swiper-button-next:empty:hover::after,
-.swiper-button-prev:empty:hover::after {
+  .swiper-button-prev:empty:hover::after {
     opacity: 0.5;
   }
 }
@@ -2367,7 +2367,7 @@ body._lock {
 
 @media (any-hover: hover) {
   .button-primary:hover,
-.button-secondary:hover {
+  .button-secondary:hover {
     box-shadow: 0 0 3rem 0.5rem rgba(223, 183, 172, 0.3);
   }
 }
