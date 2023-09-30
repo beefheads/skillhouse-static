@@ -16,6 +16,7 @@ import "./components.b/controls/b_tabs.js";
 import "./components.sklh/_price-table.js";
 import "./components.sklh/_quiz.js";
 
+import "./sections.sklh/_portfolio-gallery.js";
 import "./sections.sklh/_problems.js";
 import "./sections.sklh/_team.js";
 

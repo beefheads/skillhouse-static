@@ -142,7 +142,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
         toggleVideo(videoElement)
       });
 
-      videoElement._b_video.play = playButton;
+      videoElement._b_video.playButton = playButton;
     }
     videoElement.classList.add(CLASSES.markedup);
   }
@@ -212,8 +212,17 @@ window.addEventListener('DOMContentLoaded', (event) => {
   }
 
   function onPlayerReady(e) {
+    console.log(e.target.h.g)
     const videoId = e.target.h.g.videoId
-    const video = document.querySelector(`[data-video-url*="${videoId}"`);
+    const videos = [...document.querySelectorAll(`[data-video-url*="${videoId}"`)];
+    let video = null;
+
+    videos.forEach(videoElement => {
+      if (videoElement.classList.contains(CLASSES.ready)) return;
+      video = videoElement;
+    })
+
+
 
     if (video.classList.contains(CLASSES.hasAutoplay)) {
       video._b_video.player.setVolume(40);
@@ -221,6 +230,20 @@ window.addEventListener('DOMContentLoaded', (event) => {
       setTimeout(() => {
         video.classList.add(CLASSES.playing, CLASSES.videoStarted);
       }, 1000);
+    }
+
+    const readyEvent = new CustomEvent('b_video-ready', {
+
+    });
+    video.dispatchEvent(readyEvent, {
+      detail: {},
+    });
+
+    video._b_video.playVideo = () => {
+        playVideo(video)
+    }
+    video._b_video.pauseVideo = () => {
+        pauseVideo(video)
     }
 
     video.classList.add(CLASSES.ready);
