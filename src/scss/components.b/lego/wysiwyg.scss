@@ -8,11 +8,14 @@
 	--fw-title: 700;
 	--lh-regular: 1.4;
 	--ls-regular: -0.8px;
+	@media (max-width: $tablet) {
+		--ls-regular: -0.48px;
+	}
 
 
 	--bg-marker-ul: var(--fg);
-	--size-marker-ul: 0.3rem;
-	--top-marker-ul: 1.05rem;
+	--size-marker-ul: 0.2em;
+	--top-marker-ul: 0.5em;
 	--left-marker-ul: -0.85em;
 
 	--fz-ul: 2em;
@@ -21,12 +24,21 @@
 	--margin-bottom-ul: 2em;
 	--padding-left-ul: 1.55em;
 	--margin-bottom-li: 0.2em;
+	@media (max-width: $tablet) {
+		--fz-ul: 1.2em;
+		--top-marker-ul: 0.3em;
+		--left-marker-ul: -0.85em;
+	}
 
 	--fz-p: 2em;
 	--lh-p: var(--lh-regular);
 	--ls-p: var(--ls-regular);
 	--margin-top-p: 1em;
 	--margin-bottom-p: 1em;
+	@media (max-width: $tablet) {
+		--fz-p: 1.2em;
+		--margin-bottom-p: 1.4em;
+	}
 
 	--fz-h1: 5.5em;
 	--lh-h1: 1;

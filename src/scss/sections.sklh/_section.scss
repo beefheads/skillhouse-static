@@ -1,6 +1,11 @@
 .section {
 	padding-top: 20rem;
 	padding-bottom: 20rem;
+
+	@media (max-width: $tablet) {
+		padding-top: 6rem;
+		padding-bottom: 6rem;
+	}
 }
 
 /*.section--convex {
@@ -22,6 +27,10 @@
 	leading-trim: both;
 	text-edge: cap;
 
+	@media (max-width: $tablet) {
+		letter-spacing: 0.05rem;
+		margin-bottom: 3rem;
+	}
 }
 
 .section-buttons {
@@ -29,6 +38,10 @@
 	padding-bottom: 2rem;
 	display: inline-grid;
 	row-gap: 3rem;
+
+	@media (max-width: $tablet) {
+		row-gap: 1.2rem;
+	}
 }
 
 .text-sub {
@@ -55,4 +68,8 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-start;
+
+	@media (max-width: $tablet) {
+		display: block;
+	}
 }

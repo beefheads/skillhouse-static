@@ -17,6 +17,12 @@ radio.html
   --border-width-check: 0.1rem;
   --border-color-check: var(--fg-regular);
   --margin-right-check: 0.5em;
+  --padding-check-active: 1.2rem;
+  --height-media: 40rem;
+
+  @media (max-width: $tablet) {
+    --height-media: 18rem;
+  }
 
   --border-width-check--checked: 0.7rem;
   --border-color-check--checked: var(--c-primary);
@@ -79,8 +85,9 @@ radio.html
   flex-basis: 100%;
   margin-bottom: 1.6rem;
   transition: all 0.25s var(--tr-jolly-enter);
-  height: 40rem;
+  height: var(--height-media);
 }
+
 .radio__media-pic {
   display: block;
   height: 100%;
@@ -97,5 +104,5 @@ radio.html
 
 .radio__input:checked ~ .radio__media {
   border: 0.1rem solid var(--c-primary);
-  padding: 1.2rem;
+  padding: var(--padding-check-active);
 }

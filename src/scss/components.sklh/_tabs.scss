@@ -4,6 +4,10 @@
 
 .tabs__tablist {
 	margin-bottom: 10.5rem;
+
+	@media (max-width: $tablet) {
+		margin-bottom: 3.2rem;
+	}
 }
 
 .tabs__panel {

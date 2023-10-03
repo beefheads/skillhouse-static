@@ -18,6 +18,12 @@
     --icon-gap: 1.5rem;
     --link-padding: 0.9rem;
   }
+
+	@media (max-width: $tablet) {
+	    --icon-size: 3.4rem;
+	    --icon-gap: 0rem;
+	    --link-padding: 0.8rem;
+	}
 }
 
 .socials__link {

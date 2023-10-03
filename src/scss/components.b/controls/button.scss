@@ -21,6 +21,7 @@
   font-size: var(--fz);
   font-weight: var(--fw);
   line-height: var(--lh);
+  letter-spacing: var(--ls);
   color: var(--fg);
 
   cursor: pointer;
@@ -33,6 +34,7 @@
   --fz: 2rem;
   --fw: 600;
   --lh: initial;
+  --ls: initial;
 
   --padding-block: 1.25em;
   --padding-inline: 1.5em;

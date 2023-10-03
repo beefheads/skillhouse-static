@@ -16,6 +16,9 @@
 	position: relative;
 	height: 28rem;
 	transition: var(--tr);
+	@media (max-width: $tablet) {
+		height: 11rem;
+	}
 }
 .portfolio-gallery-card:hover {
 	@media (any-hover:hover) {
@@ -120,6 +123,11 @@
 	margin: auto;
 	pointer-events: none;
 	transition: all 0.35s var(--tr-jolly-enter);
+
+	@media (max-width: $tablet) {
+		width: 6.2rem;
+		height: 4.7rem;
+	}
 }
 .portfolio-gallery-card:hover .portfolio-gallery-card__logo {
 	@media (any-hover:hover) {

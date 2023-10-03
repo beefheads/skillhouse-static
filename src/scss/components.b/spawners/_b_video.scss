@@ -95,6 +95,10 @@
 	background-repeat: no-repeat;
 	background-position: center center;
 	transition: var(--tr);
+
+	@media (max-width: $tablet) {
+		--size: 4rem;
+	}
 }
 
 .b_video--playing.b_video--ready .b_video__play {

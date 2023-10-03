@@ -5,12 +5,12 @@
   --fz: 1.8rem;
   --fw: 500;
   --lh: initial;
+  --ls: -0.27px;
 
   --padding-block: 1.25em;
   --padding-inline: 1.5em;
   --padding: 0;
   --text-padding: 0.4em 0 0.44rem 0;
-  --ls: -0.27px;
 
   --fg: var(--c-primary);
   --bg: transparent;
@@ -18,6 +18,12 @@
   --border-width: 0.1rem;
   --border-color: transparent;
   --border-radius: 0;
+
+  @media (max-width: $tablet) {
+    --fz: 1rem;
+    --lh: 1;
+    --ls: -0.15px;
+  }
 }
 
 .link:hover {

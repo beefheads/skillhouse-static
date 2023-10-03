@@ -23,7 +23,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 		if (card != false) {
 			video = card.querySelector('.b_video');
 		}
-		console.log(video)
+		// console.log(video)
 		if (card) return;
 
 		// const video = card.querySelector('.')

@@ -21,6 +21,13 @@
 
   --fz-regular: 2rem;
   --fz-title: 5.5rem;
+  @media (max-width: $tablet) {
+    --fz-regular: 1rem;
+    --fz-title: 2.5rem;
+  }
+  @media (max-width: $mobile-xxs) {
+    // --fz-regular: 1rem;
+  }
 }
 
 // Сброс CSS
@@ -47,9 +54,8 @@ html {
     --fz-modifier: 1.663894;
   }
 
-  @media (max-width: $mobile-lg) {
-    --fz-regular: 1rem;
-    --fz-modifier: 3.125;
+  @media (max-width: $mobile-xxs) {
+    --fz-modifier: 2.777777; // 360
   }
   background-color: var(--bg-app);
 }
@@ -137,6 +143,8 @@ body._lock {
 
 
 @import "./keyframes";
+@import "./sections.sklh/section";
+
 @import "./components";
 @import "./sections";
 @import "./pages";

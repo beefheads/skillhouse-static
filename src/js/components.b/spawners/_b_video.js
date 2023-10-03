@@ -33,10 +33,10 @@ window.addEventListener('DOMContentLoaded', (event) => {
           initYoutubeVideo(videoElement, index);
           break;
         case 'vimeo':
-          console.log('vimeo')
+          // console.log('vimeo')
           break;
         default:
-          console.log('regular')
+          // console.log('regular')
           initRegularVideo(videoElement, index)
           break;
       }
@@ -212,7 +212,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
   }
 
   function onPlayerReady(e) {
-    console.log(e.target.h.g)
+    // console.log(e.target.h.g)
     const videoId = e.target.h.g.videoId
     const videos = [...document.querySelectorAll(`[data-video-url*="${videoId}"`)];
     let video = null;

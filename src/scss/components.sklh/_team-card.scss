@@ -5,16 +5,32 @@
 	align-items: start;
 	column-gap: 11rem;
 	row-gap: 2.8rem;
+
+	@media (max-width: $tablet) {
+		grid-template-columns: 100%;
+		grid-template-areas: "head" "media" "body";
+		row-gap: 2.4rem;
+	}
 }
 
 .team-card__media {
 	grid-area: media;
 	max-width: 42rem;
+
+	@media (max-width: $tablet) {
+		max-width: 14.8rem;
+		margin-left: auto;
+		margin-right: auto;
+	}
 }
 
 .team-card__head {
 	grid-area: head;
 	padding-top: 5.5rem;
+
+	@media (max-width: $tablet) {
+		padding-top: 0;
+	}
 }
 
 .team-card__name {
@@ -30,6 +46,12 @@
 	line-height: 133.333%;
 	margin-bottom: 1.6rem;
 	transition: all 0.3s var(--tr-jolly-enter) 0.2s;
+
+	@media (max-width: $tablet) {
+		font-size: 3rem;
+		margin-bottom: 0.5rem;
+		// line-height: 281.667%;
+	}
 }
 
 .swiper-slide .team-card__name {
@@ -54,6 +76,10 @@
 	letter-spacing: -0.096rem;
 
 	transition: all 0.3s var(--tr-jolly-enter) 0.25s;
+
+	@media (max-width: $tablet) {
+		font-size: 1.6rem;
+	}
 }
 
 .swiper-slide .team-card__subtitle {
@@ -71,6 +97,12 @@
 	padding-right: 6.5rem;
 	padding-bottom: 6rem;
 	transition: all 0.3s var(--tr-jolly-enter) 0.3s;
+
+	@media (max-width: $tablet) {
+		padding-top: 0.4rem;
+		padding-left: 8.4rem;
+		padding-right: 0;
+	}
 }
 
 .swiper-slide .team-card__body {

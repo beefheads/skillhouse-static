@@ -40,7 +40,7 @@
 
 
 
-      <link rel="stylesheet" href="./css/style.css?_v=20230930131816">
+      <link rel="stylesheet" href="./css/style.css?_v=20231003095820">
   </head>
   
   <body class="page-home">
@@ -424,7 +424,7 @@
           <div class="container price__container">
             <h2 class="section-title price__title">
               <span class="text-colored">Стоимость </span>
-              дизайн-проекта
+              дизайн&#8209;проекта
             </h2>
             <div class="price-table">
               <div class="swiper price-table-swiper">
@@ -484,10 +484,8 @@
                     </div>
                   </article>
                 </div>
-              
-                <div class="swiper-pagination price-table-pagination"></div>
-              
               </div>
+              <div class="swiper-pagination price-table__pagination"></div>
             </div>
           </div>
         </section>
@@ -726,14 +724,14 @@
           <div class="container narrative-cta__container">
             <div class="narrative-cta__content">
               <h2 class="section-title narrative-cta__title">
-                <span class="text-colored">Договор. </span><br>
+                <span class="text-colored">Договор. </span><br class="section-br">
                 Фиксированные цена, сроки, и поэтапная оплата
               </h2>
               <div class="narrative-cta__desc wysiwyg">
                 <p>
                   <span class="text-bold">Никаких доплат и затягивания сроков. </span>
                   До начала ремонта Вы точно знаете сколько он стоит и когда закончится. Цена, сроки, 
-                  3&nbsp;этапа оплаты — <span class="text-bold">всё фиксируется в договоре.</span>
+                  3 этапа оплаты — <span class="text-bold">всё фиксируется в&nbsp;договоре.</span>
                 </p>
               </div>
               <div class="narrative-cta__buttons">
@@ -872,39 +870,40 @@
           </div>
         </section>
 
-        <section class="section narrative-cta" id="section-showroom">
+        <section class="section narrative-cta narrative-cta--mobile-vertical" id="section-showroom">
           <div class="container narrative-cta__container">
             <div class="narrative-cta__content">
               <h2 class="section-title narrative-cta__title">
-                Посетите наш <br>
+                Посетите <br class="only-mobile">наш <br>
                 <span class="text-colored">Шоурум</span>
               </h2>
               <div class="narrative-cta__desc wysiwyg">
                 <p>
                   <span class="text-bold">Комплектация объекта под ключ. </span> Мы реализуем любые идеи вашего проекта: подберем нужные материалы и предметы интерьера. 
                 </p>
-                <div class="narrative-cta__desc-group">
-                  <div class="narrative-cta__desc-group-item">
-                    <p class="text-bold">Расчет чистовых материалов:</p>
-                    <ul>
-                      <li>Плитка</li>
-                      <li>Обои</li>
-                      <li>Напольные покрытие</li>
-                      <li>Электротовары </li>
-                      <li>Радиаторы</li>
-                      <li>Сантехника</li>
-                    </ul>
-                  </div>
-                  <div class="narrative-cta__desc-group-item">
-                    <p class="text-bold">Мебель на заказ:</p>
-                    <ul>
-                      <li>Кухонные гарнитуры </li>
-                      <li>Шкафы тумбы и прочее</li>
-                      <li>Гардеробные</li>
-                      <li>Мягкая мебель </li>
-                      <li>Мебель для офиса</li>
-                    </ul>
-                  </div>
+              </div>
+              <div class="b_video" data-video-url="https://www.youtube.com/watch?v=2VcEI3KF7tA"></div>
+              <div class="narrative-cta__desc-group wysiwyg">
+                <div class="narrative-cta__desc-group-item">
+                  <p class="text-bold">Расчет чистовых материалов:</p>
+                  <ul>
+                    <li>Плитка</li>
+                    <li>Обои</li>
+                    <li>Напольные покрытие</li>
+                    <li>Электротовары </li>
+                    <li>Радиаторы</li>
+                    <li>Сантехника</li>
+                  </ul>
+                </div>
+                <div class="narrative-cta__desc-group-item">
+                  <p class="text-bold">Мебель на заказ:</p>
+                  <ul>
+                    <li>Кухонные гарнитуры </li>
+                    <li>Шкафы тумбы и прочее</li>
+                    <li>Гардеробные</li>
+                    <li>Мягкая мебель </li>
+                    <li>Мебель для офиса</li>
+                  </ul>
                 </div>
               </div>
               <div class="narrative-cta__buttons">
@@ -912,7 +911,6 @@
               </div>
             </div>
             <div class="narrative-cta__media">
-              <div class="b_video" data-video-url="https://www.youtube.com/watch?v=2VcEI3KF7tA"></div>
               <!-- <div class="b_video" data-video-url="https://upload.wikimedia.org/wikipedia/commons/transcoded/8/87/Schlossbergbahn.webm/Schlossbergbahn.webm.480p.vp9.webm"></div> -->
             </div>
           </div>
@@ -1452,11 +1450,11 @@
 	<div class="container">
 		<section class="section contacts" id="section-contacts">
 		  <div class="container contacts__container">
-		  	<div class="section__head">
+		  	<div class="section__head contacts__head">
 			    <h2 class="section-title contacts__title">
 			    	Наши <span class="text-colored"> контакты</span>
 			    </h2>
-					<div class="socials contacts__socials">
+				<div class="socials contacts__head-socials">
   
     <a class="socials__link socials__link--youtube" aria-label="YT"
       href="https://youtube.com" target="_blank" rel="noopener noreferrer"
@@ -1521,9 +1519,47 @@
 		  			</p>
 		  		</div>
 
-		  		<button class="button-secondary contacts__button-callback" type="button" data-b_modal-open="callback">
-		  			Заказать звонок
-		  		</button>
+		  		<div class="contacts__footer">
+			  		<button class="button-secondary contacts__button-callback" type="button" data-b_modal-open="callback">
+			  			Заказать звонок
+			  		</button>
+					<div class="socials contacts__footer-socials">
+  
+    <a class="socials__link socials__link--youtube" aria-label="YT"
+      href="https://youtube.com" target="_blank" rel="noopener noreferrer"
+      >
+      <svg class="socials__icon">
+        <use href="./img/sklh_common/icon-youtube.svg#icon-youtube"></use>
+      </svg>
+    </a>
+  
+    <a class="socials__link socials__link--instagram" aria-label="IG"
+      href="https://instagram.com" target="_blank" rel="noopener noreferrer"
+      >
+      <svg class="socials__icon">
+        <use href="./img/sklh_common/icon-instagram.svg#icon-instagram"></use>
+      </svg>
+    </a>
+  
+    <a class="socials__link socials__link--telegram" aria-label="TG"
+      href="https://t.me" target="_blank" rel="noopener noreferrer"
+      >
+      <svg class="socials__icon">
+        <use href="./img/sklh_common/icon-telegram.svg#icon-telegram"></use>
+      </svg>
+    </a>
+  
+    <a class="socials__link socials__link--whatsapp" aria-label="WA"
+      href="https://wa.me" target="_blank" rel="noopener noreferrer"
+      >
+      <svg class="socials__icon">
+        <use href="./img/sklh_common/icon-whatsapp.svg#icon-whatsapp"></use>
+      </svg>
+    </a>
+  
+</div>
+
+		  		</div>
 
 		  		<div class="contacts__footnotes">
 		  			<p>© 2023 СкилХаус</p>
@@ -1804,6 +1840,6 @@
 </div>
 
 
-    <script src="./js/index.min.js?_v=20230930131816"></script>
+    <script src="./js/index.min.js?_v=20231003095820"></script>
   </body>
 </html>

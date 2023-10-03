@@ -1,4 +1,8 @@
 .price {
 	padding-top: 12rem;
 	background: linear-gradient(113deg, #303030 11.83%, #101010 87.31%);
+
+	@media (max-width: $tablet) {
+		padding-top: 5.4rem;	
+	}
 }

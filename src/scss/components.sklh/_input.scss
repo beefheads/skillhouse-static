@@ -17,6 +17,11 @@
 
   --error-color: #FF3B30;
   --error-fz: 1rem;
+
+  @media (max-width: $tablet) {
+      --fz: 1rem;
+      --padding-block: 1.08em;
+  }
  }
 
  .input__error {

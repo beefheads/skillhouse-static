@@ -23,7 +23,7 @@
   */
 
   display: block;
-  font-size: 1.8rem;
+  font-size: var(--fz);
   cursor: text;
   font-family: var(--ff-regular);
   transition:  all 0.3s ease;
@@ -37,6 +37,7 @@
   font-size: inherit;
   font-family: inherit;
   transition: inherit;
+  border-radius: var(--border-radius, 0.5em);
 }
 
 .input__icon {
@@ -93,6 +94,7 @@
 .input__error {
   display: block;
   padding-left: var(--padding-inline);
+  padding-right: var(--padding-inline);
   font-family: sans-serif;
   font-size: var(--error-fz, 1rem);
   color: var(--error-color);
@@ -102,8 +104,10 @@
   padding-top: 0.5em;
   margin-top: -1.5em;
   opacity: 0;
+  max-height: 1em;
 }
 .is-invalid .input__error {
   margin-top: 0;
   opacity: 1;
+  max-height: 10rem;
 }

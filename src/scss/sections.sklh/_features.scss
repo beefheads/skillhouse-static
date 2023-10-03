@@ -1,5 +1,17 @@
 .features {
-		padding-bottom: 18.3rem;
+	padding-bottom: 18.3rem;
+
+	@media (max-width: $tablet) {
+		padding-top: 2.3rem;
+		padding-bottom: 5.4rem;
+	}
+}
+
+.features__container {
+	@media (max-width: $tablet) {
+		padding-left: 5rem;
+		padding-right: 5rem;
+	}
 }
 
 .features__gallery {
@@ -10,10 +22,21 @@
 
 	@media (min-width: $tablet + 1) {
 	}
+
+	@media (max-width: $tablet) {
+		grid-template-columns: 100%;
+		row-gap: 3.5rem;
+	}
 }
 
 .features__gallery-button {
 	align-self: center;
 	justify-self: end;
 	min-width: 30rem;
+
+	@media (max-width: $tablet) {
+		min-width: initial;
+		justify-self: center;
+		min-width: 15rem;
+	}
 }

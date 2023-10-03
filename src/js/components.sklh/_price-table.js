@@ -1,11 +1,18 @@
-import Swiper, { Navigation, Autoplay, Pagination, Thumbs, EffectFade, Grid } from "swiper";
+// import Swiper, { Navigation, Autoplay, Pagination, Thumbs, EffectFade, Grid } from "swiper";
+import Swiper, { Navigation, Pagination, EffectCreative } from "swiper";
 
 window.addEventListener('DOMContentLoaded', (event) => {
 	const priceTable = document.querySelectorAll('.price-table');
 	if (!priceTable) return;
 
 	const swiperConfig = {
+	  	modules: [Navigation, Pagination, EffectCreative],
+		spaceBetween: 50,
 		slidesPerView: 1,
+	  	pagination: {
+	    	el: '.price-table__pagination',
+	    	clickable: true,
+	  	},
 	}
 
 	let priceTableSwiper = new Swiper('.price-table-swiper', swiperConfig);

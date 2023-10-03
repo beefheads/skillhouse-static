@@ -13,6 +13,12 @@
 	pointer-events: none;
 	transform: translateX(-100%);
 	transition: all 0.45s var(--tr-jolly-enter);
+	overflow-y: auto;
+
+	@media (max-width: $tablet) {
+		max-width: 100%;
+		padding: 2.1rem 2rem;
+	}
 }
 .menu--visible {
 	transform: translateX(0);
@@ -22,12 +28,32 @@
 .menu__body {
 	margin-top: auto;
 	margin-bottom: auto;
+
+	@media (max-width: $tablet) {
+		// margin-top: 0;
+		padding-top: 11.6rem;
+		// padding-bottom: 15.1rem;
+		padding-bottom: 8.8rem;
+	}
 }
 
 .menu__nav {
 	counter-reset: menu-nav;
 	margin-top: auto;
 	margin-bottom: auto;
+
+	@media (max-width: $tablet) {
+		padding-left: 3rem;
+	}
+}
+
+.menu__logo {
+	display: block;
+	max-width: 17rem;
+
+	@media (max-width: $tablet) {
+		max-width: 10.1rem;
+	}
 }
 
 .menu__nav-item {
@@ -43,7 +69,13 @@
 	letter-spacing: -0.8px;
 	margin-bottom: 4rem;
 	transition: var(--tr);
+
+	@media (max-width: $tablet) {
+		font-size: 1.6rem;
+		margin-bottom: 1.7rem;
+	}
 }
+
 .menu__nav-item:last-of-type {
 	margin-bottom: 0;
 }
@@ -70,6 +102,10 @@
 
 .menu__button-callback {
 	font-size: 1rem;
+
+	@media (max-width: $tablet) {
+		width: 100%;
+	}
 }
 
 .menu__footer {
@@ -123,6 +159,10 @@
 	display: block;
 	margin-bottom: 2rem;
 	transition: var(--tr);
+
+	@media (max-width: $tablet) {
+		margin-bottom: 1.3rem;
+	}
 }
 .menu__contacts-item * {
 	transition: inherit;
@@ -154,6 +194,10 @@ a.menu__contacts-item:hover > *:first-child {
 .menu__socials {
 	padding-top: 2rem;
 	grid-area: socials;
+
+	@media (max-width: $tablet) {
+		padding-top: 1rem;
+	}
 }
 
 .menu__footnotes {
@@ -168,4 +212,8 @@ a.menu__contacts-item:hover > *:first-child {
 	font-weight: 300;
 	line-height: 130%; /* 13px */
 	letter-spacing: -0.4px;
+
+	@media (max-width: $tablet) {
+		padding-top: 1rem;
+	}
 }
