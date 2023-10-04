@@ -170,6 +170,9 @@
 }
 
 .price-table__pagination {
+	@media (min-width: $tablet + 1) {
+		display: none;
+	}
 	@media (max-width: $tablet) {
 		max-width: 13.6rem;
 	}

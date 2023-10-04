@@ -28,8 +28,6 @@ export function convertImages() {
   return gulp
     .src(app.path.src.images)
     .pipe(newer(app.path.build.convertImages))
-    .pipe(
-    )
     .pipe(gulp.dest(app.path.build.convertImages))
 
     .pipe(gulp.src(app.path.src.svg))
