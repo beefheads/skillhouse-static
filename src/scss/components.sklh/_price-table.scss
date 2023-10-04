@@ -3,11 +3,13 @@
 	z-index: 1;
 	position: relative;
 
-	@media (max-width: $tablet) {
+	@media (max-width: $mobile) {
 		padding-top: 0.6rem;
-		max-width: 26rem;
 		margin-left: auto;
 		margin-right: auto;
+	}
+	@media (max-width: $mobile-lg) {
+		max-width: 26rem;
 	}
 }
 
@@ -32,12 +34,17 @@
 	text-align: center;
 	transition: all 0.45s var(--tr-jolly-enter);
 
-	@media (max-width: $tablet) {
+	@media (max-width: $tablet-xlg) {
+		min-height: initial;
+		padding-top: 3.7rem;
+		padding-bottom: 3.7rem;
+	}
+
+	@media (max-width: $mobile) {
 		flex: none;
+		border: none;
 		padding-top: 1.7rem;
 		padding-bottom: 1.7rem;
-		border: none;
-		min-height: initial;
 	}
 }
 
@@ -49,6 +56,9 @@
 	border-left: none;
 }
 
+.price-table-slide:nth-of-type(2) {
+	border: none
+}
 .price-table-slide:last-of-type {
 	border-right: none;
 }
@@ -107,6 +117,10 @@
 	line-height: 133.333%;
 
 	@media (max-width: $tablet) {
+		font-size: 3rem;
+	}
+
+	@media (max-width: $mobile) {
 		font-size: 4rem;
 		margin-bottom: 1rem;
 	}
@@ -132,6 +146,7 @@
 	font-weight: 400;
 	line-height: 130%;
 	letter-spacing: -0.072rem;
+	margin-bottom: 3rem;
 
 	@media (max-width: $tablet) {
 		font-size: 1rem;
@@ -164,16 +179,16 @@
 }
 
 .price-table-swiper {
-	@media (max-width: $tablet) {
+	@media (max-width: $mobile) {
 		margin-bottom: 6rem;
 	}
 }
 
 .price-table__pagination {
-	@media (min-width: $tablet + 1) {
+	@media (min-width: $mobile + 1) {
 		display: none;
 	}
-	@media (max-width: $tablet) {
+	@media (max-width: $mobile) {
 		max-width: 13.6rem;
 	}
 }

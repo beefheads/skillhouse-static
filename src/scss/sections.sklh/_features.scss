@@ -1,5 +1,6 @@
 .features {
 	padding-bottom: 18.3rem;
+	overflow: hidden;
 
 	@media (max-width: $tablet) {
 		padding-top: 2.3rem;
@@ -23,6 +24,9 @@
 	@media (min-width: $tablet + 1) {
 	}
 
+	@media (max-width: $laptop-md) {
+		grid-template-columns: repeat(2, 1fr);
+	}
 	@media (max-width: $tablet) {
 		grid-template-columns: 100%;
 		row-gap: 3.5rem;
@@ -33,6 +37,10 @@
 	align-self: center;
 	justify-self: end;
 	min-width: 30rem;
+
+	@media (max-width: $laptop-md) {
+		justify-self: start;
+	}
 
 	@media (max-width: $tablet) {
 		min-width: initial;

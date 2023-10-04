@@ -2,6 +2,11 @@
 	padding-top: 20rem;
 	padding-bottom: 20rem;
 
+	@media (max-width: $laptop-md) {
+		padding-top: 12rem;
+		padding-bottom: 12rem;
+	}
+
 	@media (max-width: $tablet) {
 		padding-top: 6rem;
 		padding-bottom: 6rem;
@@ -26,6 +31,10 @@
 
 	leading-trim: both;
 	text-edge: cap;
+
+	@media (max-width: $laptop-md) {
+		margin-bottom: 4.5rem;
+	}
 
 	@media (max-width: $tablet) {
 		letter-spacing: 0.05rem;

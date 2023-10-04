@@ -53,7 +53,9 @@
 }
 .features-card:last-of-type::after,
 .features-card:nth-of-type(3n)::after {
-	display: none;
+	@media (min-width: $laptop-md + 1) {
+		display: none;
+	}
 }
 
 .features-card__title {

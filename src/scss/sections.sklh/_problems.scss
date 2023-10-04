@@ -10,9 +10,18 @@
 	}
 }
 
+.problems__title {
+	@media (max-width: $tablet-xlg) and (min-width: $mobile) {
+		margin-bottom: 2rem;
+	}
+}
+
 .problems__desc {
 	margin-bottom: 9rem;
 
+	@media (max-width: $tablet-xlg) and (min-width: $mobile) {
+		margin-bottom: 2rem;
+	}
 	@media (max-width: $tablet) {
 		margin-top: -0.8em;
 		margin-bottom: 5rem;
@@ -27,7 +36,7 @@
 	margin-bottom: 10rem;
 	overflow: visible;
 
-	@media (max-width: $tablet) {
+	@media (max-width: $laptop-md) {
 		margin-bottom: 6.2rem;
 	}
 }

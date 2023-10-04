@@ -3,6 +3,10 @@
 	padding-top: 21rem;
 	min-height: 101.6rem;
 
+	@media (max-width: $laptop-md) {
+		min-height: 73.4rem;
+	}
+	
 	@media (max-width: $tablet) {
 		padding-top: 16.5rem;
 		min-height: 63.4rem;

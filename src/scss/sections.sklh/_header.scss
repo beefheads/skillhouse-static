@@ -28,13 +28,15 @@
 		display: block;
 	}
 
+	@media (max-width: $tablet-xlg) {
+		position: absolute;
+		left: var(--p-container);
+	}
 	@media (max-width: $tablet) {
 		--burger-width: 2.8rem;
 		--line-height: 2px;
 		--line-offset: 0.8rem;
 		margin-top: 0;
-		position: absolute;
-		left: var(--p-container);
 	}
 
 	@media (max-width: $mobile) {
@@ -44,8 +46,12 @@
 }
 
 .header--burger-opened .burger {
-	@media (max-width: $tablet) {
+	@media (max-width: $tablet-xlg) {
+		left: 34rem;
+		transition: all 0.7s ease;
 		margin-left: auto;
+	}
+	@media (max-width: $tablet) {
 		left: 89.5%;
 		transition: all 0.55s ease;
 	}
@@ -66,7 +72,7 @@
 .header__socials {
 	margin-left: auto;
 
-	@media (max-width: $tablet) {
+	@media (max-width: $tablet-xlg) {
 		display: none;
 	}
 }

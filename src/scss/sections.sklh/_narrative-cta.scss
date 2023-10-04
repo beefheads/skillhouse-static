@@ -24,6 +24,12 @@
 	}
 }
 
+.narrative-cta__title {
+	@media (max-width: $tablet) {
+		max-width: 60%;
+	}
+}
+
 .narrative-cta__title br:not([class]) {
 	@media (max-width: $tablet) {
 		display: none;
@@ -55,6 +61,10 @@
     }
 
     @media (max-width: $tablet) {
+    	padding-top: 54.4%;
+    }
+
+    @media (max-width: $mobile) {
     	padding-top: 66.4%;
     }
 }

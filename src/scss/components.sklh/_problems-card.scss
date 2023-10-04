@@ -58,6 +58,11 @@
 	justify-content: flex-start;
 	align-items: flex-end;
 
+
+	@media (max-width: $tablet-xlg) and (min-width: $mobile) {
+		height: 37rem;
+	}
+	
 	@media (max-width: $tablet) {
 		position: absolute;
 		right: 0;
@@ -122,7 +127,12 @@
 
 .problems-carousel-slide__content {
 	padding-top: 12rem;
-	padding-right: 10rem;
+	padding-right: 10rem;	
+
+	@media (max-width: $tablet-xlg) and (min-width: $mobile) {
+		padding-top: 5rem;
+		padding-right: 5rem;
+	}
 
 	@media (max-width: $tablet) {
 		padding-top: 9.5rem;

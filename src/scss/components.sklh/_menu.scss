@@ -28,18 +28,17 @@
 
 .menu__head {
 	margin-bottom: 11.6rem;
+	@media (max-width: $laptop-xlg) {
+		margin-bottom: 5.5rem;
+	}
 }
 
 .menu__body {
-	// margin-top: auto;
-	// margin-bottom: auto;
 	margin-bottom: auto;
+	margin-top: auto;
 
-	@media (max-width: $tablet) {
-		// margin-top: 0;
-		// padding-top: 11.6rem;
-		// padding-bottom: 15.1rem;
-		// padding-bottom: 8.8rem;
+	@media (max-width: $tablet) and (min-width: $mobile) {
+		margin-top: 0;
 	}
 }
 
@@ -117,9 +116,13 @@
 }
 
 .menu__footer {
+	margin-top: 11.6rem;
 	padding-top: 3.4rem;
 	border-top: 0.1rem solid var(--c-primary);
 
+	@media (max-width: $laptop-xlg) {
+		margin-top: 5.5rem;
+	}
 	@media (max-width: $tablet) {
 		display: grid;
 		grid-template-columns: 1fr 1fr;

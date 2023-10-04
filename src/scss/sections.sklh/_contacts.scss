@@ -173,6 +173,10 @@ a.contacts__entries-item:hover > *:first-child {
 	-webkit-mix-blend-mode: difference;
 	z-index: 1;
 
+	@media (max-width: $laptop-md) {
+		width: 70%;
+	}
+
 	@media (max-width: $tablet) {
 		width: 80%;
 	}

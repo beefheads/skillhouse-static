@@ -18,9 +18,10 @@
 	display: flex;
 	justify-content: flex-end;
 
-	@media (max-width: $tablet) {
+	@media (max-width: $laptop-md) {
 		margin-top: -1rem;
 		justify-content: flex-start;
+		margin-bottom: 3rem;
 	}
 }
 
@@ -55,7 +56,7 @@
 	overflow: visible;
 	margin-bottom: 8rem;
 
-	@media (max-width: $tablet) {
+	@media (max-width: $laptop-md) {
 		margin-bottom: 1.6rem;
 	}
 }

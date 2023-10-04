@@ -8,6 +8,10 @@
 	grid-template-columns: 6fr 5fr;
 	column-gap: 13.5rem;
 
+	@media (max-width: $laptop-md) {
+		column-gap: 1.5rem;
+	}
+
 	@media (max-width: $tablet) {
 		grid-template-columns: 100%;
 	}
@@ -34,6 +38,9 @@
 .quiz-slide__question {
 	padding-bottom: 10rem;
 }
+.quiz--slide-final .quiz-slide__question {
+	padding-bottom: 0;
+}
 
 .quiz-slide__content {
 	padding-top: 2rem;
@@ -41,6 +48,11 @@
 	padding-right: 10.5rem;
 	display: grid;
 	row-gap: 2.7rem;
+
+	@media (max-width: $laptop-md) {
+		padding-left: 4.5rem;
+		padding-right: 4.5rem;
+	}
 
 	@media (max-width: $tablet) {
 		padding-left: 3.1rem;
@@ -61,6 +73,17 @@
 	@media (max-width: $tablet) {
 		display: block;
 	}
+}
+
+.quiz-slide__media-pic {
+	display: block;
+	height: 100%;
+}
+
+.quiz-slide__media-img {
+	display: block;
+	height: 100%;
+	object-fit: cover;
 }
 
 .quiz-slide--wide {

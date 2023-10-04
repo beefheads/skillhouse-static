@@ -5,6 +5,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 	const priceTable = document.querySelectorAll('.price-table');
 	if (!priceTable) return;
 
+	const RERENDER_BREAKPOINT = 601;
 	const swiperConfig = {
 	  	modules: [Navigation, Pagination, EffectCreative],
 		spaceBetween: 50,
@@ -25,10 +26,10 @@ window.addEventListener('DOMContentLoaded', (event) => {
 	function initSwiper() {
 		let swiperDestroyed = isSwiperDestroyed();
 
-	  if (window.innerWidth > 992 && !swiperDestroyed) {
+	  if (window.innerWidth > RERENDER_BREAKPOINT && !swiperDestroyed) {
 	  	const destroy = priceTableSwiper.destroy();
 	    // console.log('destroy', destroy);
-	  } else if (window.innerWidth <= 992 && swiperDestroyed) {
+	  } else if (window.innerWidth <= RERENDER_BREAKPOINT && swiperDestroyed) {
 	    priceTableSwiper = new Swiper('.price-table-swiper', swiperConfig);
 	    // console.log('built', priceTableSwiper)
 	  }

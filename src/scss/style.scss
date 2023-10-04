@@ -21,6 +21,9 @@
 
   --fz-regular: 2rem;
   --fz-title: 5.5rem;
+  @media (max-width: $laptop-md) {
+    --fz-title: 4.5rem;
+  }
   @media (max-width: $tablet) {
     --fz-regular: 1rem;
     --fz-title: 2.5rem;
@@ -50,6 +53,9 @@ html {
     --fz-modifier: 1.020834;
   }
 
+  @media (max-width: $tablet) {
+    --fz-modifier: 1.763894;
+  }
   @media (max-width: $mobile-xlg) {
     --fz-modifier: 1.663894;
   }

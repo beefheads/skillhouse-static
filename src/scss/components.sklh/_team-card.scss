@@ -6,7 +6,17 @@
 	column-gap: 11rem;
 	row-gap: 2.8rem;
 
+	@media (max-width: $laptop-md) {
+		grid-template-columns: 30rem auto;
+		column-gap: 4rem;
+	}
+
 	@media (max-width: $tablet) {
+		grid-template-columns: 20rem auto;
+		column-gap: 2rem;
+	}
+
+	@media (max-width: $mobile-lg) {
 		grid-template-columns: 100%;
 		grid-template-areas: "head" "media" "body";
 		row-gap: 2.4rem;
@@ -28,6 +38,10 @@
 	grid-area: head;
 	padding-top: 5.5rem;
 
+	@media (max-width: $laptop-md) {
+		padding-top: 2.5rem;
+	}
+
 	@media (max-width: $tablet) {
 		padding-top: 0;
 	}
@@ -46,6 +60,10 @@
 	line-height: 133.333%;
 	margin-bottom: 1.6rem;
 	transition: all 0.3s var(--tr-jolly-enter) 0.2s;
+
+	@media (max-width: $laptop-md) {
+		font-size: 4rem;
+	}
 
 	@media (max-width: $tablet) {
 		font-size: 3rem;
@@ -98,7 +116,16 @@
 	padding-bottom: 6rem;
 	transition: all 0.3s var(--tr-jolly-enter) 0.3s;
 
+	@media (max-width: $laptop-md) {
+		padding-bottom: 3rem;
+	}
+
 	@media (max-width: $tablet) {
+		padding-left: 2rem;
+		padding-right: 0;
+	}
+
+	@media (max-width: $mobile-lg) {
 		padding-top: 0.4rem;
 		padding-left: 8.4rem;
 		padding-right: 0;
