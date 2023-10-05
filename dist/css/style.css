@@ -586,9 +586,9 @@ html {
     --fz-modifier: 1.763894;
   }
 }
-@media (max-width: 450px) {
+@media (max-width: 601px) {
   html {
-    --fz-modifier: 1.663894;
+    --fz-modifier: 2.545;
   }
 }
 @media (max-width: 360px) {
@@ -4209,7 +4209,7 @@ radio.html
     column-gap: 2rem;
   }
 }
-@media (max-width: 414px) {
+@media (max-width: 601px) {
   .team-card {
     grid-template-columns: 100%;
     grid-template-areas: "head" "media" "body";
