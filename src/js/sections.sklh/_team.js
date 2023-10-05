@@ -36,6 +36,11 @@ window.addEventListener('DOMContentLoaded', (event) => {
 		    nextEl: `.${uniqueClass} .team-carousel__button-next`,
 		    prevEl: `.${uniqueClass} .team-carousel__button-prev`,
 		  },
+
+		  lazy: {
+		    loadPrevNext: true, // pre-loads the next image to avoid showing a loading placeholder if possible
+		    loadPrevNextAmount: 2 //or, if you wish, preload the next 2 images
+		  },
 		}
 
 		let problemsSwiper = new Swiper(`.${uniqueClass} .team-carousel__swiper`, swiperConfig);
