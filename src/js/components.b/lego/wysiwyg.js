@@ -1,6 +1,6 @@
 "use strict"
 
-import Swiper, { Navigation, Autoplay, Pagination, Thumbs, EffectFade } from "swiper";
+import Swiper, { Navigation, Autoplay, Pagination, Thumbs } from "swiper";
 
 const carousels = document.querySelectorAll('.wp-block-gallery');
 const carouselClasses = {
@@ -11,20 +11,14 @@ function getSwiperConfig(swpierClasses) {
 	const {nextButtonClass, prevButtonClass, bulletsClass} = swpierClasses;
 
 	let swiperConfig = {
-	  modules: [Navigation, Pagination],
-	  // autoHeight: true,
-	  spaceBetween: 30,
-	  // slidesPerView: 2.5,
-	  slidesPerView: 1,
-	  effect: 'fade',
-	    fadeEffect: {
-	    crossFade: true
-	  },
-	  breakpoints: {
-	  	767: {
-			  slidesPerView: "auto",
-	  	}
-	  }
+		loop: true,
+		modules: [Navigation, Pagination],
+
+		centeredSlides: true,
+		centerInsufficientSlides: true,
+		centeredSlidesBounds: true,
+		slidesPerView: 1.5,
+		spaceBetween: 40,
 	}
 
 	if (nextButtonClass || prevButtonClass) {
@@ -68,11 +62,14 @@ function makeWysiwygCarousels(carousels, cssClasses) {
 	    slide.classList.add('swiper-slide');
 	  })
 
+	  const nav = document.createElement('div');
+	  nav.classList.add('b_swiper__nav')
+	  carousel.append(nav);
+
 	  const bullets = document.createElement('div');
 	  const bulletsClass = `swiper-pagination-${carouselIndex}`
 	  bullets.classList.add('swiper-pagination')
 	  bullets.classList.add(bulletsClass)
-	  carousel.append(bullets);
 
 	  const prevButton = document.createElement('div')
 	  const prevButtonClass = `swiper-button-prev-${carouselIndex}`
@@ -84,11 +81,15 @@ function makeWysiwygCarousels(carousels, cssClasses) {
 	  const nextButtonClass = `swiper-button-next-${carouselIndex}`
 	  nextButton.classList.add('swiper-button-next')
 	  nextButton.classList.add(nextButtonClass)
-	  carousel.append(nextButton);
+
+	  nav.append(prevButton);
+	  nav.append(bullets);
+	  nav.append(nextButton);
 
 	  new Swiper(`.${carouselClass}`, getSwiperConfig({
 	  	nextButtonClass,
 	  	prevButtonClass,
+	  	bulletsClass,
 	  }));
 
 	})

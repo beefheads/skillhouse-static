@@ -30,6 +30,18 @@
 	pointer-events: none;
 }
 
+.hero--portfolio .hero__bg::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.3);
+}
+
+
 .hero__title {
 	@media (max-width: $tablet) {
 		margin-bottom: 2.5rem;
@@ -39,4 +51,32 @@
 	@media (max-width: $tablet) {
 		display: none;
 	}
+}
+
+.hero__offer {
+	position: relative;
+	z-index: 2;
+}
+.hero--portfolio .hero__offer {
+	max-width: 60rem;
+}
+
+.hero__caption {
+	margin-bottom: 5.4rem;
+	margin-top: -3rem;
+	font-size: 2rem;
+	font-weight: 300;
+}
+.hero__caption br {
+	@media (max-width: $mobile) {
+		display: none;
+	}
+}
+
+.hero__summary {
+	font-size: 2rem;
+	font-weight: 300;
+	line-height: 140%;
+	letter-spacing: -0.08rem;
+	margin-bottom: 7.4rem;
 }

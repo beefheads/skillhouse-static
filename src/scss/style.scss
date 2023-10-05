@@ -8,6 +8,7 @@
 
 
 // Шрифты
+@include font('Muller', normal, 300, '../resources/fonts/muller/mullerlightitalic');
 @include font('Muller', normal, 300, '../resources/fonts/muller/mullerlight');
 @include font('Muller', normal, 400, '../resources/fonts/muller/mullerregular');
 @include font('Muller', normal, 500, '../resources/fonts/muller/mullermedium');

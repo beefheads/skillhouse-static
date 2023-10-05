@@ -10,6 +10,7 @@ import "./components.b/controls/formich.js";
 import "./components.b/spawners/b_modal.js";
 import "./components.b/spawners/_b_video.js";
 // import "./components.b/controls/_button-sticky.js";
+import "./components.b/lego/wysiwyg.js";
 
 import "./components.b/controls/b_tabs.js";
 
