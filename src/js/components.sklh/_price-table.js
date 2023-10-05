@@ -10,6 +10,18 @@ window.addEventListener('DOMContentLoaded', (event) => {
 	  	modules: [Navigation, Pagination, EffectCreative],
 		spaceBetween: 50,
 		slidesPerView: 1,
+		effect: "creative",
+	    creativeEffect: {
+	      prev: {
+	        shadow: true,
+	        translate: ["-20%", 0, -1],
+	        opacity: 0,
+	      },
+	      next: {
+	        translate: ["130%", 0, 0],
+	      },
+	    },
+
 	  	pagination: {
 	    	el: '.price-table__pagination',
 	    	clickable: true,

@@ -31,4 +31,4 @@ function scrollTosectionToScroll(percents = 9) {
         })
     }
 }
-scrollTosectionToScroll(10);
+scrollTosectionToScroll(0);

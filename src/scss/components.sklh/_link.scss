@@ -16,7 +16,8 @@
   --bg: transparent;
 
   --border-width: 0.1rem;
-  --border-color: transparent;
+  // --border-color: transparent;
+  --border-color: var(--fg);
   --border-radius: 0;
 
   @media (max-width: $tablet) {
@@ -28,10 +29,11 @@
 
 .link:hover {
 	@media (any-hover:hover) {
-	  --border-color: ;
+    background-position: 0 90%;
+    text-shadow: 0 0 15px rgba(215,191,127,.5), 0 0 10px rgba(215,191,127,.6);
 	}
 }
 
 .link:active {
-  --fw: 700;
+  --fw: 700; 
 }

@@ -97,6 +97,17 @@
 	}
 }
 
+.swiper-initialized .price-table-slide__title {
+	opacity: 0;
+	transform: translateY(-2rem);
+}
+.swiper-initialized .swiper-slide-active .price-table-slide__title {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+		
+
 .price-table-slide:hover .price-table-slide__title {
 	@media (any-hover:hover) {
 		font-weight: 700;
@@ -115,6 +126,7 @@
 	font-style: normal;
 	font-weight: 700;
 	line-height: 133.333%;
+	transition: all 0.55s var(--tr-jolly-enter);
 
 	@media (max-width: $tablet) {
 		font-size: 3rem;
@@ -124,6 +136,15 @@
 		font-size: 4rem;
 		margin-bottom: 1rem;
 	}
+}
+
+.swiper-initialized .price-table-slide__cost {
+	opacity: 0;
+	transform: scale(0.6);
+}
+.swiper-initialized .swiper-slide-active .price-table-slide__cost {
+	opacity: 1;
+	transform: scale(1);
 }
 
 .price-table-slide__cost-value {
@@ -147,11 +168,20 @@
 	line-height: 130%;
 	letter-spacing: -0.072rem;
 	margin-bottom: 3rem;
+	transition: all 0.55s var(--tr-jolly-enter);
 
 	@media (max-width: $tablet) {
 		font-size: 1rem;
 		letter-spacing: -0.04rem;
 	}
+}
+.swiper-initialized .price-table-slide__desc {
+	opacity: 0;
+	transform: translateY(2rem);
+}
+.swiper-initialized .swiper-slide-active .price-table-slide__desc {
+	opacity: 1;
+	transform: translateY(0);
 }
 
 

@@ -2563,6 +2563,11 @@ body._lock {
   cursor: pointer;
   transition: all 0.3s ease;
   letter-spacing: var(--ls);
+  background-image: linear-gradient(to bottom, var(--border-color) 0, var(--border-color) 100%);
+  background-position: 0 110%;
+  background-repeat: repeat-x;
+  background-size: 0.1rem 0.1rem;
+  text-decoration: none;
 }
 
 .link {
@@ -2590,7 +2595,6 @@ body._lock {
   font-size: inherit;
   font-weight: inherit;
   font-family: inherit;
-  border-bottom: var(--border-width) solid var(--border-color);
   transition: inherit;
   padding: var(--text-padding);
 }
@@ -2613,60 +2617,6 @@ body._lock {
   margin-left: var(--icon-gap);
 }
 
-/*
-.link {
-  color: var(--c-second);
-  font-weight: 700;
-  font-family: var(--ff-title);
-  font-style: normal;
-  font-weight: 500;
-  line-height: 125%;
-  display: inline-flex;
-  align-items: center;
-  justify-content: flex-start;
-  transition: var(--tr-regular);
-}
-
-.link__text {
-  font-size: inherit;
-  border-bottom: 0.1rem solid transparent;
-}
-.link:hover .link__text {
-  @media (any-hover:hover) {
-    border-bottom: 0.1rem solid;
-  }
-}
-
-.link__icon {
-  font-size: inherit;
-  display: block;
-  width: 0.334em;
-  height: 0.556em;
-  margin-left: 0.334em;
-  transition: var(--tr-regular);
-}
-.link:hover .link__icon {
-  @media (any-hover:hover) {
-    transform: rotate(-45deg);
-  }
-}
-
-.link-second {
-  --link-color: var(--fg-third);
-  display: inline;
-  color: var(--link-color);
-  font-size: inherit;
-  transition: var(--tr-regular);
-  border-bottom: 1px solid;
-}
-
-.link-second:hover {
-  @media (any-hover:hover) {
-    --link-color: var(--c-second)
-  }
-}
-
-*/
 .link {
   --ff: var(--ff-regular);
   --fz: 1.8rem;
@@ -2680,7 +2630,7 @@ body._lock {
   --fg: var(--c-primary);
   --bg: transparent;
   --border-width: 0.1rem;
-  --border-color: transparent;
+  --border-color: var(--fg);
   --border-radius: 0;
 }
 @media (max-width: 768px) {
@@ -2693,7 +2643,8 @@ body._lock {
 
 @media (any-hover: hover) {
   .link:hover {
-    --border-color: ;
+    background-position: 0 90%;
+    text-shadow: 0 0 15px rgba(215, 191, 127, 0.5), 0 0 10px rgba(215, 191, 127, 0.6);
   }
 }
 
@@ -3591,6 +3542,16 @@ radio.html
   }
 }
 
+.swiper-initialized .price-table-slide__title {
+  opacity: 0;
+  transform: translateY(-2rem);
+}
+
+.swiper-initialized .swiper-slide-active .price-table-slide__title {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 @media (any-hover: hover) {
   .price-table-slide:hover .price-table-slide__title {
     font-weight: 700;
@@ -3608,6 +3569,7 @@ radio.html
   font-style: normal;
   font-weight: 700;
   line-height: 133.333%;
+  transition: all 0.55s var(--tr-jolly-enter);
 }
 @media (max-width: 768px) {
   .price-table-slide__cost {
@@ -3619,6 +3581,16 @@ radio.html
     font-size: 4rem;
     margin-bottom: 1rem;
   }
+}
+
+.swiper-initialized .price-table-slide__cost {
+  opacity: 0;
+  transform: scale(0.6);
+}
+
+.swiper-initialized .swiper-slide-active .price-table-slide__cost {
+  opacity: 1;
+  transform: scale(1);
 }
 
 .price-table-slide__cost-value {
@@ -3641,12 +3613,23 @@ radio.html
   line-height: 130%;
   letter-spacing: -0.072rem;
   margin-bottom: 3rem;
+  transition: all 0.55s var(--tr-jolly-enter);
 }
 @media (max-width: 768px) {
   .price-table-slide__desc {
     font-size: 1rem;
     letter-spacing: -0.04rem;
   }
+}
+
+.swiper-initialized .price-table-slide__desc {
+  opacity: 0;
+  transform: translateY(2rem);
+}
+
+.swiper-initialized .swiper-slide-active .price-table-slide__desc {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .price-table-slide__button-more {
@@ -3996,6 +3979,7 @@ radio.html
   width: 100%;
   height: 48rem;
   filter: drop-shadow(0px 0px 100px rgba(1, 1, 1, 0.5));
+  -webkit-filter: drop-shadow(0px 0px 100px rgba(1, 1, 1, 0.5));
   display: flex;
   justify-content: flex-start;
   align-items: flex-end;
@@ -4012,6 +3996,7 @@ radio.html
     top: 0;
     width: 15rem;
     height: 16rem;
+    filter: none;
   }
 }
 
@@ -4517,7 +4502,6 @@ radio.html
 
 .header__menu-link {
   --text-padding: 1rem 0 0 0;
-  --lh: 1;
 }
 
 .header__contacts {
@@ -4735,6 +4719,11 @@ radio.html
 @media (max-width: 768px) {
   .narrative-cta__title {
     max-width: 60%;
+  }
+}
+@media (max-width: 601px) {
+  .narrative-cta__title {
+    max-width: 100%;
   }
 }
 
@@ -4994,7 +4983,8 @@ radio.html
 }
 
 .team__tabs .tabs__button.active {
-  --border-color: ;
+  background-position: 0 90%;
+  text-shadow: 0 0 15px rgba(215, 191, 127, 0.5), 0 0 10px rgba(215, 191, 127, 0.6);
 }
 
 .team-carousel {
