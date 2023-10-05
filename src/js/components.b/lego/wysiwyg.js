@@ -17,8 +17,15 @@ function getSwiperConfig(swpierClasses) {
 		centeredSlides: true,
 		centerInsufficientSlides: true,
 		centeredSlidesBounds: true,
-		slidesPerView: 1.5,
-		spaceBetween: 40,
+		slidesPerView: 1.16,
+		spaceBetween: 10,
+
+		breakpoints: {
+			769: {
+				spaceBetween: 40,
+				slidesPerView: 1.5,
+			}
+		}
 	}
 
 	if (nextButtonClass || prevButtonClass) {

@@ -44,12 +44,18 @@
 
 .hero__title {
 	@media (max-width: $tablet) {
-		margin-bottom: 2.5rem;
+		margin-bottom: 2rem;
 	}
 }
-.hero__title br {
+.hero:not(.hero--portfolio) .hero__title br {
 	@media (max-width: $tablet) {
 		display: none;
+	}
+}
+
+.hero--portfolio .hero__title {
+	@media (max-width: $tablet) {
+		letter-spacing: 0.05rem;
 	}
 }
 
@@ -66,6 +72,17 @@
 	margin-top: -3rem;
 	font-size: 2rem;
 	font-weight: 300;
+
+	@media (max-width: $tablet) {
+		max-width: 24rem;
+		line-height: 1.4;
+	}
+
+	@media (max-width: $mobile) {
+		margin-top: 0;
+		font-size: 1.2rem;
+		margin-bottom: 3.4rem;
+	}
 }
 .hero__caption br {
 	@media (max-width: $mobile) {
@@ -74,9 +91,15 @@
 }
 
 .hero__summary {
-	font-size: 2rem;
+	font-size: 1rem;
 	font-weight: 300;
 	line-height: 140%;
-	letter-spacing: -0.08rem;
+	--ls-regular: -0.08rem;
 	margin-bottom: 7.4rem;
+
+	@media (max-width: $tablet) {
+		max-width: 24rem;
+		--ls-regular: -0.048rem;		
+		margin-bottom: 1.4rem;
+	}
 }

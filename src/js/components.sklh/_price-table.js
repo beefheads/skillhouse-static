@@ -3,7 +3,7 @@ import Swiper, { Navigation, Pagination, EffectCreative } from "swiper";
 
 window.addEventListener('DOMContentLoaded', (event) => {
 	const priceTable = document.querySelectorAll('.price-table');
-	if (!priceTable) return;
+	if (priceTable.length == 0) return;
 
 	const RERENDER_BREAKPOINT = 601;
 	const swiperConfig = {
@@ -30,10 +30,10 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 	let priceTableSwiper = new Swiper('.price-table-swiper', swiperConfig);
 
-  function isSwiperDestroyed() {
+	function isSwiperDestroyed() {
 		let swiperDestroyed = priceTableSwiper.destroyed === true;
-  	return swiperDestroyed;
-  }
+	  	return swiperDestroyed;
+	}
 
 	function initSwiper() {
 		let swiperDestroyed = isSwiperDestroyed();

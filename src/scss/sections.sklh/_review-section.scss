@@ -1,0 +1,151 @@
+.review-section {
+	--review-desc-gap: 7.5rem;
+	@media (min-width: $tablet + 1) {
+		padding-bottom: 14.3rem;
+	}
+	@media (max-width: $mobile) {
+		--review-desc-gap: 3.5rem;
+	}
+}
+
+.review-section__container {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	column-gap: 3rem;
+
+	@media (max-width: $mobile) {
+		grid-template-columns: 100%;
+	}
+}
+
+.review-section__title {
+	margin-bottom: 4.2rem;
+
+	@media (max-width: $mobile) {
+		margin-bottom: 2.8rem;
+	}
+}
+
+.review-section__source {
+	// margin-left: -7.5rem;
+	margin-left: #{'calc(0px - var(--review-desc-gap))'};
+	display: inline-block;
+	height: 3rem;
+	width: auto;
+	margin-bottom: 5.3rem;
+
+	@media (max-width: $mobile) {
+		height: 2rem;
+		margin-bottom: 2.8rem;
+	}
+}
+
+.review-section__source-img {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+.review-section .review-section__source-img {
+	margin-bottom: 0;
+	margin-top: 0;
+}
+
+.review-section__desc {
+	padding-left: var(--review-desc-gap);
+	font-size: 1.5rem;
+	position: relative;
+	padding-right: 3rem;
+
+}
+.review-section .review-section__desc {
+	--ls-regular: initial;
+
+	@media (max-width: $mobile) {
+		--fz-p: 1.6rem;
+		--lh-p: 1.4;
+		--ls-regular: initial;
+	}
+}
+
+.review-section__desc::before {
+	content: "";
+	position: absolute;
+	top: 8rem;
+	left: 0;
+	display: block;
+	width: 5.8rem;
+	height: 4.3rem;
+	background-image: url(../img/sklh_common/quote.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+
+	@media (max-width: $mobile) {
+		top: 4rem;
+		width: 3.3rem;
+		height: 3.6rem;
+	}
+}
+
+.review-section__source + p{
+	margin-top: 0;
+}
+
+.review-section__media {
+	padding-top: 10rem;
+	grid-row-end: span 2;
+
+	@media (max-width: $mobile) {
+		padding-top: 2.8rem;
+		display: flex;
+		flex-direction: column;
+		grid-row-end: initial;
+	}
+}
+
+.review-section__media-video {
+	padding-top: 66.4%;
+	margin-bottom: 7rem;
+
+	@media (max-width: $mobile) {
+		order: 2;
+		margin-bottom: 4rem;
+	}
+}
+
+
+.review-section__media-caption {
+	font-size: 2.4rem;
+	text-align: right;
+	@media (max-width: $mobile) {
+		font-size: 1.2rem;
+		margin-bottom: 3.5rem;
+	}
+}
+.review-section__media-caption-title {
+	font-size: 3rem;
+	letter-spacing: initial;
+	margin-bottom: 1rem;
+	line-height: 1.15;
+
+	@media (max-width: $mobile) {
+		font-size: 1.6rem;
+		letter-spacing: -0.064rem;
+		margin-bottom: 0;
+	}
+}
+.review-section__media-caption-desc {
+	letter-spacing: -0.096rem;
+	font-weight: 300;
+
+	@media (max-width: $mobile) {
+		line-height: 140%;
+		letter-spacing: -0.048rem;
+	}
+}
+
+.review-section__buttons {
+	padding: 0;
+	align-self: end;
+	justify-self: start;
+}

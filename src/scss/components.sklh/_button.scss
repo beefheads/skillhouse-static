@@ -11,11 +11,11 @@
   --padding-block: 1.25em;
   --padding-inline: 1.5em;
 
+  min-width: 30rem;
+
   @media (max-width: $tablet) {
     --fz: 1rem;
-  }
-  @media (min-width: $tablet + 1) {
-    min-width: 30rem;
+    min-width: 15rem;
   }
 }
 
