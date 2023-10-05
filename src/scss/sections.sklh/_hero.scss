@@ -74,14 +74,15 @@
 	font-weight: 300;
 
 	@media (max-width: $tablet) {
+		font-size: 1.6rem;
+		margin-top: 0;
 		max-width: 24rem;
 		line-height: 1.4;
+		margin-bottom: 3.4rem;
 	}
 
 	@media (max-width: $mobile) {
-		margin-top: 0;
 		font-size: 1.2rem;
-		margin-bottom: 3.4rem;
 	}
 }
 .hero__caption br {

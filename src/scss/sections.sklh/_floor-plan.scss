@@ -23,6 +23,9 @@
 .floor-plan__media {
 	margin-top: var(--margin-top-media);
 
+	@media (max-width: $tablet-xlg) {
+		margin-top: #{'calc(var(--margin-top-media) + 20rem)'};
+	}
 	@media (max-width: $tablet) {
 		margin-top: #{'calc(var(--margin-top-media) + 28rem)'};
 	}

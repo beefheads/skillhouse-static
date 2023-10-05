@@ -3,7 +3,7 @@
 	padding-top: 14rem;
 	padding-bottom: 14rem;
 
-	@media (max-width: $mobile) {
+	@media (max-width: $tablet) {
 		padding-top: 5.8rem;
 		padding-bottom: 5.8rem;
 	}
@@ -63,7 +63,7 @@
 
 	margin-bottom: 5.4rem;
 
-	@media (max-width: $mobile) {
+	@media (max-width: $tablet) {
 		font-size: 1.6rem;
 		line-height: 115%;
 		letter-spacing: -0.064rem;
@@ -73,7 +73,7 @@
 
 .project-shifter__title {
 	margin-bottom: 3.2rem;
-	@media (max-width: $mobile) {
+	@media (max-width: $tablet) {
 		letter-spacing: 0.05rem;
 		margin-bottom: 2.2rem;
 	}
@@ -83,7 +83,7 @@
 	max-width: 34rem;
 	margin-bottom: 7rem;
 
-	@media (max-width: $mobile) {
+	@media (max-width: $tablet) {
 		max-width: 23rem;
 		margin-bottom: 3.5rem;
 	}
@@ -94,7 +94,7 @@
 }
 
 .project-shifter__button .button__icon {
-	@media (min-width: $mobile + 1) {
+	@media (min-width: $tablet + 1) {
 		--icon-width: 9rem;
 	    --icon-height: 3.5rem;
 	    margin-right: -2rem;

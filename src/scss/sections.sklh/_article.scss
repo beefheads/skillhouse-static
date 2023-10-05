@@ -51,8 +51,8 @@
 .article img {
 	height: 90vh;
 
-	@media (max-width: $tablet) {
-		height: 60vh;
+	@media (max-width: $tablet-xlg) {
+		height: 40vh;
 	}
 	@media (max-width: $mobile) {
 		height: 21vh;
@@ -110,15 +110,11 @@
 		margin-bottom: 2rem;
 	}
 }
-.article .wp-block-column:first-child {
-	margin-right: 3rem;
 
-	@media (max-width: $tablet) {
-		margin-right: 0;
-	}
-}
 .article .wp-block-column:last-child:not(:empty) > * {
-	@media (max-width: $tablet) {
+	padding-left: 3rem;
+	@media (max-width: $mobile) {
+		padding-left: 0;
 		padding-top: 3rem;
 	}
 }
