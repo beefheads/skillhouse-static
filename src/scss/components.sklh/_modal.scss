@@ -10,11 +10,19 @@
 	}
 }
 
+.modal--wide {
+	max-width: 123rem;
+}
+
 .modal__head {
 	margin-bottom: 14rem;
 	@media (max-width: $tablet) {
 		margin-bottom: 6rem;
 	}
+}
+
+.modal--wide .modal__head {
+	margin-bottom: 6rem;
 }
 
 .modal__logo {

@@ -10,6 +10,9 @@
 		padding: 2rem;
 	}
 }
+.modal .review-card {
+	padding: 0;
+}
 
 .review-card__body {
 	transition: inherit;
@@ -132,7 +135,7 @@
 	}
 }
 
-.review-card__feedback-exerpt {
+.review-card__feedback {
 	padding-bottom: 2rem;
 	color: var(--fg-second, #BDBDBD);
 	font-family: var(--ff-regular);
@@ -142,11 +145,14 @@
 	line-height: 130%;
 	letter-spacing: -0.072rem;
 
-	@media (max-width: $tablet) {
+	@media (max-width: $tablet-xlg) {
 		padding-bottom: 2.6rem;
 		font-size: 1.2rem;
 		letter-spacing: -0.048rem;
 	}
+}
+.review-card__feedback.wysiwyg {
+	font-size: 0.9rem;
 }
 
 .review-card__foot {

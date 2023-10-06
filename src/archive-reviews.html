@@ -47,63 +47,93 @@
         @@include('./tpls/sections.sklh/content-reviews.html',{desc: 'Мой знакомый порекомендовал мне обратиться в <span class="text-italic">Skill House</span>. Менеджер хорошо все посчитал, сначала предварительную смету, потом мы приехали на объект и он сделал окончательную смету. Она меня устроила, и где-то через месяц приступили к ремонту. Все было сделано достаточно аккуратно. Работу я принял, в итоге удовлетворен этим ремонтом. Я благодарен компании <span class="text-italic">Skill House</span> за качественный и быстрый ремонт!', hasButtonMore: true, })
 
 
-        <section class="section section--convex">
+        <section class="section section--convex aggregated-reviews">
           <div class="container">
             <h2 class="section-title">
               О нас <br class="section-br">
               <span class="text-colored">на сервисах</span> 
             </h2>
-            <div class="blinds-carousel">
-              <div class="swiper blinds-carousel-swiper">
-                <div class="swiper-wrapper">
-                  @@for (var i = 0; i < 10; i++) {
-                    <div class="swiper-slide blinds-carousel-slide">
-                      <article class="review-card">
-                        <div class="review-card__body">
-                          <a class="review-card__source" href="#">
-                            <img src="./img/sklh_services-logo/otzovik.svg" alt="" class="review-card__source-img">
-                          </a>
-                          <!-- <p class="review-card__name">Константин Константинопльский</p> -->
-                          <p class="review-card__name">Вячеслав Алексеев</p>
-                          <p class="review-card__date">12.08.2023</p>
-                          <div class="review-card__rating">
-                            <svg class="review-card__rating-star">
-                              <use href="./img/sklh_common/star.svg#star">
-                            </svg>
-                            <svg class="review-card__rating-star">
-                              <use href="./img/sklh_common/star.svg#star">
-                            </svg>
-                            <svg class="review-card__rating-star">
-                              <use href="./img/sklh_common/star.svg#star">
-                            </svg>
-                            <svg class="review-card__rating-star">
-                              <use href="./img/sklh_common/star-half.svg#star-half">
-                            </svg>
-                            <svg class="review-card__rating-star">
-                              <use href="./img/sklh_common/star-empty.svg#star-empty">
-                            </svg>
-                          </div>
-                          <h3 class="review-card__title">Качественный ремонт квартиры под ключ</h3>
-                          <p class="review-card__feedback-exerpt">
-                            Хочу рассказать о капитальном ремонте, который проходил у меня в квартире. До Skill House делала ремонт с частными мастерами, но они допустили ряд ошибок...
-                          </p>
-                        </div>
-                        <div class="review-card__foot">
-                          <button class="link review-card__button-more" type="button" data-b_modal-open="review-modal">
-                            Читать весь отзыв
-                          </button>
-                        </div>
-                      </article>
-                    </div>
-                  }
-                </div>
+
+            <div class="tabs">
+              <div class="tabs__tablist" data-tabs="reviews-services">
+                <button class="tabs__button active" type="button">
+                  <img src="./img/sklh_services-logo/otzovik.svg" alt="" class="tabs__button-icon-horizontal">
+                </button>
+                <button class="tabs__button" type="button">
+                  <img src="./img/sklh_services-logo/yandex.svg" alt="" class="tabs__button-icon-horizontal">
+                </button>
+                <button class="tabs__button" type="button">
+                  <img src="./img/sklh_services-logo/zoon.svg" alt="" class="tabs__button-icon-horizontal">
+                </button>
+                <button class="tabs__button" type="button">
+                  <img src="./img/sklh_services-logo/flamp.svg" alt="" class="tabs__button-icon-horizontal">
+                </button>
+                <button class="tabs__button" type="button">
+                  <img src="./img/sklh_services-logo/yell.svg" alt="" class="tabs__button-icon-horizontal">
+                </button>
+                <button class="tabs__button" type="button">
+                  <img src="./img/sklh_services-logo/houzz.svg" alt="" class="tabs__button-icon-horizontal">
+                </button>
               </div>
-              <div class="b_swiper__nav blinds-carousel__nav">
-                <div class="swiper-button-prev blinds-carousel__button-prev"></div>
-                <div class="swiper-pagination blinds-carousel__pagination"></div>
-                <div class="swiper-button-next blinds-carousel__button-next"></div>
+              <div class="tabs__panel-list" data-tabs="reviews-services">
+                @@for (var k = 0; k <= 6; k++) {
+                <div class="tabs__panel">
+                  <div class="blinds-carousel">
+                    <div class="swiper blinds-carousel-swiper">
+                      <div class="swiper-wrapper">
+                        @@for (var i = 0; i < 10; i++) {
+                          <div class="swiper-slide blinds-carousel-slide">
+                            <article class="review-card">
+                              <div class="review-card__body">
+                                <a class="review-card__source" href="#">
+                                  <img src="./img/sklh_services-logo/otzovik.svg" alt="" class="review-card__source-img">
+                                </a>
+                                <!-- <p class="review-card__name">Константин Константинопльский</p> -->
+                                <p class="review-card__name">Вячеслав Алексеев</p>
+                                <p class="review-card__date">12.08.2023</p>
+                                <div class="review-card__rating">
+                                  <svg class="review-card__rating-star">
+                                    <use href="./img/sklh_common/star.svg#star">
+                                  </svg>
+                                  <svg class="review-card__rating-star">
+                                    <use href="./img/sklh_common/star.svg#star">
+                                  </svg>
+                                  <svg class="review-card__rating-star">
+                                    <use href="./img/sklh_common/star.svg#star">
+                                  </svg>
+                                  <svg class="review-card__rating-star">
+                                    <use href="./img/sklh_common/star-half.svg#star-half">
+                                  </svg>
+                                  <svg class="review-card__rating-star">
+                                    <use href="./img/sklh_common/star-empty.svg#star-empty">
+                                  </svg>
+                                </div>
+                                <h3 class="review-card__title">Качественный ремонт квартиры под ключ</h3>
+                                <p class="review-card__feedback">
+                                  Хочу рассказать о капитальном ремонте, который проходил у меня в квартире. До Skill House делала ремонт с частными мастерами, но они допустили ряд ошибок...
+                                </p>
+                              </div>
+                              <div class="review-card__foot">
+                                <button class="link review-card__button-more" type="button" data-b_modal-open="modal-review-detail">
+                                  Читать весь отзыв
+                                </button>
+                              </div>
+                            </article>
+                          </div>
+                        }
+                      </div>
+                    </div>
+                    <div class="b_swiper__nav blinds-carousel__nav">
+                      <div class="swiper-button-prev blinds-carousel__button-prev"></div>
+                      <div class="swiper-pagination blinds-carousel__pagination"></div>
+                      <div class="swiper-button-next blinds-carousel__button-next"></div>
+                    </div>
+                  </div>
+                </div>
+                }
               </div>
             </div>
+
           </div>
         </section>
 

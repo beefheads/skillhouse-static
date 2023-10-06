@@ -13,18 +13,6 @@
 	overflow: hidden;
 }
 
-.team__tabs .tabs__tablist {
-	margin-top: -2rem;
-	display: flex;
-	justify-content: flex-end;
-
-	@media (max-width: $laptop-md) {
-		margin-top: -1rem;
-		justify-content: flex-start;
-		margin-bottom: 3rem;
-	}
-}
-
 .team__tabs .tabs__button {
 	margin-left: 4.4rem;
 	margin-right: 4.4rem;
