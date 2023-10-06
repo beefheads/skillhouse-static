@@ -1186,6 +1186,7 @@ body._lock {
   background-size: inherit;
   background-repeat: inherit;
   background-position: inherit;
+  object-fit: cover;
 }
 
 .text-bold {

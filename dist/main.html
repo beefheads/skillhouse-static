@@ -40,7 +40,7 @@
 
 
 
-      <link rel="stylesheet" href="./css/style.css?_v=20231006155039">
+      <link rel="stylesheet" href="./css/style.css?_v=20231006161442">
   </head>
   
   <body class="page-home">
@@ -226,9 +226,15 @@
               </div>
             </div>
           </div>
-          <div class="hero__bg js_use-bg">
-            <div class="only-desktop" data-use-bg="./img/sklh_hero/hero-bg.jpg"></div>
-            <div class="only-mobile" data-use-bg="./img/sklh_hero/hero-bg-mobile.jpg"></div>
+          <div class="hero__bg js_use-bg" data-use-bg="./img/sklh_hero/hero-bg.jpg">
+            <!-- <div class="only-desktop" data-use-bg="./img/sklh_hero/hero-bg.jpg"> -->
+            <!-- </div> -->
+            <video class="hero__bg-video" autoplay muted playsinline loop>
+              <source src="./resources/videos/bg-desktop.mp4" media="(min-width: 768px)">
+              <source src="./resources/videos/bg-mobile.mp4" media="(max-width: 767px)">
+            </video>
+            <!-- <div class="b_video b_video--looped" data-video-url="./resources/videos/bg-desktop.mp4"></div> -->
+            <!-- <div class="only-mobile" data-use-bg="./img/sklh_hero/hero-bg-mobile.jpg"></div> -->
           </div>
   
         </section>
@@ -2104,6 +2110,6 @@
 </div>
 
 
-    <script src="./js/index.min.js?_v=20231006155039"></script>
+    <script src="./js/index.min.js?_v=20231006161442"></script>
   </body>
 </html>
