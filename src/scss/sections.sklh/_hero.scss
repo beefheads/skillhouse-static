@@ -13,6 +13,12 @@
 	}
 }
 
+.hero--archive-reviews {
+	@media (min-width: $tablet + 1) {
+		padding-top: 36.5rem;
+	}
+}
+
 .hero__container {
 	position: relative;
 	z-index: 2;
@@ -30,7 +36,7 @@
 	pointer-events: none;
 }
 
-.hero--portfolio .hero__bg::before {
+.hero__bg--dimmed::before {
 	content: "";
 	position: absolute;
 	left: 0;

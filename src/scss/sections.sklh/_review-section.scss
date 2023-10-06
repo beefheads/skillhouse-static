@@ -52,7 +52,6 @@
 }
 
 .review-section__source {
-	margin-left: #{'calc(0px - var(--review-desc-gap))'};
 	display: inline-block;
 	height: 3rem;
 	width: auto;
@@ -66,6 +65,11 @@
 		margin-bottom: 2.8rem;
 	}
 }
+
+.review-section__desc .review-section__source {
+	margin-left: #{'calc(0px - var(--review-desc-gap))'};
+}
+
 .review-section__source:hover {
 	@media (any-hover: hover) {
 		filter: contrast(1) grayscale(0);

@@ -21,5 +21,7 @@ import "./sections.sklh/_portfolio-gallery.js";
 import "./sections.sklh/_problems.js";
 import "./sections.sklh/_team.js";
 
+import "./sections.sklh/_content-reviews.js";
+
 window.addEventListener('DOMContentLoaded', (event) => {
 });

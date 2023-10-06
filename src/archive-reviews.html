@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+      @@include('tpls/b/meta-head.html',{
+        "title": "Отзывы — Skillhouse",
+        "desc": "",
+        "themeColor": "#1A1A1A",
+      })
+      <link rel="stylesheet" href="./css/style.css">
+  </head>
+  
+  <body class="single-portfolio">
+
+    <div class="wrapper">
+      @@include('tpls/sections.sklh/header.html',{})
+
+      <main class="main">
+
+        <section class="section hero hero--archive-reviews">
+          <div class="container hero__container">
+            <div class="hero__offer">
+              <h2 class="section-title hero__title">
+                Наши клиенты <br>
+                <span class="text-colored">о нас</span>
+              </h2>
+              <div class="hero__summary wysiwyg">
+                <p>
+                  Мы всегда спрашиваем
+                  <span class="text-bold">мнение <br>
+                  наших клиентов</span>
+                </p>
+              </div>
+              <div class="hero__buttons section-buttons">
+                <button class="button-primary" type="button" data-b_modal-open="callback">Связаться с нами</a>
+              </div>
+            </div>
+          </div>
+          <div class="hero__bg hero__bg--dimmed js_use-bg" data-use-bg="./img/sklh_reviews/reviews-hero.jpg"></div>
+        </section>
+
+
+        @@include('./tpls/sections.sklh/content-reviews.html',{desc: 'Дизайнеры <span class="text-bold">Skill House</span> с нуля создали полноценный и комфортный интерьер квартиры, продумав каждую мелочь в оформлении, включая чистовую отделку, мебель и даже предложения по декору.' })
+        @@include('./tpls/sections.sklh/content-reviews.html',{desc: 'Мой знакомый порекомендовал мне обратиться в <span class="text-italic">Skill House</span>. Менеджер хорошо все посчитал, сначала предварительную смету, потом мы приехали на объект и он сделал окончательную смету. Она меня устроила, и где-то через месяц приступили к ремонту. Все было сделано достаточно аккуратно. Работу я принял, в итоге удовлетворен этим ремонтом. Я благодарен компании <span class="text-italic">Skill House</span> за качественный и быстрый ремонт!' })
+        @@include('./tpls/sections.sklh/content-reviews.html',{desc: 'Мой знакомый порекомендовал мне обратиться в <span class="text-italic">Skill House</span>. Менеджер хорошо все посчитал, сначала предварительную смету, потом мы приехали на объект и он сделал окончательную смету. Она меня устроила, и где-то через месяц приступили к ремонту. Все было сделано достаточно аккуратно. Работу я принял, в итоге удовлетворен этим ремонтом. Я благодарен компании <span class="text-italic">Skill House</span> за качественный и быстрый ремонт!', hasButtonMore: true, })
+
+
+      </main>
+
+      @@include('tpls/sections.sklh/footer.html',{})
+    </div>
+
+    @@include('tpls/modals.html', {})
+
+    <script src="./js/index.min.js"></script>
+  </body>
+</html>
