@@ -118,7 +118,8 @@
 	max-height: 30rem;
 
 	@media (max-width: $tablet-xlg) {
-		max-height: 10.7rem;
+		// max-height: 10.7rem;
+		max-height: 10.5em;
 	}
 	@media (max-width: $mobile) {
 		// max-height: 13rem;

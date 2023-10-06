@@ -1235,11 +1235,10 @@ body._lock {
   }
 }
 
-/*.section--convex {
-	padding-top: 12rem;
-	padding-bottom: 12rem;
+.section--convex {
+  background: linear-gradient(113deg, #303030 11.83%, #101010 87.31%);
 }
-*/
+
 .section-title {
   margin-bottom: 7rem;
   font-family: var(--ff-title);
@@ -4340,6 +4339,238 @@ radio.html
   transform: translateY(0);
 }
 
+.blinds-carousel {
+  padding-top: 2rem;
+  z-index: 1;
+  position: relative;
+}
+@media (max-width: 601px) {
+  .blinds-carousel {
+    padding-top: 0.6rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (max-width: 414px) {
+  .blinds-carousel {
+    max-width: 28rem;
+  }
+}
+
+.blinds-carousel-slide {
+  transition: all 0.45s var(--tr-jolly-enter);
+}
+
+.blinds-carousel-slide:first-of-type {
+  border-left: none;
+}
+
+.blinds-carousel-slide:nth-of-type(2n+2) {
+  border-left: 0.1rem solid var(--c-primary);
+  border-right: 0.1rem solid var(--c-primary);
+}
+
+.blinds-carousel-slide:last-of-type {
+  border-right: none;
+}
+
+@media (any-hover: hover) and (min-width: 769px) {
+  .blinds-carousel-slide:hover {
+    background: var(--Black, #1A1A1A);
+    box-shadow: 0px 0px 100px 0px rgba(1, 1, 1, 0.5);
+  }
+}
+
+.blinds-carousel-swiper {
+  border-left: 0.1rem solid var(--c-primary);
+  border-right: 0.1rem solid var(--c-primary);
+  margin-bottom: 8rem;
+}
+@media (max-width: 768px) {
+  .blinds-carousel-swiper {
+    margin-bottom: 5.5rem;
+  }
+}
+
+@media (max-width: 601px) {
+  .blinds-carousel__pagination {
+    max-width: 23.6rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .blinds-carousel__button-prev,
+  .blinds-carousel__button-next {
+    display: none;
+  }
+}
+
+.review-card {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 48rem;
+}
+@media (max-width: 992px) {
+  .review-card {
+    min-height: initial;
+    padding: 2rem;
+  }
+}
+
+.review-card__body {
+  transition: inherit;
+}
+
+.review-card__button-more::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.review-card__source {
+  display: inline-block;
+  height: 3rem;
+  width: auto;
+  margin-bottom: 2.7rem;
+  transition: var(--tr);
+  filter: contrast(0.1) grayscale(1);
+  -webkit-filter: contrast(0.1) grayscale(1);
+}
+@media (max-width: 768px) {
+  .review-card__source {
+    height: 1.6rem;
+    margin-bottom: 1.6rem;
+  }
+}
+
+@media (any-hover: hover) {
+  .review-card__source:hover {
+    filter: contrast(1) grayscale(0);
+    -webkit-filter: contrast(1) grayscale(0);
+  }
+}
+
+.review-card__source-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.review-card__name {
+  color: var(--c-primary);
+  font-family: var(--ff-regular);
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 0.9;
+  margin-bottom: 1rem;
+}
+@media (max-width: 768px) {
+  .review-card__name {
+    font-size: 2.4rem;
+    margin-bottom: 0.7rem;
+  }
+}
+
+.review-card__date {
+  margin-bottom: 1.2rem;
+  color: var(--fg-second, #BDBDBD);
+  font-family: var(--ff-regular);
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+  letter-spacing: -0.072rem;
+}
+@media (max-width: 768px) {
+  .review-card__date {
+    font-size: 1.2rem;
+    letter-spacing: -0.048rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.review-card__rating {
+  --star-size: 2.4rem;
+  --star-gap: 0.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 4rem;
+}
+@media (max-width: 768px) {
+  .review-card__rating {
+    margin-bottom: 3rem;
+  }
+}
+
+.review-card__rating-star {
+  --size: var(--star-size);
+  display: block;
+  min-width: var(--size);
+  width: var(--size);
+  max-width: var(--size);
+  min-height: var(--size);
+  height: var(--size);
+  margin-right: var(--star-gap);
+}
+
+.review-card__rating-star:last-child {
+  margin-right: 0;
+}
+
+.review-card__title {
+  margin-bottom: 1.7rem;
+  font-family: var(--ff-regular);
+  font-size: 2.4rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 115%;
+  letter-spacing: -0.096rem;
+}
+@media (max-width: 768px) {
+  .review-card__title {
+    font-size: 1.6rem;
+    letter-spacing: -0.064rem;
+    margin-bottom: 0.9rem;
+  }
+}
+
+.review-card__feedback-exerpt {
+  padding-bottom: 2rem;
+  color: var(--fg-second, #BDBDBD);
+  font-family: var(--ff-regular);
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+  letter-spacing: -0.072rem;
+}
+@media (max-width: 768px) {
+  .review-card__feedback-exerpt {
+    padding-bottom: 2.6rem;
+    font-size: 1.2rem;
+    letter-spacing: -0.048rem;
+  }
+}
+
+.review-card__foot {
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.review-card__button-more {
+  text-align: center;
+}
+
 /*
     <button class="burger header__burger">
       <span class="burger__line"></span>
@@ -4415,6 +4646,10 @@ radio.html
   .header {
     margin-bottom: -7.795rem;
   }
+}
+
+.header--no-overlap {
+  margin-bottom: 0;
 }
 
 .header .burger {
@@ -4577,6 +4812,13 @@ radio.html
     padding-top: 36.5rem;
   }
 }
+@media (max-width: 768px) {
+  .hero--archive-reviews {
+    padding-top: 8.5rem;
+    padding-bottom: 4rem;
+    min-height: 32rem;
+  }
+}
 
 .hero__container {
   position: relative;
@@ -4600,10 +4842,16 @@ radio.html
   position: absolute;
   left: 0;
   top: 0;
+  z-index: 2;
   display: block;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.3);
+}
+@media (max-width: 768px) {
+  .hero__bg--dimmed::before {
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%);
+  }
 }
 
 @media (max-width: 768px) {
@@ -4613,7 +4861,7 @@ radio.html
 }
 
 @media (max-width: 768px) {
-  .hero:not(.hero--portfolio) .hero__title br {
+  .hero:not(.hero--portfolio):not(.hero--archive-reviews) .hero__title br {
     display: none;
   }
 }
@@ -5880,7 +6128,7 @@ radio.html
 }
 @media (max-width: 992px) {
   .content-reviews--closed .content-reviews__feedback {
-    max-height: 10.7rem;
+    max-height: 10.5em;
   }
 }
 .content-reviews .content-reviews__feedback {

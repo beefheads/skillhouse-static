@@ -12,7 +12,7 @@
   <body class="single-portfolio">
 
     <div class="wrapper">
-      @@include('tpls/sections.sklh/header.html',{})
+      @@include('tpls/sections.sklh/header.html',{className: 'header--no-overlap'})
 
       <main class="main">
 
@@ -20,7 +20,7 @@
           <div class="container hero__container">
             <div class="hero__offer">
               <h2 class="section-title hero__title">
-                Наши клиенты <br>
+                Наши клиенты <br class="section-br">
                 <span class="text-colored">о нас</span>
               </h2>
               <div class="hero__summary wysiwyg">
@@ -35,13 +35,77 @@
               </div>
             </div>
           </div>
-          <div class="hero__bg hero__bg--dimmed js_use-bg" data-use-bg="./img/sklh_reviews/reviews-hero.jpg"></div>
+          <div class="hero__bg hero__bg--dimmed js_use-bg">
+            <div class="only-desktop" data-use-bg="./img/sklh_reviews/reviews-hero.jpg"></div>
+            <div class="only-mobile" data-use-bg="./img/sklh_reviews/reviews-hero-mobile.jpg"></div>
+          </div>
         </section>
 
 
         @@include('./tpls/sections.sklh/content-reviews.html',{desc: 'Дизайнеры <span class="text-bold">Skill House</span> с нуля создали полноценный и комфортный интерьер квартиры, продумав каждую мелочь в оформлении, включая чистовую отделку, мебель и даже предложения по декору.' })
         @@include('./tpls/sections.sklh/content-reviews.html',{desc: 'Мой знакомый порекомендовал мне обратиться в <span class="text-italic">Skill House</span>. Менеджер хорошо все посчитал, сначала предварительную смету, потом мы приехали на объект и он сделал окончательную смету. Она меня устроила, и где-то через месяц приступили к ремонту. Все было сделано достаточно аккуратно. Работу я принял, в итоге удовлетворен этим ремонтом. Я благодарен компании <span class="text-italic">Skill House</span> за качественный и быстрый ремонт!' })
         @@include('./tpls/sections.sklh/content-reviews.html',{desc: 'Мой знакомый порекомендовал мне обратиться в <span class="text-italic">Skill House</span>. Менеджер хорошо все посчитал, сначала предварительную смету, потом мы приехали на объект и он сделал окончательную смету. Она меня устроила, и где-то через месяц приступили к ремонту. Все было сделано достаточно аккуратно. Работу я принял, в итоге удовлетворен этим ремонтом. Я благодарен компании <span class="text-italic">Skill House</span> за качественный и быстрый ремонт!', hasButtonMore: true, })
+
+
+        <section class="section section--convex">
+          <div class="container">
+            <h2 class="section-title">
+              О нас <br class="section-br">
+              <span class="text-colored">на сервисах</span> 
+            </h2>
+            <div class="blinds-carousel">
+              <div class="swiper blinds-carousel-swiper">
+                <div class="swiper-wrapper">
+                  @@for (var i = 0; i < 10; i++) {
+                    <div class="swiper-slide blinds-carousel-slide">
+                      <article class="review-card">
+                        <div class="review-card__body">
+                          <a class="review-card__source" href="#">
+                            <img src="./img/sklh_services-logo/otzovik.svg" alt="" class="review-card__source-img">
+                          </a>
+                          <!-- <p class="review-card__name">Константин Константинопльский</p> -->
+                          <p class="review-card__name">Вячеслав Алексеев</p>
+                          <p class="review-card__date">12.08.2023</p>
+                          <div class="review-card__rating">
+                            <svg class="review-card__rating-star">
+                              <use href="./img/sklh_common/star.svg#star">
+                            </svg>
+                            <svg class="review-card__rating-star">
+                              <use href="./img/sklh_common/star.svg#star">
+                            </svg>
+                            <svg class="review-card__rating-star">
+                              <use href="./img/sklh_common/star.svg#star">
+                            </svg>
+                            <svg class="review-card__rating-star">
+                              <use href="./img/sklh_common/star-half.svg#star-half">
+                            </svg>
+                            <svg class="review-card__rating-star">
+                              <use href="./img/sklh_common/star-empty.svg#star-empty">
+                            </svg>
+                          </div>
+                          <h3 class="review-card__title">Качественный ремонт квартиры под ключ</h3>
+                          <p class="review-card__feedback-exerpt">
+                            Хочу рассказать о капитальном ремонте, который проходил у меня в квартире. До Skill House делала ремонт с частными мастерами, но они допустили ряд ошибок...
+                          </p>
+                        </div>
+                        <div class="review-card__foot">
+                          <button class="link review-card__button-more" type="button" data-b_modal-open="review-modal">
+                            Читать весь отзыв
+                          </button>
+                        </div>
+                      </article>
+                    </div>
+                  }
+                </div>
+              </div>
+              <div class="b_swiper__nav blinds-carousel__nav">
+                <div class="swiper-button-prev blinds-carousel__button-prev"></div>
+                <div class="swiper-pagination blinds-carousel__pagination"></div>
+                <div class="swiper-button-next blinds-carousel__button-next"></div>
+              </div>
+            </div>
+          </div>
+        </section>
 
 
       </main>

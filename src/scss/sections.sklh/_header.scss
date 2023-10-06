@@ -12,6 +12,10 @@
 	}
 }
 
+.header--no-overlap {
+	margin-bottom: 0;
+}
+
 .header .burger {
 	--c-burger-line: var(--c-primary);
 	--line-width: 100%;
