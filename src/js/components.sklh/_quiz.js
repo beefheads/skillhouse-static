@@ -29,13 +29,14 @@ window.addEventListener('DOMContentLoaded', (event) => {
 	    clickable: false,
 	  },
 	  navigation: {
-	    nextEl: ".quiz__button-next",
+	    // nextEl: ".quiz__button-next",
 	    prevEl: ".quiz__button-prev",
 	  },
 	  on: {
 	  	init() {
 	  		initSwiperProgress(this);
 	  		handleRadioChange(this);
+	  		handleSlideNext(this)
 	  	},
 	  }
 	}
@@ -51,6 +52,28 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 		handleQuizFinishing(quizSwiper)
 	})
+
+	function handleSlideNext(context) {
+		const nextButton = context.el.closest('.quiz').querySelector('.quiz__button-next')
+		if (!nextButton) return;
+
+		nextButton.addEventListener('click', () => {
+			let currentSlideIndex = context.activeIndex;
+			let currentQuestion = context.slides[currentSlideIndex];
+
+			const answersToValidate = currentQuestion.querySelectorAll('[required]');
+			answersToValidate.forEach(answer => {
+				const input = answer.closest('.js_form__control');
+				if (!input._formich) return;
+				input._formich.validate();
+			})
+			const hasInvalid = currentQuestion.querySelector('.is-invalid');
+			if (hasInvalid) return;
+
+			context.slideNext();
+			// context.allowSlideNext
+		})
+	}
 
 
 	function handleRadioChange(context) {

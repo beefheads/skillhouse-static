@@ -189,6 +189,12 @@ function extractUTM(form) {
 
 // #region input-labels
 const inputs = document.querySelectorAll(".js_form .js_form__control");
+inputs.forEach(input => {
+  input._formich = {};
+  input._formich.validate = () => {
+    validateInput(input);
+  }
+})
 
 const inputClasses = {
   invalid: "is-invalid",
@@ -210,6 +216,10 @@ function initInputs(inputs) {
   inputs.forEach((input) => {
     if (input.classList.contains(inputClasses.init)) return;
     input.classList.add(inputClasses.init);
+
+    // input._formich.validate = () => {
+    //   validateInput(input);
+    // }
 
     const field = input.querySelector("[required]");
 
