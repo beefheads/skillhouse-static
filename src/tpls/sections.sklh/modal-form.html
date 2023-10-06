@@ -10,6 +10,18 @@
 		<h3 class="modal__title">@@title</h3>
 		<p class="modal__desc"> @@desc </p>
 		<div class="modal__form form js_form">
+			<div class="form__hidden-fieldset">
+				<input type="text" name="page" hidden>
+			    <input type="text" name="formname" hidden>
+
+			    <input type="hidden" name="utm_source" value="">
+			    <input type="hidden" name="utm_medium" value="">
+			    <input type="hidden" name="utm_campaign" value="">
+			    <input type="hidden" name="utm_content" value="">
+			    <input type="hidden" name="utm_term" value="">
+			    <input type="hidden" name="referrer" value="">
+			    <input type="hidden" name="requestTime" value="">
+			</div>
 			<div class="form__fieldset">
 				@@include('../input/name.html', {placeholder: 'Ваше имя'})
 				@@include('../input/tel.html', {placeholder: 'Номер телефона'})

@@ -18,6 +18,7 @@
               <h3 class="quiz-slide__title section-title">
                 Где Вы планируете делать ремонт?
               </h3>
+              <input type="text" name="quiz_question_`+i+`" value="Где Вы планируете делать ремонт?" hidden>
               <div class="quiz-slide__content">
                 <div class="quiz-slide__answerlist">
                   @@include('../input/radio.html', {
@@ -63,6 +64,7 @@
               <h3 class="quiz-slide__title section-title">
                 Выберите картинку
               </h3>
+              <input type="text" name="quiz_question_`+i+`" value="Выберите картинку" hidden>
               <div class="quiz-slide__content">
                 <div class="quiz-slide__answerlist quiz-slide__answerlist--horizontal-list">
                   @@include('../input/radio-imaged.html', {
@@ -106,6 +108,7 @@
               <h3 class="quiz-slide__title section-title">
                 Как с Вами связаться?
               </h3>
+              <input type="text" name="quiz_question_`+i+`" value="Как с Вами связаться?" hidden>
               <div class="quiz-slide__content">
                 <div class="quiz-slide__answerlist">
                   @@include('../input/radio.html', {
@@ -131,6 +134,18 @@
                   })
                 </div>
                 <div class="quiz-slide__answerlist">
+                  <div class="form__hidden-fieldset">
+                    <input type="text" name="page" hidden>
+                      <input type="text" name="formname" hidden>
+
+                      <input type="hidden" name="utm_source" value="">
+                      <input type="hidden" name="utm_medium" value="">
+                      <input type="hidden" name="utm_campaign" value="">
+                      <input type="hidden" name="utm_content" value="">
+                      <input type="hidden" name="utm_term" value="">
+                      <input type="hidden" name="referrer" value="">
+                      <input type="hidden" name="requestTime" value="">
+                  </div>
                   @@include('../input/name.html', {placeholder: 'Ваше имя'})
                   @@include('../input/tel.html', {placeholder: 'Номер телефона'})
                   <div class="button-primary js_form__submit">Узнать цену</div>

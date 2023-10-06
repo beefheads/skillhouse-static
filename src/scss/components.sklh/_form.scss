@@ -2,6 +2,10 @@
 
 }
 
+.form__hidden-fieldset {
+	display: none;
+}
+
 .form__fieldset {
 	display: grid;
 	row-gap: 2rem;

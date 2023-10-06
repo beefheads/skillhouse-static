@@ -247,6 +247,7 @@ class b_modal {
     const IGNORE_MODAL_AUTOOPEN = [
       'modal-success',
       'modal-error',
+      'tariff',
     ];
     if (window.location.hash) {
       const hash = window.location.hash.substring(1);
