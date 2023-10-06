@@ -1480,6 +1480,13 @@ body._lock {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
+  transition: all 0.45s var(--tr-jolly-enter);
+}
+
+@media (any-hover: hover) {
+  .b_video:hover::before {
+    background-color: transparent;
+  }
 }
 
 .b_video__cover {
@@ -1559,11 +1566,17 @@ body._lock {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
-  transition: var(--tr);
+  transition: all 0.45s var(--tr-jolly-enter);
 }
 @media (max-width: 768px) {
   .b_video__play::before {
     --size: 4rem;
+  }
+}
+
+@media (any-hover: hover) {
+  .b_video__play:hover::before {
+    transform: scale(1.1);
   }
 }
 
