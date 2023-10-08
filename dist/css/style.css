@@ -1275,6 +1275,10 @@ body._lock {
   }
 }
 
+.container.section-buttons {
+  display: grid;
+}
+
 .text-sub {
   color: var(--fg-regular, #FFF);
   leading-trim: both;
@@ -1715,7 +1719,7 @@ body._lock {
 
 .wysiwyg {
   --wysiwyg-fz: 1rem;
-  --accnet: var(--c-primary);
+  --accent: var(--c-primary);
   --fg: var(--fg-regular);
   --fw-regular: 300;
   --fw-title: 700;
@@ -1855,19 +1859,28 @@ body._lock {
 }
 .wysiwyg a {
   color: var(--accent);
-  text-decoration: underline;
+  text-decoration: none;
+  --border-color: var(--accent);
+  background-image: linear-gradient(to bottom, var(--border-color) 0, var(--border-color) 100%);
+  background-position: 0 90%;
+  background-repeat: repeat-x;
+  background-size: 0.1rem 0.1rem;
+  text-decoration: none;
 }
 .wysiwyg blockquote {
   margin: 1.4em 0;
   padding: 1.5em 3em;
-  background-color: #f8f8f8;
-  border-radius: 30px;
-  background: #F0F2F5;
+  font-size: var(--fz-p);
+  border-left: 0.2rem solid var(--fg);
 }
 @media (max-width: 601px) {
   .wysiwyg blockquote {
     padding: 1.5em 1em;
+    border-left: 0.5rem solid var(--fg);
   }
+}
+.wysiwyg blockquote *:first-child {
+  margin-top: 0;
 }
 .wysiwyg img {
   width: 100%;
@@ -1888,7 +1901,7 @@ body._lock {
 .wysiwyg th,
 .wysiwyg td {
   padding: 0.5em;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #f8f8f8;
 }
 .wysiwyg pre {
   margin-top: 1.4em;
@@ -4639,7 +4652,7 @@ radio.html
 }
 
 .review-card__feedback {
-  padding-bottom: 2rem;
+  margin-bottom: 2rem;
   color: var(--fg-second, #BDBDBD);
   font-family: var(--ff-regular);
   font-size: 1.8rem;
@@ -4647,6 +4660,11 @@ radio.html
   font-weight: 400;
   line-height: 130%;
   letter-spacing: -0.072rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 @media (max-width: 992px) {
   .review-card__feedback {
@@ -4657,7 +4675,7 @@ radio.html
 }
 
 .review-card__feedback.wysiwyg {
-  font-size: 0.9rem;
+  -webkit-line-clamp: unset;
 }
 
 .review-card__foot {
@@ -4853,7 +4871,7 @@ radio.html
 .header__contacts {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: flex-end;
   justify-content: flex-start;
 }
 @media (max-width: 768px) {
@@ -4871,11 +4889,18 @@ radio.html
   font-weight: 400;
   line-height: normal;
   letter-spacing: 1.4px;
+  transition: all 0.4s var(--tr-jolly-enter);
 }
 @media (max-width: 768px) {
   .header__contacts-item {
     font-size: 0.8rem;
     letter-spacing: 0.8px;
+  }
+}
+
+@media (any-hover: hover) {
+  .header__contacts-item:hover {
+    color: var(--c-primary);
   }
 }
 
@@ -5292,13 +5317,14 @@ radio.html
   margin-bottom: 0;
 }
 
-.section-quiz {
+.secti on-quiz {
   padding-top: 13.5rem;
   padding-bottom: 14rem;
   background: linear-gradient(113deg, #303030 11.83%, #101010 87.31%);
+  transition: all 0.45s var(--tr-jolly-enter);
 }
 @media (max-width: 768px) {
-  .section-quiz {
+  .secti on-quiz {
     padding-top: 5.5rem;
     padding-bottom: 5.5rem;
   }
@@ -5371,6 +5397,7 @@ radio.html
   padding-top: 11rem;
   padding-bottom: 11rem;
   background: linear-gradient(113deg, #303030 11.83%, #101010 87.31%);
+  transition: all 0.45s var(--tr-jolly-enter);
 }
 @media (max-width: 768px) {
   .team {
@@ -5722,7 +5749,8 @@ radio.html
 }
 
 .article > *:not(.alignfull),
-.article > .wp-block-group > .wp-block-group > *:not(.wp-block-gallery) {
+.article > .wp-block-group > .wp-block-group > *:not(.wp-block-gallery),
+.article > .wp-block-group > .wp-block-group__inner-container > .wp-block-group > .wp-block-group__inner-container > *:not(.wp-block-gallery) {
   max-width: calc(var(--w-container) + 2 * var(--p-container));
   width: 100%;
   margin-left: auto;
@@ -5854,6 +5882,7 @@ radio.html
 
 .floor-plan__media {
   margin-top: var(--margin-top-media);
+  pointer-events: none;
 }
 @media (max-width: 992px) {
   .floor-plan__media {
@@ -5895,6 +5924,7 @@ radio.html
   background-position: bottom;
   background-size: contain;
   z-index: 1;
+  pointer-events: none;
 }
 @media (max-width: 768px) {
   .review-section--has-bg::before {
@@ -6101,6 +6131,10 @@ radio.html
 
 .content-reviews:nth-of-type(even) {
   background: linear-gradient(113deg, #303030 11.83%, #101010 87.31%);
+}
+
+.content-reviews:nth-of-type(even) + .content-reviews__buttons {
+  margin-top: 6rem;
 }
 
 .content-reviews--has-bg::before {
@@ -6346,6 +6380,11 @@ radio.html
   justify-self: center;
   padding-left: 2.8rem;
   padding-right: 2.8rem;
+}
+
+.content-reviews__buttons.container {
+  justify-content: center;
+  padding-bottom: 12rem;
 }
 
 .project-shifter {

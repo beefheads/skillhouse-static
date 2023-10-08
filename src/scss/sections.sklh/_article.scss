@@ -4,7 +4,7 @@
 
 	--margin-top-h2: 12rem;
 	--margin-bottom-h2: 7rem;
-	--fz-h2: var(--fz-title); 
+	--fz-h2: var(--fz-title);
 
 	@media (max-width: $tablet) {
 		padding-top: 0rem;
@@ -19,11 +19,11 @@
 }
 
 
-.article h1, 
-.article h2, 
-.article h3, 
-.article h4, 
-.article h5, 
+.article h1,
+.article h2,
+.article h3,
+.article h4,
+.article h5,
 .article h6 {
 	font-family: var(--ff-title);
 	color: var(--c-primary);
@@ -74,7 +74,7 @@
 }
 .article > .wp-block-group.alignfull:nth-of-type(even) {
 	background: linear-gradient(113deg, #303030 11.83%, #101010 87.31%);
-} 
+}
 
 .article > .wp-block-group.alignfull .wp-block-group *:first-child {
 	margin-top: 0;
@@ -84,7 +84,8 @@
 }
 
 .article > *:not(.alignfull),
-.article > .wp-block-group > .wp-block-group > *:not(.wp-block-gallery) {
+.article > .wp-block-group > .wp-block-group > *:not(.wp-block-gallery),
+.article > .wp-block-group > .wp-block-group__inner-container > .wp-block-group > .wp-block-group__inner-container > *:not(.wp-block-gallery) {
   max-width: #{'calc(var(--w-container) + 2 * var(--p-container))'};
   width: 100%;
   margin-left: auto;

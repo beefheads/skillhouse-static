@@ -108,7 +108,7 @@
 	// margin-left: auto;
 	display: flex;
 	flex-direction: column;
-	align-items: flex-start;
+  align-items: flex-end;
 	justify-content: flex-start;
 
 	@media (max-width: $tablet) {
@@ -125,11 +125,18 @@
 	font-weight: 400;
 	line-height: normal;
 	letter-spacing: 1.4px;
+  transition: all 0.4s var(--tr-jolly-enter);
 
 	@media (max-width: $tablet) {
 		font-size: 0.8rem;
 		letter-spacing: 0.8px;
 	}
+}
+
+.header__contacts-item:hover {
+  @media (any-hover:hover) {
+    color: var(--c-primary);
+  }
 }
 
 .header__button-callback {

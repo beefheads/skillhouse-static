@@ -16,6 +16,7 @@ import "./components.b/controls/b_tabs.js";
 
 import "./components.sklh/_price-table.js";
 import "./components.sklh/_quiz.js";
+import "./components.sklh/_review-card.js";
 
 import "./components.sklh/_blinds-carousel.js";
 

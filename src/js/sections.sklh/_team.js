@@ -12,6 +12,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 		carousel.classList.add(uniqueClass);
 
 		const swiperConfig = {
+		  autoHeight: true,
 			speed: 450,
 			slidesPerView: 1,
 		  modules: [Navigation, Pagination, EffectCreative],

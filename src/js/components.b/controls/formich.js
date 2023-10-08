@@ -45,7 +45,7 @@ function serealizeForm(formNode) {
     formData[textarea.name] = textarea.value;
   }
 
-  return formData; 
+  return formData;
 
 }
 
@@ -99,7 +99,7 @@ formsList.forEach((form) => {
 
     try {
       // let result = await response.json();
-      
+
       // if (result.status) {
       //   console.error(result.status);
       // }
@@ -118,13 +118,22 @@ formsList.forEach((form) => {
 
       resetForm(form)
 
+      const submitSuccess = new CustomEvent('submit-success', {
+        detail: {
+          form,
+        },
+        bubbles: true, // Allow event to bubble up the DOM tree
+        cancelable: true // Allow event to be canceled
+      });
+      form.dispatchEvent(submitSuccess);
+
       setTimeout(() => {
         submitButton.classList.remove('button--wait');
         buttonTextElement.innerText = buttonText;
       }, 5000)
     } catch {
     }
-    
+
   });
 });
 
@@ -137,6 +146,7 @@ function resetForm (form) {
     ]
     if (INPUTS_TO_IGNORE_RESET.includes(input.type)) return;
     if (input.getAttribute('readonly') != null) return;
+    if (input.getAttribute('hidden') != null) return;
 
     input.value = ''
   })

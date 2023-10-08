@@ -2,6 +2,7 @@
 	padding-top: 11rem;
 	padding-bottom: 11rem;
 	background: linear-gradient(113deg, #303030 11.83%, #101010 87.31%);
+  transition: all 0.45s var(--tr-jolly-enter);
 
 	@media (max-width: $tablet) {
 		padding-top: 5.6rem;

@@ -52,6 +52,9 @@
 		row-gap: 1.2rem;
 	}
 }
+.container.section-buttons {
+  display: grid;
+}
 
 .text-sub {
 	color: var(--fg-regular, #FFF);

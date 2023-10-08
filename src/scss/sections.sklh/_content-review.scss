@@ -13,6 +13,11 @@
 .content-reviews:nth-of-type(even) {
 	background: linear-gradient(113deg, #303030 11.83%, #101010 87.31%);
 }
+
+.content-reviews:nth-of-type(even) + .content-reviews__buttons  {
+  margin-top: 6rem;
+}
+
 .content-reviews--has-bg::before {
 	content: "";
 	position: absolute;
@@ -196,7 +201,7 @@
 	@media (max-width: $tablet-xlg) {
 		margin-bottom: 3.5rem;
 	}
-	
+
 	@media (max-width: $tablet) {
 		font-size: 1.2rem;
 	}
@@ -242,4 +247,9 @@
 	justify-self: center;
 	padding-left: 2.8rem;
 	padding-right: 2.8rem;
+}
+
+.content-reviews__buttons.container {
+  justify-content: center;
+  padding-bottom: 12rem;
 }

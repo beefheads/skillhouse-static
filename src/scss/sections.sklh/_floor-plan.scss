@@ -22,6 +22,7 @@
 
 .floor-plan__media {
 	margin-top: var(--margin-top-media);
+  pointer-events: none;
 
 	@media (max-width: $tablet-xlg) {
 		margin-top: #{'calc(var(--margin-top-media) + 20rem)'};

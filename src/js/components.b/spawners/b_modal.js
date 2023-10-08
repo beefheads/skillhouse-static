@@ -248,6 +248,7 @@ class b_modal {
       'modal-success',
       'modal-error',
       'tariff',
+      'modal-review-detail',
     ];
     if (window.location.hash) {
       const hash = window.location.hash.substring(1);

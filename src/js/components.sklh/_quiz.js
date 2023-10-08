@@ -124,7 +124,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 	}
 
 	function dispatchQuizEvent(eventName, data = {}) {
-		const event = new CustomEvent(eventName, { 
+		const event = new CustomEvent(eventName, {
 		  detail: data,
 		  bubbles: true, // Allow event to bubble up the DOM tree
 		  cancelable: true // Allow event to be canceled
@@ -148,5 +148,12 @@ window.addEventListener('DOMContentLoaded', (event) => {
 	quiz.addEventListener('slide-before-last', () => {
 		// console.log('slides-before-last')
 	})
+
+  quiz.addEventListener('submit-success', () => {
+    setTimeout(() => {
+      quizSwiper.slideTo(0);
+    }, 5000);
+  })
+
 
 });
